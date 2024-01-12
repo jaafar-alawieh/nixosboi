@@ -204,6 +204,11 @@ in
   #when you need to update it:
   ##  dconf dump / | dconf2nix > dconf.nix
   ##  sudo cp dconf.nix /etc/nixos/dconf.nix 
+  programs.steam = {
+  enable = true;
+  remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+  dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  };
   home-manager.users."happylime" = {
     home.stateVersion="23.05";
     programs.bash.enable = true;
@@ -251,7 +256,6 @@ in
 	powertop
 	python311
 	qbittorrent
-  steam
 	#teams
 	tenacity
 	tldr
