@@ -287,17 +287,17 @@ in
 	gnomeExtensions.clipboard-indicator
 	gnomeExtensions.dash-to-dock
   gnomeExtensions.gsconnect
-	gnomeExtensions.just-perfection
+	#gnomeExtensions.just-perfection
 	gnomeExtensions.media-controls
 	gnomeExtensions.power-profile-switcher
 	gnomeExtensions.reorder-workspaces
 	gnomeExtensions.simple-system-monitor
 	gnomeExtensions.tactile
-	gnomeExtensions.top-panel-workspace-scroll
+	#gnomeExtensions.top-panel-workspace-scroll
 	gnomeExtensions.transparent-top-bar-adjustable-transparency
 	gnomeExtensions.transparent-window-moving
-	gnomeExtensions.vertical-workspaces
-	gnomeExtensions.space-bar
+	#gnomeExtensions.vertical-workspaces
+	#gnomeExtensions.space-bar
   gnomeExtensions.workspace-matrix
 	#gnome themes
 	flat-remix-gnome
