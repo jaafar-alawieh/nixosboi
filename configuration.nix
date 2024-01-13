@@ -30,6 +30,12 @@ in
   #  "resume_offset=49250304"
   #];
 
+  #update
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = true;
+  system.autoUpgrade.channel = "https://channels.nixos.org/nixos-23.11";
+
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -209,13 +215,13 @@ in
   remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
   dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
-  home-manager.users."happylime" = {
-    home.stateVersion="23.05";
-    programs.bash.enable = true;
+  #home-manager.users."happylime" = {
+    #home.stateVersion="23.11";
+  #  programs.bash.enable = true;
     #imports = [ ./dconf.nix ];
-    home.file."touchegg".target = "/config/touchegg/touchegg.conf";
-    home.file."touchegg".source = "/etc/nixos/conffiles/touchegg.conf";  # or .text if I just want to include everything in a nix config file and import it
-  };
+  #  home.file."touchegg".target = "/config/touchegg/touchegg.conf";
+  #  home.file."touchegg".source = "/etc/nixos/conffiles/touchegg.conf";  # or .text if I just want to include everything in a nix config file and import it
+  #};
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -270,7 +276,7 @@ in
 	xdotool
   xorg.xdpyinfo
 	xorg.xkill
-	youtube-music
+	#youtube-music
 	zip
 	#NUR
 	nur.repos.nltch.spotify-adblock    #for installing spotify-adblock
@@ -307,7 +313,7 @@ in
   ];
 
   #fonts
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
   corefonts
   vistafonts
   wine64Packages.fonts
