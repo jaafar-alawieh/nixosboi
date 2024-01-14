@@ -173,7 +173,7 @@ in
     serviceConfig.Type = "oneshot";
     script = ''
       echo "Will start backup now."
-      ${pkgs.bash}/bin/bash ~/projects/mega_backup/keepass.sh
+      ${pkgs.bash}/bin/bash $HOME/projects/mega_backup/keepass.sh
       echo "Backup done."
     '';
   };
