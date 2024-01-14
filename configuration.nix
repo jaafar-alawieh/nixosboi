@@ -314,12 +314,11 @@ in
 	gnomeExtensions.media-controls
 	gnomeExtensions.power-profile-switcher
 	gnomeExtensions.reorder-workspaces
-	gnomeExtensions.simple-system-monitor
 	gnomeExtensions.tactile
 	#gnomeExtensions.top-panel-workspace-scroll
 	gnomeExtensions.transparent-top-bar-adjustable-transparency
 	gnomeExtensions.transparent-window-moving
-	#gnomeExtensions.space-bar
+	gnomeExtensions.space-bar
   gnomeExtensions.workspace-matrix
 	#gnome themes
 	flat-remix-gnome
