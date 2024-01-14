@@ -177,7 +177,7 @@ in
 
       echo "Script started at $(date)"
 
-      # Set PATH to include mega-cmd
+      # Set PATH to include megacmd
       export PATH=$PATH:${pkgs.megacmd}/bin
 
       if mega-put /home/happylime/Documents/Keepass/JaafarDatabase.kdbx /keepass_database > /tmp/mega_backup.log 2>&1; then
