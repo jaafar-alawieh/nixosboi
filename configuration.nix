@@ -172,9 +172,16 @@ in
   systemd.services.mega_keepass_backup = {
     serviceConfig.Type = "oneshot";
     script = ''
-      echo "Will start backup now."
-      ${pkgs.bash}/bin/bash /home/happylime/projects/mega_backup/keepass.sh
-      echo "Backup done."
+      #!/usr/bin/env nix-shell
+      #!nix-shell -i bash -p mega-cmd
+
+      echo "Script started at $(date)"
+
+      if mega-put /home/happylime/Documents/Keepass/JaafarDatabase.kdbx /keepass_database > /tmp/mega_backup.log 2>&1; then
+        echo "Script completed at $(date)"
+      else
+        echo "Error: mega-put command failed. Check /tmp/mega_backup.log for details."
+      fi
     '';
   };
 
