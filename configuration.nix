@@ -82,11 +82,11 @@ in
   };
 
   # #hyprland
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  # programs.hyprland = {
+  #   enable = true;
+  #   xwayland.enable = true;
+  # };
+  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # #hyprland xdg portal #not sure if i need this
   # xdg.portal.enable = true;
@@ -296,13 +296,13 @@ in
 	nur.repos.nltch.spotify-adblock    #for installing spotify-adblock
 	nur.repos.nltch.ciscoPacketTracer8 #for installing packettracer8 
 	#hyprland
-  dunst #notif
-  kitty #terminal
-  mako #notif
-  libnotify #notif
-  wofi #gtk rofi that's used to launch apps
-  swww #wallpaper
-  waybar #topbar
+  # dunst #notif
+  # kitty #terminal
+  # mako #notif
+  # libnotify #notif
+  # wofi #gtk rofi that's used to launch apps
+  # swww #wallpaper
+  # waybar #topbar
 
   #gnome extensions 
 	gnomeExtensions.battery-indicator-icon 
