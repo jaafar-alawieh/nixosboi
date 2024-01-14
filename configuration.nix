@@ -86,7 +86,9 @@ in
     enable = true;
     xwayland.enable = true;
   };
-  # #hyprland xdg portal
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  # #hyprland xdg portal #not sure if i need this
   # xdg.portal.enable = true;
   # xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
