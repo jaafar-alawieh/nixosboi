@@ -81,6 +81,15 @@ in
     xkbVariant = "";
   };
 
+  # #hyprland
+  # programs.hyprland = {
+  #   enable = true;
+  #   xwayland.enable = true;
+  # };
+  # #hyprland xdg portal
+  # xdg.portal.enable = true;
+  # xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -135,6 +144,12 @@ in
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   
+  #insecure packages
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-25.9.0"
+  ];
+
+
   #flatpak support
   services.flatpak.enable = true;
 
@@ -273,15 +288,21 @@ in
 	webex
   wget
   wmctrl
-	xdotool
-  xorg.xdpyinfo
-	xorg.xkill
 	#youtube-music
 	zip
 	#NUR
 	nur.repos.nltch.spotify-adblock    #for installing spotify-adblock
 	nur.repos.nltch.ciscoPacketTracer8 #for installing packettracer8 
-	#gnome extensions 
+	#hyprland
+  # dunst #notif
+  # kitty #terminal
+  # mako #notif
+  # libnotify #notif
+  # wofi #gtk rofi that's used to launch apps
+  # swww #wallpaper
+  # waybar #topbar
+
+  #gnome extensions 
 	gnomeExtensions.battery-indicator-icon 
 	gnomeExtensions.caffeine
 	gnomeExtensions.clipboard-indicator
@@ -296,7 +317,6 @@ in
 	#gnomeExtensions.top-panel-workspace-scroll
 	gnomeExtensions.transparent-top-bar-adjustable-transparency
 	gnomeExtensions.transparent-window-moving
-	#gnomeExtensions.vertical-workspaces
 	#gnomeExtensions.space-bar
   gnomeExtensions.workspace-matrix
 	#gnome themes
