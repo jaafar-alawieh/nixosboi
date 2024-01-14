@@ -180,7 +180,7 @@ in
       # Set PATH to include megacmd
       export PATH=$PATH:${pkgs.megacmd}/bin
 
-      if mega-put /home/happylime/Documents/Keepass/JaafarDatabase.kdbx /keepass_database > /tmp/mega_backup.log 2>&1; then
+      if mega-put $HOME/Documents/Keepass/JaafarDatabase.kdbx /keepass_database > /tmp/mega_backup.log 2>&1; then
         echo "Script completed at $(date)"
       else
         echo "Error: mega-put command failed. Check /tmp/mega_backup.log for details."
