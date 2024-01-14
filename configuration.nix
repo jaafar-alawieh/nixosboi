@@ -168,6 +168,24 @@ in
   ];
   #end of create directories
   
+  #First script systemd timer
+  systemd.services.mega_keepass_backup = {
+    serviceConfig.Type = "oneshot";
+    script = ''
+      echo "Will start backup now."
+      ${pkgs.bash}/bin/bash ~/projects/mega_backup/keepass.sh
+      echo "Backup done."
+    '';
+  };
+
+  systemd.timers.mega_keepass_backup = {
+    wantedBy = [ "timers.target" ];
+    partOf = [ "mega_keepass_backup.service" ];
+    timerConfig.OnCalendar = [ "daily" ];
+    timerConfig.Persistent = true;
+  };
+  #end of first script systemd timer
+  
   ####only for jaafar's backlight https://www.reddit.com/r/NixOS/comments/16on943/comment/k1m3f6g/?context=3
   systemd.services.disable-keyboard-backlight = {
     enable = true;
