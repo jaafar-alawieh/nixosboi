@@ -82,10 +82,10 @@ in
   };
 
   # #hyprland
-  # programs.hyprland = {
-  #   enable = true;
-  #   xwayland.enable = true;
-  # };
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
   # #hyprland xdg portal
   # xdg.portal.enable = true;
   # xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
@@ -294,13 +294,13 @@ in
 	nur.repos.nltch.spotify-adblock    #for installing spotify-adblock
 	nur.repos.nltch.ciscoPacketTracer8 #for installing packettracer8 
 	#hyprland
-  # dunst #notif
-  # kitty #terminal
-  # mako #notif
-  # libnotify #notif
-  # wofi #gtk rofi that's used to launch apps
-  # swww #wallpaper
-  # waybar #topbar
+  dunst #notif
+  kitty #terminal
+  mako #notif
+  libnotify #notif
+  wofi #gtk rofi that's used to launch apps
+  swww #wallpaper
+  waybar #topbar
 
   #gnome extensions 
 	gnomeExtensions.battery-indicator-icon 
