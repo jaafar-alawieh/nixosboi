@@ -117,8 +117,8 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/control-center" = {
-      last-panel = "wifi";
-      window-state = mkTuple [ 980 484 ];
+      last-panel = "keyboard";
+      window-state = mkTuple [ 980 484 false ];
     };
 
     "org/gnome/desktop/a11y/interface" = {
@@ -181,7 +181,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = [ "org-gnome-settings" "gnome-power-panel" "org-gnome-console" "org-gnome-characters" "firefox" "org-gnome-nautilus" "gnome-network-panel" "org-gnome-extensions" "impress" "writer" "org-gnome-tweaks" "code" "teams" "org-gnome-terminal" "io-github-realmazharhussain-gdmsettings" "org-gnome-gedit" "xdg-desktop-portal-gnome" "vlc" "gnome-system-monitor" "org-keepassxc-keepassxc" "com-github-joseexposito-touche" "org-gnome-geary" "mullvad-vpn" "org-qbittorrent-qbittorrent" "tenacity" "spotify" "com-spotify-client" "org-gnome-eog" "android-studio" "gimp" "calc" ];
+      application-children = [ "org-gnome-settings" "gnome-power-panel" "org-gnome-console" "org-gnome-characters" "firefox" "org-gnome-nautilus" "gnome-network-panel" "org-gnome-extensions" "impress" "writer" "org-gnome-tweaks" "code" "teams" "org-gnome-terminal" "io-github-realmazharhussain-gdmsettings" "org-gnome-gedit" "xdg-desktop-portal-gnome" "vlc" "gnome-system-monitor" "org-keepassxc-keepassxc" "com-github-joseexposito-touche" "org-gnome-geary" "mullvad-vpn" "org-qbittorrent-qbittorrent" "tenacity" "spotify" "com-spotify-client" "org-gnome-eog" "android-studio" "gimp" "calc" "org-gnome-shell-extensions-gsconnect-preferences" "org-gnome-shell-extensions-gsconnect" "io-github-cboxdoerfer-fsearch" "steam" ];
       show-banners = true;
     };
 
@@ -227,6 +227,10 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/notifications/application/impress" = {
       application-id = "impress.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/io-github-cboxdoerfer-fsearch" = {
+      application-id = "io.github.cboxdoerfer.FSearch.desktop";
     };
 
     "org/gnome/desktop/notifications/application/io-github-realmazharhussain-gdmsettings" = {
@@ -281,6 +285,14 @@ with lib.hm.gvariant;
       application-id = "org.gnome.Settings.desktop";
     };
 
+    "org/gnome/desktop/notifications/application/org-gnome-shell-extensions-gsconnect-preferences" = {
+      application-id = "org.gnome.Shell.Extensions.GSConnect.Preferences.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/org-gnome-shell-extensions-gsconnect" = {
+      application-id = "org.gnome.Shell.Extensions.GSConnect.desktop";
+    };
+
     "org/gnome/desktop/notifications/application/org-gnome-terminal" = {
       application-id = "org.gnome.Terminal.desktop";
     };
@@ -299,6 +311,10 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/notifications/application/spotify" = {
       application-id = "spotify.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/steam" = {
+      application-id = "steam.desktop";
     };
 
     "org/gnome/desktop/notifications/application/teams" = {
@@ -390,19 +406,19 @@ with lib.hm.gvariant;
       switch-input-source-backward = [ "<Shift><Super>space" "<Shift><Super>space" "<Shift><Super>space" ];
       switch-panels = [];
       switch-panels-backward = [];
-      switch-to-workspace-1 = [];
-      switch-to-workspace-2 = [];
-      switch-to-workspace-3 = [];
-      switch-to-workspace-4 = [];
+      switch-to-workspace-1 = [ "<Super>1" ];
+      switch-to-workspace-2 = [ "<Super>2" ];
+      switch-to-workspace-3 = [ "<Super>3" ];
+      switch-to-workspace-4 = [ "<Super>4" ];
       switch-to-workspace-5 = [ "<Super>5" ];
       switch-to-workspace-6 = [ "<Super>6" ];
       switch-to-workspace-7 = [ "<Super>7" ];
       switch-to-workspace-8 = [ "<Super>8" ];
       switch-to-workspace-9 = [ "<Super>9" ];
       switch-to-workspace-down = [ "<Super>Down" "<Super>Page_Down" ];
-      switch-to-workspace-last = [ "<Super>Right" ];
+      switch-to-workspace-last = [];
       switch-to-workspace-left = [ "<Super>Left" ];
-      switch-to-workspace-right = [ "<Super>Up" ];
+      switch-to-workspace-right = [ "<Super>Right" ];
       switch-to-workspace-up = [ "<Super>Up" "<Control><Alt>Up" "<Super>Page_Up" ];
       switch-windows = [ "<Super>Tab" ];
       switch-windows-backward = [ "<Shift><Super>Tab" ];
@@ -415,7 +431,7 @@ with lib.hm.gvariant;
       button-layout = "icon:minimize,maximize,close";
       num-workspaces = 9;
       titlebar-font = "Cantarell Bold 12";
-      workspace-names = [ "1 Whatsapp" "2 Music" ];
+      workspace-names = [ "1 Whatsapp" "2 Music" "3 NixConf" "4 ChatGPT" ];
     };
 
     "org/gnome/eog/ui" = {
@@ -432,7 +448,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/evince/default" = {
-      window-ratio = mkTuple [ 1.8288590604026846 1.631828978622328 ];
+      window-ratio = mkTuple [ 1.8791946308724832 1.631828978622328 ];
     };
 
     "org/gnome/evolution-data-server" = {
@@ -466,14 +482,14 @@ with lib.hm.gvariant;
 
     "org/gnome/gedit/preferences/editor" = {
       editor-font = "Source Code Pro 14";
-      scheme = "cobalt";
+      scheme = "dracula";
       use-default-font = false;
       wrap-last-split-mode = "word";
     };
 
     "org/gnome/gedit/state/history-entry" = {
       replace-with-entry = [ "Control" ];
-      search-for-entry = [ ".he" "he" "harry" "shift" ];
+      search-for-entry = [ ".he " " he " "harry" "shift" ];
     };
 
     "org/gnome/gedit/state/window" = {
@@ -481,7 +497,7 @@ with lib.hm.gvariant;
       side-panel-active-page = "GeditWindowDocumentsPanel";
       side-panel-size = 200;
       size = mkTuple [ 1120 1326 ];
-      state = 87168;
+      state = 87040;
     };
 
     "org/gnome/gnome-system-monitor" = {
@@ -490,7 +506,7 @@ with lib.hm.gvariant;
       network-total-in-bits = false;
       show-dependencies = false;
       show-whose-processes = "user";
-      window-state = mkTuple [ 700 500 ];
+      window-state = mkTuple [ 700 500 0 1237 ];
     };
 
     "org/gnome/gnome-system-monitor/disktreenew" = {
@@ -500,7 +516,7 @@ with lib.hm.gvariant;
 
     "org/gnome/gnome-system-monitor/proctree" = {
       columns-order = [ 0 1 2 3 4 6 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 ];
-      sort-col = 15;
+      sort-col = 8;
       sort-order = 0;
     };
 
@@ -528,11 +544,11 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/nautilus/list-view" = {
-      default-zoom-level = "large";
+      default-zoom-level = "small";
     };
 
     "org/gnome/nautilus/preferences" = {
-      default-folder-viewer = "list-view";
+      default-folder-viewer = "icon-view";
       migrated-gtk-settings = true;
       search-filter-time-type = "last_modified";
       search-view = "icon-view";
@@ -571,7 +587,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/portal/filechooser/org/upscayl/Upscayl" = {
-      last-folder-path = "/home/happylime/Downloads/clutter";
+      last-folder-path = "/home/happylime/Pictures/Upscale";
     };
 
     "org/gnome/portal/filechooser/org/qbittorrent/qBittorrent" = {
@@ -592,7 +608,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-      binding = "<Super>i";
+      binding = "<Super>MonBrightnessDown";
       command = "sh -c 'sleep 1 && xset dpms force off'";
       name = "xscreen off";
     };
@@ -671,7 +687,7 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom20" = {
       binding = "<Super>m";
-      command = "bash -c 'screen_width=$(xdpyinfo | grep dimensions | awk \"{print \\$2}\" | cut -d \"x\" -f 1) && screen_height=$(xdpyinfo | grep dimensions | awk \"{print \\$2}\" | cut -d \"x\" -f 2) && window_width=$((screen_width / 2)) && window_height=$((screen_height / 2)) && bash -c \"spotify & disown\" && bash -c \"youtube-music & disown\" && xdotool search --name \"Spotify\" windowmove 0 0 windowsize ${window_width} ${window_height} && xdotool search --name \"YouTube Music\" windowmove ${window_width} 0 windowsize ${window_width} ${window_height}'\n";
+      command = "bash -c 'screen_width=$(xdpyinfo | grep dimensions | awk \"{print \\$2}\" | cut -d \"x\" -f 1) && screen_height=$(xdpyinfo | grep dimensions | awk \"{print \\$2}\" | cut -d \"x\" -f 2) && window_width=$((screen_width / 2)) && window_height=$((screen_height / 2)) && bash -c \"spotify & disown\" && bash -c \"youtube-music & disown\" && xdotool search --name \"Spotify\" windowmove 0 0 windowsize ${window_width} ${window_height} && xdotool search --name \"YouTube Music\" windowmove ${window_width} 0 windowsize ${window_width} ${window_height}'n";
       name = "Music";
     };
 
@@ -707,7 +723,7 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8" = {
       binding = "<Super>w";
-      command = "sh -c 'if xdotool search --name \"WhatsApp\"; then xdotool windowactivate --sync $(xdotool search --name \"WhatsApp\"); else firefox --new-window https://web.whatsapp.com/; fi\n'";
+      command = "sh -c 'if xdotool search --name \"WhatsApp\"; then xdotool windowactivate --sync $(xdotool search --name \"WhatsApp\"); else firefox --new-window https://web.whatsapp.com/; fin'";
       name = "Whatsapp";
     };
 
@@ -724,10 +740,10 @@ with lib.hm.gvariant;
     "org/gnome/shell" = {
       command-history = [ "r" ];
       disable-user-extensions = false;
-      disabled-extensions = [ "native-window-placement@gnome-shell-extensions.gcampax.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "wsmatrix@martin.zurowietz.de" ];
-      enabled-extensions = [ "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-top-bar@zhanghai.me" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "user-theme@gnome-shell-extensions.gcampax.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-top-bar@ftpix.com" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "user-theme@gnome-shell-extensions.gcampax.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-top-bar@ftpix.com" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "user-theme@gnome-shell-extensions.gcampax.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "just-perfection-desktop@just-perfection" "battery-indicator-icon@Deminder" "color-picker@tuberry" "ssm-gnome@lgiki.net" "power-profile-switcher@eliapasquali.github.io" "mediacontrols@cliffniff.github.com" "gestureImprovements@gestures" "x11gestures@joseexposito.github.io" "vertical-workspaces@G-dH.github.com" "gsconnect@andyholmes.github.io" ];
+      disabled-extensions = [ "native-window-placement@gnome-shell-extensions.gcampax.github.com" "wsmatrix@martin.zurowietz.de" "vertical-workspaces@G-dH.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "gSnap@micahosborne" ];
+      enabled-extensions = [ "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-top-bar@zhanghai.me" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "user-theme@gnome-shell-extensions.gcampax.github.com" "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-top-bar@ftpix.com" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "user-theme@gnome-shell-extensions.gcampax.github.com" "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-top-bar@ftpix.com" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "user-theme@gnome-shell-extensions.gcampax.github.com" "just-perfection-desktop@just-perfection" "battery-indicator-icon@Deminder" "color-picker@tuberry" "ssm-gnome@lgiki.net" "power-profile-switcher@eliapasquali.github.io" "mediacontrols@cliffniff.github.com" "gestureImprovements@gestures" "x11gestures@joseexposito.github.io" "gsconnect@andyholmes.github.io" "panel-workspace-scroll@polymeilex.github.io" ];
       favorite-apps = [ "org.gnome.Nautilus.desktop" "org.gnome.Terminal.desktop" "firefox.desktop" "code.desktop" ];
-      last-selected-power-profile = "power-saver";
+      last-selected-power-profile = "performance";
       welcome-dialog-last-shown-version = "44.2";
     };
 
@@ -850,8 +866,107 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/gsconnect" = {
+      devices = [ "169790bc_17f4_41a2_a945_cd5549ea8ca1" "f6632e15f1a4e42b" ];
+      enabled = true;
       id = "0dfac97c-105c-4beb-8396-f267374d4021";
       name = "nixos";
+      show-indicators = false;
+    };
+
+    "org/gnome/shell/extensions/gsconnect/device/10807139-bf75-499d-98dd-91958271e0b1" = {
+      incoming-capabilities = [ "kdeconnect.battery" "kdeconnect.battery.request" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.contacts.response_uids_timestamps" "kdeconnect.contacts.response_vcards" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.echo" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.request" "kdeconnect.photo" "kdeconnect.photo.request" "kdeconnect.ping" "kdeconnect.presenter" "kdeconnect.runcommand" "kdeconnect.runcommand.request" "kdeconnect.sftp" "kdeconnect.share.request" "kdeconnect.sms.messages" "kdeconnect.systemvolume.request" "kdeconnect.telephony" ];
+      last-connection = "lan://192.168.1.11:1716";
+      name = "cherry";
+      outgoing-capabilities = [ "kdeconnect.battery" "kdeconnect.battery.request" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.contacts.request_all_uids_timestamps" "kdeconnect.contacts.request_vcards_by_uid" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.echo" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.action" "kdeconnect.notification.reply" "kdeconnect.notification.request" "kdeconnect.photo" "kdeconnect.photo.request" "kdeconnect.ping" "kdeconnect.runcommand" "kdeconnect.runcommand.request" "kdeconnect.sftp.request" "kdeconnect.share.request" "kdeconnect.sms.request" "kdeconnect.sms.request_conversation" "kdeconnect.sms.request_conversations" "kdeconnect.systemvolume" "kdeconnect.telephony.request" "kdeconnect.telephony.request_mute" ];
+      supported-plugins = [ "battery" "clipboard" "findmyphone" "mousepad" "mpris" "notification" "ping" "runcommand" "share" ];
+      type = "laptop";
+    };
+
+    "org/gnome/shell/extensions/gsconnect/device/169790bc_17f4_41a2_a945_cd5549ea8ca1" = {
+      certificate-pem = "-----BEGIN CERTIFICATE-----nMIIBkjCCATmgAwIBAgIBATAKBggqhkjOPQQDBDBTMS0wKwYDVQQDDCQxNjk3OTBinY18xN2Y0XzQxYTJfYTk0NV9jZDU1NDllYThjYTExFDASBgNVBAsMC0tERSBDb25unZWN0MQwwCgYDVQQKDANLREUwHhcNMjIxMTMwMjIwMDAwWhcNMzIxMTMwMjIwMDAwnWjBTMS0wKwYDVQQDDCQxNjk3OTBiY18xN2Y0XzQxYTJfYTk0NV9jZDU1NDllYThjnYTExFDASBgNVBAsMC0tERSBDb25uZWN0MQwwCgYDVQQKDANLREUwWTATBgcqhkjOnPQIBBggqhkjOPQMBBwNCAASV0w+tT6m2wRj/CtISzGXclMk9bqZ4YCiO49bZUIebnqEcTesdrMWviUAujEb00syofJpJ44ZaX6+M2WNtvKXvoMAoGCCqGSM49BAMEA0cAnMEQCIG5xOoTU7FntKL13Rdo+gs1sxHCeWoCqoXjt5skQSRFtAiAvHYXjNfz+Ueuznv9tGUssAUgpunBadaJv842D1JGqOAw==n-----END CERTIFICATE-----n";
+      incoming-capabilities = [ "kdeconnect.battery" "kdeconnect.bigscreen.stt" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.contacts.request_all_uids_timestamps" "kdeconnect.contacts.request_vcards_by_uid" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.action" "kdeconnect.notification.reply" "kdeconnect.notification.request" "kdeconnect.ping" "kdeconnect.runcommand" "kdeconnect.sftp.request" "kdeconnect.share.request" "kdeconnect.share.request.update" "kdeconnect.sms.request" "kdeconnect.sms.request_attachment" "kdeconnect.sms.request_conversation" "kdeconnect.sms.request_conversations" "kdeconnect.systemvolume" "kdeconnect.telephony.request" "kdeconnect.telephony.request_mute" ];
+      last-connection = "lan://192.168.16.103:1716";
+      name = "JX3";
+      outgoing-capabilities = [ "kdeconnect.battery" "kdeconnect.bigscreen.stt" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.connectivity_report" "kdeconnect.contacts.response_uids_timestamps" "kdeconnect.contacts.response_vcards" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.echo" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.request" "kdeconnect.ping" "kdeconnect.presenter" "kdeconnect.runcommand.request" "kdeconnect.sftp" "kdeconnect.share.request" "kdeconnect.sms.attachment_file" "kdeconnect.sms.messages" "kdeconnect.systemvolume.request" "kdeconnect.telephony" ];
+      paired = true;
+      supported-plugins = [ "battery" "clipboard" "connectivity_report" "contacts" "findmyphone" "mousepad" "mpris" "notification" "ping" "presenter" "runcommand" "sftp" "share" "sms" "systemvolume" "telephony" ];
+      type = "phone";
+    };
+
+    "org/gnome/shell/extensions/gsconnect/device/169790bc_17f4_41a2_a945_cd5549ea8ca1/plugin/battery" = {
+      custom-battery-notification-value = mkUint32 80;
+    };
+
+    "org/gnome/shell/extensions/gsconnect/device/169790bc_17f4_41a2_a945_cd5549ea8ca1/plugin/notification" = {
+      applications = ''
+        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Evolution Alarm Notify":{"iconName":"appointment-soon","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Geary":{"iconName":"org.gnome.Geary","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Archive Manager":{"iconName":"org.gnome.FileRoller","enabled":true},"Firefox":{"iconName":"","enabled":true},"Spotify":{"iconName":"","enabled":true}}
+      '';
+    };
+
+    "org/gnome/shell/extensions/gsconnect/device/169790bc_17f4_41a2_a945_cd5549ea8ca1/plugin/share" = {
+      receive-directory = "/home/happylime/Downloads";
+    };
+
+    "org/gnome/shell/extensions/gsconnect/device/c20304e6-29e5-4b41-aa1d-644a436730ca" = {
+      incoming-capabilities = [ "kdeconnect.battery" "kdeconnect.battery.request" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.contacts.response_uids_timestamps" "kdeconnect.contacts.response_vcards" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.echo" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.request" "kdeconnect.photo" "kdeconnect.photo.request" "kdeconnect.ping" "kdeconnect.presenter" "kdeconnect.runcommand" "kdeconnect.runcommand.request" "kdeconnect.sftp" "kdeconnect.share.request" "kdeconnect.sms.messages" "kdeconnect.systemvolume.request" "kdeconnect.telephony" ];
+      last-connection = "lan://192.168.1.17:1716";
+      name = "sadek";
+      outgoing-capabilities = [ "kdeconnect.battery" "kdeconnect.battery.request" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.contacts.request_all_uids_timestamps" "kdeconnect.contacts.request_vcards_by_uid" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.echo" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.action" "kdeconnect.notification.reply" "kdeconnect.notification.request" "kdeconnect.photo" "kdeconnect.photo.request" "kdeconnect.ping" "kdeconnect.runcommand" "kdeconnect.runcommand.request" "kdeconnect.sftp.request" "kdeconnect.share.request" "kdeconnect.sms.request" "kdeconnect.sms.request_conversation" "kdeconnect.sms.request_conversations" "kdeconnect.systemvolume" "kdeconnect.telephony.request" "kdeconnect.telephony.request_mute" ];
+      supported-plugins = [ "battery" "clipboard" "findmyphone" "mousepad" "mpris" "notification" "photo" "ping" "runcommand" "share" ];
+      type = "laptop";
+    };
+
+    "org/gnome/shell/extensions/gsconnect/device/c20304e6-29e5-4b41-aa1d-644a436730ca/plugin/battery" = {
+      custom-battery-notification-value = mkUint32 80;
+    };
+
+    "org/gnome/shell/extensions/gsconnect/device/c20304e6-29e5-4b41-aa1d-644a436730ca/plugin/notification" = {
+      applications = ''
+        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Evolution Alarm Notify":{"iconName":"appointment-soon","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Geary":{"iconName":"org.gnome.Geary","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Archive Manager":{"iconName":"org.gnome.FileRoller","enabled":true}}
+      '';
+    };
+
+    "org/gnome/shell/extensions/gsconnect/device/c20304e6-29e5-4b41-aa1d-644a436730ca/plugin/share" = {
+      receive-directory = "/home/happylime/Downloads";
+    };
+
+    "org/gnome/shell/extensions/gsconnect/device/dc8db1bb3ec6e7ae" = {
+      incoming-capabilities = [ "kdeconnect.battery" "kdeconnect.battery.request" "kdeconnect.bigscreen.stt" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.connectivity_report.request" "kdeconnect.contacts.request_all_uids_timestamps" "kdeconnect.contacts.request_vcards_by_uid" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.action" "kdeconnect.notification.reply" "kdeconnect.notification.request" "kdeconnect.photo.request" "kdeconnect.ping" "kdeconnect.runcommand" "kdeconnect.sftp.request" "kdeconnect.share.request" "kdeconnect.share.request.update" "kdeconnect.sms.request" "kdeconnect.sms.request_attachment" "kdeconnect.sms.request_conversation" "kdeconnect.sms.request_conversations" "kdeconnect.systemvolume" "kdeconnect.telephony.request" "kdeconnect.telephony.request_mute" ];
+      last-connection = "lan://192.168.1.8:1716";
+      name = "Infinix X672";
+      outgoing-capabilities = [ "kdeconnect.battery" "kdeconnect.battery.request" "kdeconnect.bigscreen.stt" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.connectivity_report" "kdeconnect.contacts.response_uids_timestamps" "kdeconnect.contacts.response_vcards" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.echo" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.request" "kdeconnect.photo" "kdeconnect.ping" "kdeconnect.presenter" "kdeconnect.runcommand.request" "kdeconnect.sftp" "kdeconnect.share.request" "kdeconnect.sms.attachment_file" "kdeconnect.sms.messages" "kdeconnect.systemvolume.request" "kdeconnect.telephony" ];
+      supported-plugins = [ "battery" "clipboard" "connectivity_report" "contacts" "findmyphone" "mousepad" "mpris" "notification" "ping" "presenter" "runcommand" "sftp" "share" "sms" "systemvolume" "telephony" ];
+      type = "phone";
+    };
+
+    "org/gnome/shell/extensions/gsconnect/device/f6632e15f1a4e42b" = {
+      certificate-pem = "-----BEGIN CERTIFICATE-----nMIIC9zCCAd+gAwIBAgIBATANBgkqhkiG9w0BAQsFADA/MRkwFwYDVQQDDBBmNjYznMmUxNWYxYTRlNDJiMRQwEgYDVQQLDAtLREUgQ29ubmVjdDEMMAoGA1UECgwDS0RFnMB4XDTIwMTEyOTIyMDAwMFoXDTMwMTEyOTIyMDAwMFowPzEZMBcGA1UEAwwQZjY2nMzJlMTVmMWE0ZTQyYjEUMBIGA1UECwwLS0RFIENvbm5lY3QxDDAKBgNVBAoMA0tEnRTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK3Oz9nWAQfMKS2LY+dlneSHhyMIZye6ZH4B4NEICxTIG6NAN0HruDSXvTxUqKACDcFNgfLPUWkPkm1ZpCpQjn3eMN5SikOzNeZrnCNRWwwDCa4k6814F30AmXwfcmICGPp2z/6A+yJ7dTKTjclAW7n+zDtwMnTyr5tNxmg3mMxmFDIBRLf9QrYAVdWuvwulRNmYAJdC4HYH+cpZMHDfKLknngqguC3ddxzuAc3NvZRytH4ty8xLa/43BqOZaHzG4rTFhsOU+qmb9vrlx6dfHLEHnkxnPSYocGVMxOPclKT3xm5oEXR9xCD+ZD83Q8WMKdT2lwjUK6ZH0E5UfVTdPMBdPnms8CAwEAATANBgkqhkiG9w0BAQsFAAOCAQEANmi3PmfuFcRitkMuvy2tjP5M+Ns9n360Jyp1aAfo6Vm9zex7GJfvv7ITl2l8sKRvE1TApBw0CUOaFhynznmvY0SJBmqdvnPw7RxkB1fcUWvOfNcDy+71W7b3k/txUwZA6GmFtD8TQpdgh3D+qZIJZrBEbAuUiFnH9BJwlRWof0gaMDx6PK4EaTsv/8fCnSITW5w9E8FkGsyLzMIqPj34MR+VqL4K03XnfBrappDoo8VeJOHGw4glh4fSFu+ITWnfIcXiNnmavhHQJY3d9AlE+21MusTpiUW6nIm1dk42f1C8UOdUhEp+riYFglZZvePhUUgk0aWqWI2QRbxHHwl+jon12PA==n-----END CERTIFICATE-----n";
+      incoming-capabilities = [ "kdeconnect.battery" "kdeconnect.battery.request" "kdeconnect.bigscreen.stt" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.connectivity_report.request" "kdeconnect.contacts.request_all_uids_timestamps" "kdeconnect.contacts.request_vcards_by_uid" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.action" "kdeconnect.notification.reply" "kdeconnect.notification.request" "kdeconnect.photo.request" "kdeconnect.ping" "kdeconnect.runcommand" "kdeconnect.sftp.request" "kdeconnect.share.request" "kdeconnect.share.request.update" "kdeconnect.sms.request" "kdeconnect.sms.request_attachment" "kdeconnect.sms.request_conversation" "kdeconnect.sms.request_conversations" "kdeconnect.systemvolume" "kdeconnect.telephony.request" "kdeconnect.telephony.request_mute" ];
+      last-connection = "lan://192.168.16.103:1717";
+      name = "M2102J20SG";
+      outgoing-capabilities = [ "kdeconnect.battery" "kdeconnect.battery.request" "kdeconnect.bigscreen.stt" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.connectivity_report" "kdeconnect.contacts.response_uids_timestamps" "kdeconnect.contacts.response_vcards" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.echo" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.request" "kdeconnect.photo" "kdeconnect.ping" "kdeconnect.presenter" "kdeconnect.runcommand.request" "kdeconnect.sftp" "kdeconnect.share.request" "kdeconnect.sms.attachment_file" "kdeconnect.sms.messages" "kdeconnect.systemvolume.request" "kdeconnect.telephony" ];
+      paired = true;
+      supported-plugins = [ "battery" "clipboard" "connectivity_report" "contacts" "findmyphone" "mousepad" "mpris" "notification" "ping" "presenter" "runcommand" "sftp" "share" "sms" "systemvolume" "telephony" ];
+      type = "phone";
+    };
+
+    "org/gnome/shell/extensions/gsconnect/device/f6632e15f1a4e42b/plugin/battery" = {
+      custom-battery-notification-value = mkUint32 80;
+    };
+
+    "org/gnome/shell/extensions/gsconnect/device/f6632e15f1a4e42b/plugin/notification" = {
+      applications = ''
+        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Evolution Alarm Notify":{"iconName":"appointment-soon","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Geary":{"iconName":"org.gnome.Geary","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Archive Manager":{"iconName":"org.gnome.FileRoller","enabled":true},"Spotify":{"iconName":"","enabled":true},"Firefox":{"iconName":"","enabled":true}}
+      '';
+    };
+
+    "org/gnome/shell/extensions/gsconnect/device/f6632e15f1a4e42b/plugin/share" = {
+      receive-directory = "/home/happylime/Downloads";
+    };
+
+    "org/gnome/shell/extensions/gsconnect/preferences" = {
+      window-maximized = false;
+      window-size = mkTuple [ 845 476 ];
     };
 
     "org/gnome/shell/extensions/gsnap" = {
@@ -920,8 +1035,8 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/reorder-workspaces" = {
       keybinding-behavior-outside-of-overview = "disabled";
-      move-workspace-next = [ "<Shift>Down" ];
-      move-workspace-prev = [ "<Shift>Up" ];
+      move-workspace-next = [ "<Shift>Right" ];
+      move-workspace-prev = [ "<Shift>Left" ];
     };
 
     "org/gnome/shell/extensions/simple-system-monitor" = {
@@ -1012,16 +1127,17 @@ with lib.hm.gvariant;
       switch-to-application-9 = [];
       toggle-message-tray = [ "<Super>n" ];
       toggle-overview = [];
+      toggle-quick-settings = [];
     };
 
     "org/gnome/shell/world-clocks" = {
-      locations = "@av []";
+      locations = [];
     };
 
     "org/gnome/software" = {
-      check-timestamp = mkInt64 1701420349;
+      check-timestamp = mkInt64 1705233906;
       first-run = false;
-      flatpak-purge-timestamp = mkInt64 1701420962;
+      flatpak-purge-timestamp = mkInt64 1705106186;
     };
 
     "org/gnome/terminal/legacy" = {
@@ -1040,8 +1156,8 @@ with lib.hm.gvariant;
     };
 
     "org/gtk/gtk4/settings/color-chooser" = {
-      custom-colors = [ (mkTuple [ 0.14902 0.137255 ]) ];
-      selected-color = mkTuple [ true 0.14902 ];
+      custom-colors = [ (mkTuple [ 0.13725490868091583 0.12941177189350128 0.21176470816135406 1.0 ]) (mkTuple [ 0.16470588743686676 0.15294118225574493 0.24705882370471954 1.0 ]) ];
+      selected-color = mkTuple [ true 0.13725490868091583 0.12941177189350128 0.21176470816135406 1.0 ];
     };
 
     "org/gtk/gtk4/settings/file-chooser" = {
@@ -1076,7 +1192,7 @@ with lib.hm.gvariant;
       sort-directories-first = false;
       sort-order = "descending";
       type-format = "category";
-      window-position = mkTuple [ 13 238 ];
+      window-position = mkTuple [ 504 238 ];
       window-size = mkTuple [ 1231 902 ];
     };
 
