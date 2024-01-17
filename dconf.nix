@@ -70,6 +70,13 @@ with lib.hm.gvariant;
       migrated-config = true;
     };
 
+    "org/gnome/Snapshot" = {
+      is-maximized = false;
+      show-composition-guidelines = false;
+      window-height = 640;
+      window-width = 800;
+    };
+
     "org/gnome/TextEditor" = {
       show-line-numbers = true;
       style-scheme = "classic-dark";
@@ -98,6 +105,8 @@ with lib.hm.gvariant;
       source-units = "degree";
       target-currency = "";
       target-units = "radian";
+      window-maximized = false;
+      window-size = mkTuple [ 360 507 ];
       word-size = 64;
     };
 
@@ -431,7 +440,7 @@ with lib.hm.gvariant;
       button-layout = "icon:minimize,maximize,close";
       num-workspaces = 9;
       titlebar-font = "Cantarell Bold 12";
-      workspace-names = [ "1 Whatsapp" "2 Music" "3 NixConf" "4 ChatGPT" ];
+      workspace-names = [ "1" ];
     };
 
     "org/gnome/eog/ui" = {
@@ -477,7 +486,7 @@ with lib.hm.gvariant;
     "org/gnome/gedit/plugins/filebrowser" = {
       root = "file:///";
       tree-view = true;
-      virtual-root = "file:///home/happylime/projects/christmasrandomizer";
+      virtual-root = "file:///home/happylime/projects/mega_backup";
     };
 
     "org/gnome/gedit/preferences/editor" = {
@@ -600,7 +609,7 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
       control-center = [ "<Super>s" ];
-      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom11/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom12/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom13/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom14/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom15/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom16/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom17/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom18/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom19/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom20/" ];
+      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom11/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom12/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom13/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom14/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom15/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom16/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom17/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom18/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom19/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom20/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom21/" ];
       help = [];
       home = [ "<Super>e" ];
       logout = [ "<Control><Super>l" ];
@@ -686,8 +695,14 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom20" = {
-      binding = "<Super>m";
+      binding = "<Shift><Super>m";
       command = "bash -c 'screen_width=$(xdpyinfo | grep dimensions | awk \"{print \\$2}\" | cut -d \"x\" -f 1) && screen_height=$(xdpyinfo | grep dimensions | awk \"{print \\$2}\" | cut -d \"x\" -f 2) && window_width=$((screen_width / 2)) && window_height=$((screen_height / 2)) && bash -c \"spotify & disown\" && bash -c \"youtube-music & disown\" && xdotool search --name \"Spotify\" windowmove 0 0 windowsize ${window_width} ${window_height} && xdotool search --name \"YouTube Music\" windowmove ${window_width} 0 windowsize ${window_width} ${window_height}'n";
+      name = "DOUBLE Music";
+    };
+
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom21" = {
+      binding = "<Super>m";
+      command = "youtube-music & disown && sleep 5 && xdotool search --name \"YouTube Music\" windowsize 100% 100%n";
       name = "Music";
     };
 
@@ -740,7 +755,7 @@ with lib.hm.gvariant;
     "org/gnome/shell" = {
       command-history = [ "r" ];
       disable-user-extensions = false;
-      disabled-extensions = [ "native-window-placement@gnome-shell-extensions.gcampax.github.com" "wsmatrix@martin.zurowietz.de" "vertical-workspaces@G-dH.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "gSnap@micahosborne" ];
+      disabled-extensions = [ "native-window-placement@gnome-shell-extensions.gcampax.github.com" "wsmatrix@martin.zurowietz.de" "vertical-workspaces@G-dH.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "gSnap@micahosborne" "blur-my-shell@aunetx" ];
       enabled-extensions = [ "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-top-bar@zhanghai.me" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "user-theme@gnome-shell-extensions.gcampax.github.com" "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-top-bar@ftpix.com" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "user-theme@gnome-shell-extensions.gcampax.github.com" "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-top-bar@ftpix.com" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "user-theme@gnome-shell-extensions.gcampax.github.com" "just-perfection-desktop@just-perfection" "battery-indicator-icon@Deminder" "color-picker@tuberry" "ssm-gnome@lgiki.net" "power-profile-switcher@eliapasquali.github.io" "mediacontrols@cliffniff.github.com" "gestureImprovements@gestures" "x11gestures@joseexposito.github.io" "gsconnect@andyholmes.github.io" "panel-workspace-scroll@polymeilex.github.io" ];
       favorite-apps = [ "org.gnome.Nautilus.desktop" "org.gnome.Terminal.desktop" "firefox.desktop" "code.desktop" ];
       last-selected-power-profile = "performance";
@@ -758,8 +773,20 @@ with lib.hm.gvariant;
       status-style = "circle";
     };
 
+    "org/gnome/shell/extensions/blur-my-shell" = {
+      brightness = 1.0;
+      color = mkTuple [ 4.3237313628196716e-2 2.053334005177021e-2 0.14666666090488434 0.7233333587646484 ];
+      hacks-level = 0;
+      noise-amount = 1.0;
+      sigma = 60;
+    };
+
+    "org/gnome/shell/extensions/blur-my-shell/panel" = {
+      blur = false;
+    };
+
     "org/gnome/shell/extensions/caffeine" = {
-      indicator-position-max = 1;
+      indicator-position-max = 2;
     };
 
     "org/gnome/shell/extensions/custom-hot-corners-extended/misc" = {
@@ -988,6 +1015,7 @@ with lib.hm.gvariant;
       gesture = true;
       hot-corner = false;
       osd = true;
+      overlay-key = true;
       panel = true;
       panel-arrow = true;
       panel-corner-size = 0;
@@ -1006,7 +1034,7 @@ with lib.hm.gvariant;
       workspace = true;
       workspace-background-corner-size = 0;
       workspace-popup = true;
-      workspace-switcher-should-show = false;
+      workspace-switcher-should-show = true;
       workspaces-in-app-grid = true;
     };
 
@@ -1135,9 +1163,9 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/software" = {
-      check-timestamp = mkInt64 1705233906;
+      check-timestamp = mkInt64 1705394014;
       first-run = false;
-      flatpak-purge-timestamp = mkInt64 1705106186;
+      flatpak-purge-timestamp = mkInt64 1705409981;
     };
 
     "org/gnome/terminal/legacy" = {
@@ -1156,8 +1184,8 @@ with lib.hm.gvariant;
     };
 
     "org/gtk/gtk4/settings/color-chooser" = {
-      custom-colors = [ (mkTuple [ 0.13725490868091583 0.12941177189350128 0.21176470816135406 1.0 ]) (mkTuple [ 0.16470588743686676 0.15294118225574493 0.24705882370471954 1.0 ]) ];
-      selected-color = mkTuple [ true 0.13725490868091583 0.12941177189350128 0.21176470816135406 1.0 ];
+      custom-colors = [ (mkTuple [ 4.3237313628196716e-2 2.053334005177021e-2 0.14666666090488434 0.7233333587646484 ]) (mkTuple [ 0.14162133634090424 2.053334005177021e-2 0.14666666090488434 0.7233333587646484 ]) (mkTuple [ 0.14162133634090424 2.0533330738544464e-2 0.14666666090488434 0.7233333587646484 ]) (mkTuple [ 0.34967201948165894 2.1800002083182335e-2 0.3633333444595337 0.7233333587646484 ]) (mkTuple [ 0.0 0.0 0.0 0.0 ]) (mkTuple [ 0.13725490868091583 0.12941177189350128 0.21176470816135406 1.0 ]) (mkTuple [ 0.16470588743686676 0.15294118225574493 0.24705882370471954 1.0 ]) ];
+      selected-color = mkTuple [ true 4.3237313628196716e-2 2.053334005177021e-2 0.14666666090488434 0.7233333587646484 ];
     };
 
     "org/gtk/gtk4/settings/file-chooser" = {
@@ -1192,7 +1220,7 @@ with lib.hm.gvariant;
       sort-directories-first = false;
       sort-order = "descending";
       type-format = "category";
-      window-position = mkTuple [ 504 238 ];
+      window-position = mkTuple [ 13 11 ];
       window-size = mkTuple [ 1231 902 ];
     };
 

@@ -1,4 +1,4 @@
-# Eedit this configuration file to define what should be installed on
+# Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
@@ -9,7 +9,6 @@ let
   nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
     inherit pkgs;
   #end of NUR for spotify
-
   };
 
 in
@@ -169,24 +168,24 @@ in
   #end of create directories
   
   #First script systemd timer
-  systemd.services.mega_keepass_backup = {
-    serviceConfig.Type = "oneshot";
-    script = ''
-      #!/usr/bin/env nix-shell
-      #!nix-shell -i bash -p mega-cmd
+  # systemd.services.mega_keepass_backup = {
+  #   serviceConfig.Type = "oneshot";
+  #   script = ''
+  #     #!/usr/bin/env nix-shell
+  #     #!nix-shell -i bash -p mega-cmd
 
-      echo "Script started at $(date)"
+  #     echo "Script started at $(date)"
 
-      # Set PATH to include megacmd
-      export PATH=$PATH:${pkgs.megacmd}/bin
-
-      if mega-put $HOME/Documents/Keepass/JaafarDatabase.kdbx /keepass_database > /tmp/mega_backup.log 2>&1; then
-        echo "Script completed at $(date)"
-      else
-        echo "Error: mega-put command failed. Check /tmp/mega_backup.log for details."
-      fi
-    '';
-  };
+  #     # Set PATH to include megacmd
+  #     export PATH=$PATH:${pkgs.megacmd}/bin
+  #     mega-login ez.synchro@gmail.com ${secrets.megapassword}
+  #     if mega-put $HOME/Documents/Keepass/JaafarDatabase.kdbx /keepass_database > /tmp/mega_backup.log 2>&1; then
+  #       echo "Script completed at $(date)"
+  #     else
+  #       echo "Error: mega-put command failed. Check /tmp/mega_backup.log for details."
+  #     fi
+  #   '';
+  # };
 
   systemd.timers.mega_keepass_backup = {
     wantedBy = [ "timers.target" ];
@@ -292,6 +291,7 @@ in
 	powertop
 	python311
 	qbittorrent
+  #sops-nix
 	#teams
 	tenacity
 	tldr
@@ -324,7 +324,7 @@ in
 	gnomeExtensions.dash-to-dock
   gnomeExtensions.gsconnect
 	gnomeExtensions.just-perfection
-	gnomeExtensions.media-controls
+	#gnomeExtensions.media-controls
 	gnomeExtensions.power-profile-switcher
 	gnomeExtensions.reorder-workspaces
 	gnomeExtensions.tactile
