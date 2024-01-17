@@ -303,6 +303,7 @@ in
 	webex
   wget
   wmctrl
+  xdotool
 	youtube-music
 	zip
 	#NUR
