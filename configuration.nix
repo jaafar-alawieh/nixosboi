@@ -324,7 +324,7 @@ in
 	gnomeExtensions.dash-to-dock
   gnomeExtensions.gsconnect
 	gnomeExtensions.just-perfection
-	#gnomeExtensions.media-controls
+	gnomeExtensions.media-controls
 	gnomeExtensions.power-profile-switcher
 	gnomeExtensions.reorder-workspaces
 	gnomeExtensions.tactile
