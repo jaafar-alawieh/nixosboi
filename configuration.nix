@@ -328,11 +328,10 @@ in
 	gnomeExtensions.power-profile-switcher
 	gnomeExtensions.reorder-workspaces
 	gnomeExtensions.tactile
-  #gnomeExtensions.panel-workspace-scroll
-	gnomeExtensions.top-panel-workspace-scroll
+  gnomeExtensions.panel-workspace-scroll
 	gnomeExtensions.transparent-top-bar-adjustable-transparency
 	gnomeExtensions.transparent-window-moving
-	gnomeExtensions.scroll-panel
+	#gnomeExtensions.scroll-panel #wait for this to be compatible; more features
   gnomeExtensions.space-bar
   gnomeExtensions.workspace-matrix
 	#gnome themes
