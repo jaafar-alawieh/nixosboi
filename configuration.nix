@@ -288,7 +288,7 @@ in
 	obs-studio
 	ocrmypdf #pdf tool
   pass
-  pass-wayland
+  #pass-wayland
 	poppler_utils #anotherpdf toolfml
 	powertop
 	python311
