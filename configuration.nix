@@ -287,6 +287,8 @@ in
 	nodePackages_latest.pnpm #package for webdev experiment 
 	obs-studio
 	ocrmypdf #pdf tool
+  pass
+  pass-wayland
 	poppler_utils #anotherpdf toolfml
 	powertop
 	python311
