@@ -308,7 +308,7 @@ in
   ydotool
 	youtube-music
 	zip
-  zoom
+  zoom-us
 	#NUR
 	nur.repos.nltch.spotify-adblock    #for installing spotify-adblock
 	#hyprland
