@@ -48,8 +48,8 @@ in
   system.copySystemConfiguration = true;
 
   # Set your time zone.
-  time.timeZone = "Asia/Beirut";
-
+  #time.timeZone = "Asia/Beirut";
+  time.timeZone = "Europe/Paris";
   # Set Default Language
 
   # Select internationalisation properties.
