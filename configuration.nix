@@ -258,6 +258,7 @@ in
 	brave
 	dconf2nix
   firefox
+  ffmpeg_5-full
 	fsearch
 	gh #github cli tool
 	gimp-with-plugins
