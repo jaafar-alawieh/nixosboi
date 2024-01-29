@@ -296,6 +296,7 @@ in
 	qbittorrent
   #sops-nix
 	#teams
+  qtpass
 	tenacity
 	tldr
 	ungoogled-chromium
