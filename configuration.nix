@@ -116,10 +116,12 @@ in
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+
+  users.mutableUsers = true;
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.happylime = {
+  users.users.jalawieh = {
     isNormalUser = true;
-    description = "happylime";
+    description = "jalawieh";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
@@ -244,10 +246,10 @@ in
   remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
   dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
-  home-manager.users."happylime" = {
+  home-manager.users."jalawieh" = {
     home.stateVersion="23.11";
     programs.bash.enable = true;
-    #imports = [ ./dconf.nix ];
+    imports = [ ./dconf.nix ];
     home.file."touchegg".target = "/config/touchegg/touchegg.conf";
     home.file."touchegg".source = "/etc/nixos/conffiles/touchegg.conf";  # or .text if I just want to include everything in a nix config file and import it
   };
