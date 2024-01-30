@@ -117,7 +117,7 @@ in
   # services.xserver.libinput.enable = true;
 
 
-  users.mutableUsers = true;
+  #dont think i need this: users.mutableUsers = true;
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jalawieh = {
     isNormalUser = true;
