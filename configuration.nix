@@ -327,7 +327,7 @@ in
   #gnome extensions 
 	gnomeExtensions.battery-indicator-icon 
   gnomeExtensions.blur-my-shell
-	#gnomeExtensions.caffeine
+	gnomeExtensions.caffeine
 	gnomeExtensions.clipboard-indicator
 	gnomeExtensions.dash-to-dock
   gnomeExtensions.gsconnect
