@@ -249,7 +249,7 @@ in
   home-manager.users."jalawieh" = {
     home.stateVersion="23.11";
     programs.bash.enable = true;
-    imports = [ ./dconf.nix ];
+    #imports = [ ./dconf.nix ];
     home.file."touchegg".target = "/config/touchegg/touchegg.conf";
     home.file."touchegg".source = "/etc/nixos/conffiles/touchegg.conf";  # or .text if I just want to include everything in a nix config file and import it
   };
@@ -327,7 +327,7 @@ in
   #gnome extensions 
 	gnomeExtensions.battery-indicator-icon 
   gnomeExtensions.blur-my-shell
-	#gnomeExtensions.caffeine
+	gnomeExtensions.caffeine
 	gnomeExtensions.clipboard-indicator
 	gnomeExtensions.dash-to-dock
   gnomeExtensions.gsconnect
