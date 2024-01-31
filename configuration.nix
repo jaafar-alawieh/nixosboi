@@ -300,6 +300,7 @@ in
   #sops-nix
 	#teams
   qtpass
+  remmina
 	tenacity
 	tldr
 	ungoogled-chromium
