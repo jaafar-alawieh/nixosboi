@@ -91,6 +91,14 @@ in
   xdg.portal.enable = true;
   # xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
+  ##virtualization https://nixos.wiki/wiki/Virt-manager
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+  #end of virtualization
+
+
+
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
