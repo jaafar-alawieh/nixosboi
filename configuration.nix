@@ -310,6 +310,7 @@ in
 	#teams
   qtpass
   remmina
+  spice-vdagent
 	tenacity
 	tldr
 	ungoogled-chromium
