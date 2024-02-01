@@ -329,7 +329,7 @@ in
 
   #gnome extensions 
 	gnomeExtensions.battery-indicator-icon 
-	gnomeExtensions.caffeine
+	#gnomeExtensions.caffeine
 	gnomeExtensions.clipboard-indicator
 	gnomeExtensions.dash-to-dock
   gnomeExtensions.gsconnect
