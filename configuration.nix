@@ -329,6 +329,7 @@ in
 	gnomeExtensions.clipboard-indicator
 	gnomeExtensions.dash-to-dock
   gnomeExtensions.gsconnect
+  gnomeExtensions.gsnap
 	gnomeExtensions.just-perfection
 	gnomeExtensions.media-controls
 	gnomeExtensions.power-profile-switcher
