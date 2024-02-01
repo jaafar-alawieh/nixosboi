@@ -327,9 +327,9 @@ in
   gnomeExtensions.blur-my-shell
 	gnomeExtensions.caffeine
 	gnomeExtensions.clipboard-indicator
+  gnomeExtensions.custom-hot-corners-extended
 	gnomeExtensions.dash-to-dock
   gnomeExtensions.gsconnect
-  gnomeExtensions.gsnap
 	gnomeExtensions.just-perfection
 	gnomeExtensions.media-controls
 	gnomeExtensions.power-profile-switcher
