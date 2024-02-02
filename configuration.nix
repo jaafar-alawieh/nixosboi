@@ -144,6 +144,7 @@ in
   #insecure packages
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"
+    "electron-19.1.9"
   ];
 
 
@@ -268,6 +269,7 @@ in
   environment.systemPackages = with pkgs; [
 	brave
 	dconf2nix
+  etcher
   firefox
   ffmpeg_5-full
 	fsearch
