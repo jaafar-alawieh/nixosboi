@@ -301,8 +301,8 @@ in
   mpv
 	mullvad-vpn
   nano
-	neofetch
-	neovim
+	#neofetch
+	#neovim
 	nodePackages_latest.pnpm #package for webdev experiment 
 	obs-studio
 	ocrmypdf #pdf tool
