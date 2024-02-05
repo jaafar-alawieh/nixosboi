@@ -386,7 +386,7 @@ in
         l = "ls -alh";
         ll = "ls -l";
         ls = "ls --color=tty";
-        conv = "code --disable-gpu ~/projects/nix/configuration.nix";
+        conv = "code ~/projects/nix/configuration.nix";
         revuild = "sudo cp ~/projects/nix/configuration.nix /etc/nixos/configuration.nix && sudo nixos-rebuild switch && [ $? -eq 0 ] && git -C ~/projects/nix add . && git -C ~/projects/nix commit -m 'auto rebuild commit' && git -C ~/projects/nix push";
         conf = "sudo nano -l /etc/nixos/configuration.nix";
         rebuild = "sudo nixos-rebuild switch && [ $? -eq 0 ] && now=$(date +'%Y-%m-%d_%H-%M-%S') && sudo cp /etc/nixos/configuration.nix /etc/nixos/conffiles/backups/configuration.$now.nix";
