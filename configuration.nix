@@ -96,7 +96,10 @@ in
   programs.virt-manager.enable = true;
   services.qemuGuest.enable = true;
   #end of virtualization
-
+  ##docker
+  virtualisation.docker.enable = true;
+  users.extraGroups.docker.members = [ "jalawieh" ];
+  ##end docker
 
 
 
