@@ -278,7 +278,7 @@ in
 	git
 	glaxnimate #kdenlive dependency why tf aint it predownloaded
 	gnome-frog
-  gnome.gnome-boxes
+  #gnome.gnome-boxes
 	gnome.gedit
   gnome3.gnome-tweaks
   gnome.dconf-editor
