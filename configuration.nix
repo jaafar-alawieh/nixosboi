@@ -325,6 +325,7 @@ in
   vim 
 	vlc
 	vscode-fhs
+  wayvnc
 	webex
   wget
   wmctrl
