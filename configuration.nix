@@ -298,6 +298,7 @@ in
 	lmms
 	mediainfo #kdenlive dependency why tf aint it predownloaded
 	megacmd
+  mosh
   mpv
 	mullvad-vpn
   nano
