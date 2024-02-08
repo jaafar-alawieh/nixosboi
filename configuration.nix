@@ -311,6 +311,7 @@ in
 	ocrmypdf #pdf tool
   openssh
   pass
+  passExtensions.pass-import
   #pass-wayland
 	poppler_utils #anotherpdf toolfml
 	powertop
