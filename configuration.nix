@@ -274,9 +274,10 @@ in
   brave
   copyq
 	dconf2nix
-  etcher
+  etcher #disk image etcher balena etcher
   firefox
   ffmpeg_5-full
+  fpm #package builder
 	fsearch
 	gh #github cli tool
 	gimp-with-plugins
