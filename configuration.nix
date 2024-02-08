@@ -271,6 +271,7 @@ in
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 	brave
+  copyq
 	dconf2nix
   etcher
   firefox
