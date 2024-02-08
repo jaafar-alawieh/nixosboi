@@ -270,7 +270,8 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-	brave
+	autocutsel
+  brave
   copyq
 	dconf2nix
   etcher
