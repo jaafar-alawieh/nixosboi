@@ -277,7 +277,7 @@ in
   etcher #disk image etcher balena etcher
   firefox
   ffmpeg_5-full
-  fpm #package builder
+  fpm #package builder for pyp2rpm
 	fsearch
 	gh #github cli tool
 	gimp-with-plugins
@@ -323,6 +323,7 @@ in
   qtpass
   remmina
   spice-vdagent
+  squashfsTools #pyp2rpm crap
 	tenacity
 	tldr
 	ungoogled-chromium
