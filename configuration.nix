@@ -255,7 +255,9 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+  autocutsel
 	brave
+  copyq
 	dconf2nix
   firefox
   ffmpeg_5-full
