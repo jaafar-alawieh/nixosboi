@@ -290,7 +290,6 @@ in
   gnome.dconf-editor
   gnome.gnome-terminal
 	gradience
-  gzdoom
   home-manager
 	imagemagick #CLI converter
 	keepassxc
