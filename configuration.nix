@@ -31,7 +31,7 @@ in
 
   #update
   system.autoUpgrade.enable = true;
-  system.autoUpgrade.allowReboot = true;
+  system.autoUpgrade.allowReboot = false;
   system.autoUpgrade.channel = "https://channels.nixos.org/nixos-23.11";
 
 
