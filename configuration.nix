@@ -271,6 +271,8 @@ in
   gnome3.gnome-tweaks
   gnome.dconf-editor
   gnome.gnome-terminal
+  gnupg
+  gnupg1
 	gradience
   gzdoom
   home-manager
