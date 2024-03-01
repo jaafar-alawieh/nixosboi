@@ -384,7 +384,10 @@ in
   fonts.packages = with pkgs; [
   corefonts
   dejavu_fonts
+  freefont_ttf
   liberation_ttf
+  nerdfonts
+  noto-fonts
   vistafonts
   wine64Packages.fonts
   ];
