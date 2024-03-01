@@ -383,6 +383,8 @@ in
   #fonts
   fonts.packages = with pkgs; [
   corefonts
+  dejavu_fonts
+  liberation_ttf
   vistafonts
   wine64Packages.fonts
   ];
