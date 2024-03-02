@@ -282,6 +282,7 @@ in
 	libsForQt5.kdenlive #kdenlive
 	livecaptions
 	lmms
+  lutris
 	mediainfo #kdenlive dependency why tf aint it predownloaded
 	megacmd
   mpv
