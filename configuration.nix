@@ -273,6 +273,7 @@ in
 	autocutsel
   brave
   copyq
+  cups
 	dconf2nix
   etcher #disk image etcher balena etcher
   firefox
