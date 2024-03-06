@@ -273,6 +273,7 @@ in
   android-tools
 	autocutsel
   brave
+  cargo
   copyq
   cups
 	dconf2nix
