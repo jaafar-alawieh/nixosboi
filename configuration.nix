@@ -312,6 +312,7 @@ in
 	nodePackages_latest.pnpm #package for webdev experiment 
 	obs-studio
 	ocrmypdf #pdf tool
+  openfortivpn
   openssh
   pass
   passExtensions.pass-import
