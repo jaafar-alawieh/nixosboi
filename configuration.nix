@@ -309,6 +309,7 @@ in
   nano
 	neofetch
 	neovim
+  networkmanager-fortisslvpn
 	nodePackages_latest.pnpm #package for webdev experiment 
 	obs-studio
 	ocrmypdf #pdf tool
