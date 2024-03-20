@@ -314,6 +314,7 @@ in
 	obs-studio
 	ocrmypdf #pdf tool
   openfortivpn
+  #openfortivpn-webview
   openssh
   pass
   passExtensions.pass-import
