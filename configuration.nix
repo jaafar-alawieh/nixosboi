@@ -286,6 +286,7 @@ in
 	gimp-with-plugins
 	git
 	glaxnimate #kdenlive dependency why tf aint it predownloaded
+  gnome.cheese
 	gnome-frog
   #gnome.gnome-boxes
 	gnome.gedit
