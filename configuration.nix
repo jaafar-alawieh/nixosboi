@@ -290,9 +290,10 @@ in
 	gnome-frog
   #gnome.gnome-boxes
 	gnome.gedit
-  gnome3.gnome-tweaks
   gnome.dconf-editor
   gnome.gnome-terminal
+  gnome.gpaste
+  gnome3.gnome-tweaks
 	gradience
   home-manager
 	imagemagick #CLI converter
@@ -359,7 +360,6 @@ in
   #gnome extensions 
 	gnomeExtensions.battery-indicator-icon 
 	gnomeExtensions.caffeine
-	gnomeExtensions.clipboard-indicator
 	gnomeExtensions.dash-to-dock
   gnomeExtensions.gsconnect
   gnomeExtensions.gtile
