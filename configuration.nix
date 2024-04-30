@@ -331,6 +331,7 @@ in
   remmina
   spice-vdagent
   squashfsTools #pyp2rpm crap
+  teams-for-linux
 	tenacity
 	tldr
 	ungoogled-chromium
