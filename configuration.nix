@@ -5,11 +5,6 @@
 { config, pkgs, lib, fetchurl, self, nix-pkgs, buildEnv, ... }:
 
 let
-  #NUR for spotify
-  nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
-    inherit pkgs;
-  #end of NUR for spotify
-  };
 
 in
 {
