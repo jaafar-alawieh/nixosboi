@@ -347,8 +347,6 @@ in
 	youtube-music
 	zip
   zoom-us
-	#NUR
-	nur.repos.nltch.spotify-adblock    #for installing spotify-adblock
 	#hyprland
   # dunst #notif
   # kitty #terminal
@@ -418,6 +416,7 @@ in
         cp = "cp -i";
         mv = "mv -i";
         mkdir = "mkdir -p";
+        nixclean = "nix-env --delete-generations old && nix-store --gc && nix-channel --update && nix-env -u --always && for link in /nix/var/nix/gcroots/auto/*; do rm $(readlink $link); done && nix-collect-garbage -d";
         home = "cd ~";
         cb = "cd ..";
         cbb = "cd ../..";
