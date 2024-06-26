@@ -244,13 +244,13 @@ in
   remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
   dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
-  home-manager.users."happylime" = {
-    home.stateVersion="23.11";
-    programs.bash.enable = true;
-    #imports = [ ./dconf.nix ];
-    home.file."touchegg".target = "/config/touchegg/touchegg.conf";
-    home.file."touchegg".source = "/etc/nixos/conffiles/touchegg.conf";  # or .text if I just want to include everything in a nix config file and import it
-  };
+#  home-manager.users."happylime" = {
+#    home.stateVersion="23.11";
+#    programs.bash.enable = true;
+#    #imports = [ ./dconf.nix ];
+#    home.file."touchegg".target = "/config/touchegg/touchegg.conf";
+#    home.file."touchegg".source = "/etc/nixos/conffiles/touchegg.conf";  # or .text if I just want to include everything in a nix config file and import it
+#  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
