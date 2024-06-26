@@ -32,7 +32,7 @@ in
   #update
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = false;
-  system.autoUpgrade.channel = "https://channels.nixos.org/nixos-23.11";
+  system.autoUpgrade.channel = "https://channels.nixos.org/nixos-24.05";
 
 
   networking.hostName = "nixos"; # Define your hostname.
