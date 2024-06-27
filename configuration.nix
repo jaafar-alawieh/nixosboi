@@ -268,15 +268,6 @@ in
   zoom-us
 	#NUR
 	nur.repos.nltch.spotify-adblock    #for installing spotify-adblock
-	#hyprland
-  # dunst #notif
-  # kitty #terminal
-  # mako #notif
-  # libnotify #notif
-  # wofi #gtk rofi that's used to launch apps
-  # swww #wallpaper
-  # waybar #topbar
-
   #gnome extensions 
 	gnomeExtensions.battery-indicator-icon 
   gnomeExtensions.blur-my-shell
