@@ -218,21 +218,6 @@ in
   };
   #####only for jaafar's backlight - DELETE FOR OTHER COMPUTERS
 
-  #calling github bashfiles
-  ##bashfile 1
-  #  buildEnv {
-  #    name = "custom-scripts-env";
-  #    paths = [
-  #      (lib.dontUnpack {
-  #        name = "custom-scripts";
-  #        builder = ./builder.sh;
-  #        src = fetchurl {
-  #          url = "https://raw.githubusercontent.com/jaafar-alawieh/nixosboi/main/dconfbackup.sh"; # Replace with the correct URL
-  #          sha256 = "0cglyppx1id90gvkvhai6irmib8741dbags4pb512g0wnhsdfd8a"; # Replace with the correct hash
-  #        };
-  #      })
-  #    ];
-  # }
   
   #GNOME DCONF SETTINGS ##Use `dconf watch /` to track stateful changes you are doing, then set them here.
   #comment out dconf.nix line when done with it so it doesnt keep undoing new adjustments
