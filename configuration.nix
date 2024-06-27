@@ -244,6 +244,7 @@ in
   remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
   dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
+  
   home-manager.users."happylime" = {
     home.stateVersion="24.05";
     programs.bash.enable = true;
