@@ -261,6 +261,8 @@ in
 	vscode-fhs
 	webex
   wget
+  wineWowPackages.stable
+  winetricks
   wmctrl
   ydotool
 	youtube-music
