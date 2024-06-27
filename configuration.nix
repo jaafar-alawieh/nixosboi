@@ -80,13 +80,6 @@ in
     xkb.variant = "";
   };
 
-  # #hyprland
-  # programs.hyprland = {
-  #   enable = true;
-  #   xwayland.enable = true;
-  # };
-  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
-
   # #hyprland xdg portal #not sure if i need this
   xdg.portal.enable = true;
   # xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
@@ -135,10 +128,8 @@ in
     "electron-25.9.0"
   ];
 
-
   #flatpak support
   services.flatpak.enable = true;
-
 
   ##general overrides
 
