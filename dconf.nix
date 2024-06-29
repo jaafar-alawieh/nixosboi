@@ -6,7 +6,7 @@ with lib.hm.gvariant;
 {
   dconf.settings = {
     "apps/seahorse/listing" = {
-      keyrings-selected = [ "secret-service:///org/freedesktop/secrets/collection/login" ];
+      keyrings-selected = [ "gnupg://" ];
     };
 
     "apps/seahorse/windows/key-manager" = {
@@ -71,7 +71,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/Snapshot" = {
-      is-maximized = false;
+      is-maximized = true;
       show-composition-guidelines = false;
       window-height = 640;
       window-width = 800;
@@ -126,7 +126,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/control-center" = {
-      last-panel = "info-overview";
+      last-panel = "keyboard";
       window-state = mkTuple [ 980 484 false ];
     };
 
@@ -190,7 +190,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = [ "org-gnome-settings" "gnome-power-panel" "org-gnome-console" "org-gnome-characters" "firefox" "org-gnome-nautilus" "gnome-network-panel" "org-gnome-extensions" "impress" "writer" "org-gnome-tweaks" "code" "teams" "org-gnome-terminal" "io-github-realmazharhussain-gdmsettings" "org-gnome-gedit" "xdg-desktop-portal-gnome" "vlc" "gnome-system-monitor" "org-keepassxc-keepassxc" "com-github-joseexposito-touche" "org-gnome-geary" "mullvad-vpn" "org-qbittorrent-qbittorrent" "tenacity" "spotify" "com-spotify-client" "org-gnome-eog" "android-studio" "gimp" "calc" "org-gnome-shell-extensions-gsconnect-preferences" "org-gnome-shell-extensions-gsconnect" "io-github-cboxdoerfer-fsearch" "steam" ];
+      application-children = [ "org-gnome-settings" "gnome-power-panel" "org-gnome-console" "org-gnome-characters" "firefox" "org-gnome-nautilus" "gnome-network-panel" "org-gnome-extensions" "impress" "writer" "org-gnome-tweaks" "code" "teams" "org-gnome-terminal" "io-github-realmazharhussain-gdmsettings" "org-gnome-gedit" "xdg-desktop-portal-gnome" "vlc" "gnome-system-monitor" "org-keepassxc-keepassxc" "com-github-joseexposito-touche" "org-gnome-geary" "mullvad-vpn" "org-qbittorrent-qbittorrent" "tenacity" "spotify" "com-spotify-client" "org-gnome-eog" "android-studio" "gimp" "calc" "org-gnome-shell-extensions-gsconnect-preferences" "org-gnome-shell-extensions-gsconnect" "io-github-cboxdoerfer-fsearch" "steam" "org-upscayl-upscayl" "org-gnome-baobab" "org-gnome-extensions-desktop" ];
       show-banners = true;
     };
 
@@ -254,6 +254,10 @@ with lib.hm.gvariant;
       application-id = "mullvad-vpn.desktop";
     };
 
+    "org/gnome/desktop/notifications/application/org-gnome-baobab" = {
+      application-id = "org.gnome.baobab.desktop";
+    };
+
     "org/gnome/desktop/notifications/application/org-gnome-characters" = {
       application-id = "org.gnome.Characters.desktop";
     };
@@ -272,6 +276,10 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/notifications/application/org-gnome-evince" = {
       application-id = "org.gnome.Evince.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/org-gnome-extensions-desktop" = {
+      application-id = "org.gnome.Extensions.desktop.desktop";
     };
 
     "org/gnome/desktop/notifications/application/org-gnome-extensions" = {
@@ -316,6 +324,10 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/notifications/application/org-qbittorrent-qbittorrent" = {
       application-id = "org.qbittorrent.qBittorrent.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/org-upscayl-upscayl" = {
+      application-id = "org.upscayl.Upscayl.desktop";
     };
 
     "org/gnome/desktop/notifications/application/spotify" = {
@@ -438,9 +450,9 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "icon:minimize,maximize,close";
-      num-workspaces = 9;
+      num-workspaces = 5;
       titlebar-font = "Cantarell Bold 12";
-      workspace-names = [ "1" ];
+      workspace-names = [ "1 Messaging" "2  Music" ];
     };
 
     "org/gnome/eog/ui" = {
@@ -457,7 +469,17 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/evince/default" = {
-      window-ratio = mkTuple [ 1.8791946308724832 1.631828978622328 ];
+      continuous = true;
+      dual-page = false;
+      dual-page-odd-left = true;
+      enable-spellchecking = true;
+      fullscreen = false;
+      inverted-colors = false;
+      show-sidebar = true;
+      sidebar-page = "thumbnails";
+      sidebar-size = 148;
+      sizing-mode = "automatic";
+      window-ratio = mkTuple [ 1.881391891391415 1.2828282828282822 ];
     };
 
     "org/gnome/evolution-data-server" = {
@@ -471,7 +493,7 @@ with lib.hm.gvariant;
 
     "org/gnome/file-roller/listing" = {
       list-mode = "as-folder";
-      name-column-width = 250;
+      name-column-width = 768;
       show-path = false;
       sort-method = "name";
       sort-type = "ascending";
@@ -480,18 +502,18 @@ with lib.hm.gvariant;
     "org/gnome/file-roller/ui" = {
       sidebar-width = 200;
       window-height = 480;
-      window-width = 600;
+      window-width = 1318;
     };
 
     "org/gnome/gedit/plugins/filebrowser" = {
       root = "file:///";
-      tree-view = true;
-      virtual-root = "file:///home/happylime/projects/mega_backup";
+      tree-view = false;
+      virtual-root = "file:///run/media/happylime/Crucial%20X9/Games";
     };
 
     "org/gnome/gedit/preferences/editor" = {
       editor-font = "Source Code Pro 14";
-      scheme = "dracula";
+      scheme = "cobalt";
       use-default-font = false;
       wrap-last-split-mode = "word";
     };
@@ -506,7 +528,7 @@ with lib.hm.gvariant;
       side-panel-active-page = "GeditWindowDocumentsPanel";
       side-panel-size = 200;
       size = mkTuple [ 1120 1326 ];
-      state = 87040;
+      state = 87168;
     };
 
     "org/gnome/gnome-system-monitor" = {
@@ -531,7 +553,7 @@ with lib.hm.gvariant;
 
     "org/gnome/mutter" = {
       center-new-windows = false;
-      dynamic-workspaces = true;
+      dynamic-workspaces = false;
       workspaces-only-on-primary = true;
     };
 
@@ -609,10 +631,10 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
       control-center = [ "<Super>s" ];
-      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom11/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom12/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom13/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom14/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom15/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom16/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom17/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom18/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom19/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom20/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom21/" ];
+      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom11/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom12/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom13/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom14/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom15/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom16/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom17/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom18/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom19/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom20/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom21/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom22/" ];
       help = [];
       home = [ "<Super>e" ];
-      logout = [ "<Control><Super>l" ];
+      logout = [];
       www = [ "<Super>b" ];
     };
 
@@ -702,8 +724,14 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom21" = {
       binding = "<Super>m";
-      command = "youtube-music & disown && sleep 5 && xdotool search --name \"YouTube Music\" windowsize 100% 100%n";
+      command = "chromium-browser --app=https://music.youtube.com/";
       name = "Music";
+    };
+
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom22" = {
+      binding = "<Control><Super>l";
+      command = "busctl --user call org.gnome.Shell /org/gnome/ScreenSaver org.gnome.ScreenSaver SetActive b true n";
+      name = "wayland screen off";
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
@@ -755,8 +783,8 @@ with lib.hm.gvariant;
     "org/gnome/shell" = {
       command-history = [ "r" ];
       disable-user-extensions = false;
-      disabled-extensions = [ "native-window-placement@gnome-shell-extensions.gcampax.github.com" "wsmatrix@martin.zurowietz.de" "vertical-workspaces@G-dH.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "gSnap@micahosborne" "blur-my-shell@aunetx" ];
-      enabled-extensions = [ "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-top-bar@zhanghai.me" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "user-theme@gnome-shell-extensions.gcampax.github.com" "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-top-bar@ftpix.com" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "user-theme@gnome-shell-extensions.gcampax.github.com" "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-top-bar@ftpix.com" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "user-theme@gnome-shell-extensions.gcampax.github.com" "just-perfection-desktop@just-perfection" "battery-indicator-icon@Deminder" "color-picker@tuberry" "ssm-gnome@lgiki.net" "power-profile-switcher@eliapasquali.github.io" "mediacontrols@cliffniff.github.com" "gestureImprovements@gestures" "x11gestures@joseexposito.github.io" "gsconnect@andyholmes.github.io" "panel-workspace-scroll@polymeilex.github.io" ];
+      disabled-extensions = [ "native-window-placement@gnome-shell-extensions.gcampax.github.com" "vertical-workspaces@G-dH.github.com" "blur-my-shell@aunetx" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "wsmatrix@martin.zurowietz.de" "gSnap@micahosborne" "custom-hot-corners-extended@G-dH.github.com" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" ];
+      enabled-extensions = [ "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-top-bar@zhanghai.me" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "user-theme@gnome-shell-extensions.gcampax.github.com" "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-top-bar@ftpix.com" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "user-theme@gnome-shell-extensions.gcampax.github.com" "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-top-bar@ftpix.com" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "user-theme@gnome-shell-extensions.gcampax.github.com" "just-perfection-desktop@just-perfection" "battery-indicator-icon@Deminder" "color-picker@tuberry" "ssm-gnome@lgiki.net" "power-profile-switcher@eliapasquali.github.io" "mediacontrols@cliffniff.github.com" "gestureImprovements@gestures" "x11gestures@joseexposito.github.io" "gsconnect@andyholmes.github.io" "panel-workspace-scroll@polymeilex.github.io" "dash-to-dock@micxgx.gmail.com" ];
       favorite-apps = [ "org.gnome.Nautilus.desktop" "org.gnome.Terminal.desktop" "firefox.desktop" "code.desktop" ];
       last-selected-power-profile = "power-saver";
       welcome-dialog-last-shown-version = "44.2";
@@ -786,7 +814,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/caffeine" = {
-      indicator-position-max = 1;
+      indicator-position-max = 4;
       toggle-state = true;
       user-enabled = true;
     };
@@ -796,12 +824,21 @@ with lib.hm.gvariant;
       supported-active-extensions = [];
     };
 
+    "org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-left-0" = {
+      barrier-size-h = 50;
+    };
+
+    "org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-left-1" = {
+      action = "prev-workspace-current-mon";
+      h-expand = false;
+      v-expand = false;
+    };
+
     "org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-left-6" = {
       ctrl = true;
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {
-      app-ctrl-hotkey-1 = [ "" ];
       app-ctrl-hotkey-10 = [ "" ];
       app-ctrl-hotkey-2 = [ "" ];
       app-ctrl-hotkey-3 = [ "" ];
@@ -839,7 +876,7 @@ with lib.hm.gvariant;
       app-hotkey-kp-5 = [ "" ];
       app-hotkey-kp-6 = [ "" ];
       app-hotkey-kp-7 = [ "" ];
-      app-hotkey-kp-8 = [ "" ];
+      app-hotkey-kp-8 = [];
       app-hotkey-kp-9 = [ "" ];
       app-shift-hotkey-1 = [ "" ];
       app-shift-hotkey-10 = [ "" ];
@@ -875,7 +912,6 @@ with lib.hm.gvariant;
       dock-position = "BOTTOM";
       height-fraction = 0.9;
       hot-keys = false;
-      hotkey-prefix-text = "";
       preferred-monitor = -2;
       preferred-monitor-by-connector = "eDP-1";
       running-indicator-dominant-color = false;
@@ -884,6 +920,59 @@ with lib.hm.gvariant;
       show-trash = false;
       transparency-mode = "FIXED";
       unity-backlit-items = false;
+    };
+
+    "org/gnome/shell/extensions/dash-to-panel" = {
+      app-ctrl-hotkey-1 = [ "" ];
+      app-ctrl-hotkey-10 = [ "" ];
+      app-ctrl-hotkey-2 = [ "" ];
+      app-ctrl-hotkey-3 = [ "" ];
+      app-ctrl-hotkey-4 = [ "" ];
+      app-ctrl-hotkey-5 = [ "" ];
+      app-ctrl-hotkey-6 = [ "" ];
+      app-ctrl-hotkey-7 = [ "" ];
+      app-ctrl-hotkey-8 = [ "" ];
+      app-ctrl-hotkey-9 = [ "" ];
+      app-ctrl-hotkey-kp-1 = [ "" ];
+      app-ctrl-hotkey-kp-10 = [ "" ];
+      app-ctrl-hotkey-kp-2 = [ "" ];
+      app-ctrl-hotkey-kp-3 = [ "" ];
+      app-ctrl-hotkey-kp-4 = [ "" ];
+      app-ctrl-hotkey-kp-5 = [ "" ];
+      app-ctrl-hotkey-kp-6 = [ "" ];
+      app-ctrl-hotkey-kp-7 = [ "" ];
+      app-ctrl-hotkey-kp-8 = [ "" ];
+      app-ctrl-hotkey-kp-9 = [ "" ];
+      app-hotkey-kp-1 = [ "" ];
+      app-hotkey-kp-10 = [ "" ];
+      app-hotkey-kp-2 = [ "" ];
+      app-hotkey-kp-3 = [ "" ];
+      app-hotkey-kp-4 = [ "" ];
+      app-hotkey-kp-5 = [ "" ];
+      app-hotkey-kp-6 = [ "" ];
+      app-hotkey-kp-7 = [ "" ];
+      app-hotkey-kp-8 = [ "" ];
+      app-hotkey-kp-9 = [ "" ];
+      app-shift-hotkey-1 = [ "" ];
+      app-shift-hotkey-10 = [ "" ];
+      app-shift-hotkey-2 = [ "" ];
+      app-shift-hotkey-3 = [ "" ];
+      app-shift-hotkey-4 = [ "" ];
+      app-shift-hotkey-5 = [ "" ];
+      app-shift-hotkey-6 = [ "" ];
+      app-shift-hotkey-7 = [ "" ];
+      app-shift-hotkey-8 = [ "" ];
+      app-shift-hotkey-9 = [ "" ];
+      app-shift-hotkey-kp-1 = [ "" ];
+      app-shift-hotkey-kp-10 = [ "" ];
+      app-shift-hotkey-kp-2 = [ "" ];
+      app-shift-hotkey-kp-3 = [ "" ];
+      app-shift-hotkey-kp-4 = [ "" ];
+      app-shift-hotkey-kp-5 = [ "" ];
+      app-shift-hotkey-kp-6 = [ "" ];
+      app-shift-hotkey-kp-7 = [ "" ];
+      app-shift-hotkey-kp-8 = [ "" ];
+      app-shift-hotkey-kp-9 = [ "" ];
     };
 
     "org/gnome/shell/extensions/gestureImprovements" = {
@@ -895,7 +984,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/gsconnect" = {
-      devices = [ "169790bc_17f4_41a2_a945_cd5549ea8ca1" "f6632e15f1a4e42b" ];
+      devices = [ "169790bc_17f4_41a2_a945_cd5549ea8ca1" "f6632e15f1a4e42b" "6208abe4_151b_4471_aab8_ea0704418a6a" ];
       enabled = true;
       id = "0dfac97c-105c-4beb-8396-f267374d4021";
       name = "nixos";
@@ -914,7 +1003,7 @@ with lib.hm.gvariant;
     "org/gnome/shell/extensions/gsconnect/device/169790bc_17f4_41a2_a945_cd5549ea8ca1" = {
       certificate-pem = "-----BEGIN CERTIFICATE-----nMIIBkjCCATmgAwIBAgIBATAKBggqhkjOPQQDBDBTMS0wKwYDVQQDDCQxNjk3OTBinY18xN2Y0XzQxYTJfYTk0NV9jZDU1NDllYThjYTExFDASBgNVBAsMC0tERSBDb25unZWN0MQwwCgYDVQQKDANLREUwHhcNMjIxMTMwMjIwMDAwWhcNMzIxMTMwMjIwMDAwnWjBTMS0wKwYDVQQDDCQxNjk3OTBiY18xN2Y0XzQxYTJfYTk0NV9jZDU1NDllYThjnYTExFDASBgNVBAsMC0tERSBDb25uZWN0MQwwCgYDVQQKDANLREUwWTATBgcqhkjOnPQIBBggqhkjOPQMBBwNCAASV0w+tT6m2wRj/CtISzGXclMk9bqZ4YCiO49bZUIebnqEcTesdrMWviUAujEb00syofJpJ44ZaX6+M2WNtvKXvoMAoGCCqGSM49BAMEA0cAnMEQCIG5xOoTU7FntKL13Rdo+gs1sxHCeWoCqoXjt5skQSRFtAiAvHYXjNfz+Ueuznv9tGUssAUgpunBadaJv842D1JGqOAw==n-----END CERTIFICATE-----n";
       incoming-capabilities = [ "kdeconnect.battery" "kdeconnect.bigscreen.stt" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.contacts.request_all_uids_timestamps" "kdeconnect.contacts.request_vcards_by_uid" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.action" "kdeconnect.notification.reply" "kdeconnect.notification.request" "kdeconnect.ping" "kdeconnect.runcommand" "kdeconnect.sftp.request" "kdeconnect.share.request" "kdeconnect.share.request.update" "kdeconnect.sms.request" "kdeconnect.sms.request_attachment" "kdeconnect.sms.request_conversation" "kdeconnect.sms.request_conversations" "kdeconnect.systemvolume" "kdeconnect.telephony.request" "kdeconnect.telephony.request_mute" ];
-      last-connection = "lan://192.168.16.103:1716";
+      last-connection = "lan://192.168.1.69:1716";
       name = "JX3";
       outgoing-capabilities = [ "kdeconnect.battery" "kdeconnect.bigscreen.stt" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.connectivity_report" "kdeconnect.contacts.response_uids_timestamps" "kdeconnect.contacts.response_vcards" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.echo" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.request" "kdeconnect.ping" "kdeconnect.presenter" "kdeconnect.runcommand.request" "kdeconnect.sftp" "kdeconnect.share.request" "kdeconnect.sms.attachment_file" "kdeconnect.sms.messages" "kdeconnect.systemvolume.request" "kdeconnect.telephony" ];
       paired = true;
@@ -928,12 +1017,38 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/gsconnect/device/169790bc_17f4_41a2_a945_cd5549ea8ca1/plugin/notification" = {
       applications = ''
-        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Evolution Alarm Notify":{"iconName":"appointment-soon","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Geary":{"iconName":"org.gnome.Geary","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Archive Manager":{"iconName":"org.gnome.FileRoller","enabled":true},"Firefox":{"iconName":"","enabled":true},"Spotify":{"iconName":"","enabled":true}}
+        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Evolution Alarm Notify":{"iconName":"appointment-soon","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Geary":{"iconName":"org.gnome.Geary","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Archive Manager":{"iconName":"org.gnome.FileRoller","enabled":true},"Firefox":{"iconName":"","enabled":true},"Spotify":{"iconName":"","enabled":true},"Mullvad VPN":{"iconName":"","enabled":true},"Disk Space":{"iconName":"drive-harddisk-symbolic","enabled":true},"qBittorrent":{"iconName":"qbittorrent","enabled":true}}
       '';
     };
 
     "org/gnome/shell/extensions/gsconnect/device/169790bc_17f4_41a2_a945_cd5549ea8ca1/plugin/share" = {
       receive-directory = "/home/happylime/Downloads";
+    };
+
+    "org/gnome/shell/extensions/gsconnect/device/6208abe4_151b_4471_aab8_ea0704418a6a" = {
+      certificate-pem = "-----BEGIN CERTIFICATE-----nMIIBkjCCATmgAwIBAgIBATAKBggqhkjOPQQDBDBTMS0wKwYDVQQDDCQ2MjA4YWJlnNF8xNTFiXzQ0NzFfYWFiOF9lYTA3MDQ0MThhNmExFDASBgNVBAsMC0tERSBDb25unZWN0MQwwCgYDVQQKDANLREUwHhcNMjMwMzA0MjMwMDAwWhcNMzMwMzA0MjMwMDAwnWjBTMS0wKwYDVQQDDCQ2MjA4YWJlNF8xNTFiXzQ0NzFfYWFiOF9lYTA3MDQ0MThhnNmExFDASBgNVBAsMC0tERSBDb25uZWN0MQwwCgYDVQQKDANLREUwWTATBgcqhkjOnPQIBBggqhkjOPQMBBwNCAASy9oPgWg9h8Gyp9a2LgC+316OeBB+vmiY66UeqXQ4GnsARGeDdlUivD9VaXldKQm1g0aeurc0NjZ6IuCMZX2AACMAoGCCqGSM49BAMEA0cAnMEQCIFh/E7kQkMp2gVk8UVbncoHILYwyjwOyqwSNFi2UQsZoAiATTp7BlM/wtqKQnXcZZ24pf9riFhu6YLizf5TB9wGHV/g==n-----END CERTIFICATE-----n";
+      incoming-capabilities = [ "kdeconnect.battery" "kdeconnect.bigscreen.stt" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.contacts.request_all_uids_timestamps" "kdeconnect.contacts.request_vcards_by_uid" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.action" "kdeconnect.notification.reply" "kdeconnect.notification.request" "kdeconnect.ping" "kdeconnect.runcommand" "kdeconnect.sftp.request" "kdeconnect.share.request" "kdeconnect.share.request.update" "kdeconnect.sms.request" "kdeconnect.sms.request_attachment" "kdeconnect.sms.request_conversation" "kdeconnect.sms.request_conversations" "kdeconnect.systemvolume" "kdeconnect.telephony.request" "kdeconnect.telephony.request_mute" ];
+      last-connection = "lan://192.168.1.97:1716";
+      name = "jx5";
+      outgoing-capabilities = [ "kdeconnect.battery" "kdeconnect.bigscreen.stt" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.connectivity_report" "kdeconnect.contacts.response_uids_timestamps" "kdeconnect.contacts.response_vcards" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.echo" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.request" "kdeconnect.ping" "kdeconnect.presenter" "kdeconnect.runcommand.request" "kdeconnect.sftp" "kdeconnect.share.request" "kdeconnect.sms.attachment_file" "kdeconnect.sms.messages" "kdeconnect.systemvolume.request" "kdeconnect.telephony" ];
+      paired = true;
+      supported-plugins = [ "battery" "clipboard" "connectivity_report" "contacts" "findmyphone" "mousepad" "mpris" "notification" "ping" "presenter" "runcommand" "sftp" "share" "sms" "systemvolume" "telephony" ];
+      type = "tablet";
+    };
+
+    "org/gnome/shell/extensions/gsconnect/device/6208abe4_151b_4471_aab8_ea0704418a6a/plugin/notification" = {
+      applications = ''
+        {"Firefox":{"iconName":"","enabled":true},"Power":{"iconName":"","enabled":true},"Disk Space":{"iconName":"drive-harddisk-symbolic","enabled":true},"Mullvad VPN":{"iconName":"","enabled":true},"qBittorrent":{"iconName":"qbittorrent","enabled":true}}
+      '';
+    };
+
+    "org/gnome/shell/extensions/gsconnect/device/9c6350bacfb7ec8a" = {
+      incoming-capabilities = [ "kdeconnect.battery" "kdeconnect.battery.request" "kdeconnect.bigscreen.stt" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.connectivity_report.request" "kdeconnect.contacts.request_all_uids_timestamps" "kdeconnect.contacts.request_vcards_by_uid" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.action" "kdeconnect.notification.reply" "kdeconnect.notification.request" "kdeconnect.photo.request" "kdeconnect.ping" "kdeconnect.runcommand" "kdeconnect.sftp.request" "kdeconnect.share.request" "kdeconnect.share.request.update" "kdeconnect.sms.request" "kdeconnect.sms.request_attachment" "kdeconnect.sms.request_conversation" "kdeconnect.sms.request_conversations" "kdeconnect.systemvolume" "kdeconnect.telephony.request" "kdeconnect.telephony.request_mute" ];
+      last-connection = "lan://192.168.1.89:1716";
+      name = "2311DRK48G";
+      outgoing-capabilities = [ "kdeconnect.battery" "kdeconnect.battery.request" "kdeconnect.bigscreen.stt" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.connectivity_report" "kdeconnect.contacts.response_uids_timestamps" "kdeconnect.contacts.response_vcards" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.echo" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.request" "kdeconnect.photo" "kdeconnect.ping" "kdeconnect.presenter" "kdeconnect.runcommand.request" "kdeconnect.sftp" "kdeconnect.share.request" "kdeconnect.sms.attachment_file" "kdeconnect.sms.messages" "kdeconnect.systemvolume.request" "kdeconnect.telephony" ];
+      supported-plugins = [ "battery" "clipboard" "connectivity_report" "contacts" "findmyphone" "mousepad" "mpris" "notification" "ping" "presenter" "runcommand" "sftp" "share" "sms" "systemvolume" "telephony" ];
+      type = "tablet";
     };
 
     "org/gnome/shell/extensions/gsconnect/device/c20304e6-29e5-4b41-aa1d-644a436730ca" = {
@@ -985,7 +1100,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/gsconnect/device/f6632e15f1a4e42b/plugin/notification" = {
       applications = ''
-        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Evolution Alarm Notify":{"iconName":"appointment-soon","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Geary":{"iconName":"org.gnome.Geary","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Archive Manager":{"iconName":"org.gnome.FileRoller","enabled":true},"Spotify":{"iconName":"","enabled":true},"Firefox":{"iconName":"","enabled":true}}
+        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Evolution Alarm Notify":{"iconName":"appointment-soon","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Geary":{"iconName":"org.gnome.Geary","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Archive Manager":{"iconName":"org.gnome.FileRoller","enabled":true},"Spotify":{"iconName":"","enabled":true},"Firefox":{"iconName":"","enabled":true},"Mullvad VPN":{"iconName":"","enabled":true},"Disk Space":{"iconName":"drive-harddisk-symbolic","enabled":true},"qBittorrent":{"iconName":"qbittorrent","enabled":true}}
       '';
     };
 
@@ -1000,7 +1115,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/gsnap" = {
       show-icon = true;
-      use-modifier = true;
+      use-modifier = false;
     };
 
     "org/gnome/shell/extensions/just-perfection" = {
@@ -1043,13 +1158,22 @@ with lib.hm.gvariant;
     "org/gnome/shell/extensions/mediacontrols" = {
       colored-player-icon = false;
       element-order = [ "icon" "title" "controls" "menu" ];
-      extension-position = "right";
+      extension-position = "Right";
+      fixed-label-width = true;
       hide-media-notification = false;
+      label-width = mkUint32 160;
       max-widget-width = 150;
+      mouse-action-left = "SHOW_POPUP_MENU";
+      mouse-action-middle = "NONE";
+      mouse-action-right = "OPEN_PREFERENCES";
+      mouse-action-scroll-down = "NONE";
+      mouse-action-scroll-up = "NONE";
       mouse-actions = [ "toggle_info" "toggle_menu" "none" "raise" "none" "none" "none" "none" ];
       prefer-using-seek = false;
       seperator-chars = [ "|" "|" ];
       show-control-icons = true;
+      show-control-icons-seek-backward = false;
+      show-control-icons-seek-forward = false;
       show-player-icon = false;
       show-seek-back = false;
       show-seek-forward = false;
@@ -1134,14 +1258,19 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/wsmatrix" = {
+      enable-popup-workspace-hover = false;
       num-columns = 3;
       num-rows = 3;
+      popup-timeout = 800;
       show-workspace-names = true;
     };
 
     "org/gnome/shell/keybindings" = {
       focus-active-notification = [];
       open-application-menu = [ "<Control>grave" ];
+      open-new-window-application-2 = [];
+      open-new-window-application-3 = [];
+      open-new-window-application-4 = [];
       screenshot = [];
       screenshot-window = [];
       show-screen-recording-ui = [];
@@ -1165,9 +1294,9 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/software" = {
-      check-timestamp = mkInt64 1705486358;
+      check-timestamp = mkInt64 1719666471;
       first-run = false;
-      flatpak-purge-timestamp = mkInt64 1705409981;
+      flatpak-purge-timestamp = mkInt64 1719538963;
     };
 
     "org/gnome/terminal/legacy" = {
@@ -1217,10 +1346,10 @@ with lib.hm.gvariant;
       show-hidden = false;
       show-size-column = true;
       show-type-column = true;
-      sidebar-width = 180;
-      sort-column = "modified";
+      sidebar-width = 184;
+      sort-column = "name";
       sort-directories-first = false;
-      sort-order = "descending";
+      sort-order = "ascending";
       type-format = "category";
       window-position = mkTuple [ 13 11 ];
       window-size = mkTuple [ 1231 902 ];

@@ -230,7 +230,6 @@ in
 	keepassxc
   killall
 	libreoffice
-  librewolf
 	libsForQt5.kdenlive #kdenlive
 	livecaptions
 	lmms
@@ -247,6 +246,7 @@ in
 	ocrmypdf #pdf tool
   pass
   #pass-wayland
+  pomodoro-gtk
 	poppler_utils #anotherpdf toolfml
 	powertop
 	python311
