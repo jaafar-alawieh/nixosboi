@@ -250,6 +250,7 @@ in
 	powertop
 	python311
 	qbittorrent
+  surf
   #sops-nix
 	#teams
   qtpass
