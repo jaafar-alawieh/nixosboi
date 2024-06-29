@@ -265,7 +265,6 @@ in
   winetricks
   wmctrl
   ydotool
-	youtube-music
 	zip
   zoom-us
 	#NUR
