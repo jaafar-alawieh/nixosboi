@@ -228,6 +228,7 @@ in
   home-manager
 	imagemagick #CLI converter
 	keepassxc
+  killall
 	libreoffice
 	libsForQt5.kdenlive #kdenlive
 	livecaptions
