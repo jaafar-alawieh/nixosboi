@@ -230,6 +230,7 @@ in
 	keepassxc
   killall
 	libreoffice
+  librewolf
 	libsForQt5.kdenlive #kdenlive
 	livecaptions
 	lmms
@@ -258,7 +259,6 @@ in
 	ungoogled-chromium
 	unzip
   vim 
-  vimb
 	vlc
 	vscode-fhs
 	webex
