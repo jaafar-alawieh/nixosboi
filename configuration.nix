@@ -206,6 +206,7 @@ in
   environment.systemPackages = with pkgs; [
   ardour
   autocutsel
+  blocky
 	brave
   copyq
 	dconf2nix
