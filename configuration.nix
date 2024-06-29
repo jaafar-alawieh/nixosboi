@@ -250,7 +250,6 @@ in
 	powertop
 	python311
 	qbittorrent
-  surf
   #sops-nix
 	#teams
   qtpass
@@ -259,6 +258,7 @@ in
 	ungoogled-chromium
 	unzip
   vim 
+  vimb
 	vlc
 	vscode-fhs
 	webex
