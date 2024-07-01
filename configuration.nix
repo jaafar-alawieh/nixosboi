@@ -207,6 +207,7 @@ in
   ardour
   autocutsel
 	brave
+  caligula
   copyq
 	dconf2nix
   firefox
