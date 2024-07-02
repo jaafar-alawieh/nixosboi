@@ -27,7 +27,7 @@ in
   #update
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = false;
-  system.autoUpgrade.channel = "https://channels.nixos.org/nixos-23.11";
+  system.autoUpgrade.channel = "https://channels.nixos.org/nixos-24.05";
 
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -255,7 +255,7 @@ in
   dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
   home-manager.users."jalawieh" = {
-    home.stateVersion="23.11";
+    home.stateVersion="24.05";
     programs.bash.enable = true;
     #imports = [ ./dconf.nix ];
     home.file."touchegg".target = "/config/touchegg/touchegg.conf";
@@ -272,11 +272,12 @@ in
   copyq
   cups
 	dconf2nix
-  etcher #disk image etcher balena etcher
+  docker_26
   firefox
   ffmpeg_5-full
   fpm #package builder for pyp2rpm
 	fsearch
+	gedit
 	gh #github cli tool
 	gimp-with-plugins
 	git
@@ -284,7 +285,6 @@ in
   gnome.cheese
 	gnome-frog
   #gnome.gnome-boxes
-	gnome.gedit
   gnome.dconf-editor
   gnome.gnome-terminal
   gnome.gpaste
@@ -465,6 +465,6 @@ in
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment?
+  system.stateVersion = "24.05"; # Did you read the comment?
 
 }
