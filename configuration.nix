@@ -123,30 +123,12 @@ in
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   
-  #insecure packages
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-25.9.0"
-  ];
-
   #flatpak support
   services.flatpak.enable = true;
 
   ##general overrides
 
   nixpkgs.config.packageOverrides = pkgs: rec {
-  #wifi patch
-    wpa_supplicant = pkgs.wpa_supplicant.overrideAttrs (attrs: {
-      patches = attrs.patches ++ [ ./eduroam.patch ];
-    });  
-  #end of wifi patch 
-  
-
-  #NUR for spotify
-    nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
-      inherit pkgs;
-    };
-  #end of NUR for spotify
-
   };
   #end of overrides
 
@@ -187,11 +169,11 @@ in
   #when you need to update it:
   ##  dconf dump / | dconf2nix > dconf.nix
   ##  sudo cp dconf.nix /etc/nixos/dconf.nix 
-  programs.steam = {
-  enable = true;
-  remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-  dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-  };
+  #programs.steam = {
+  #enable = true;
+  #remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+  #dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  #};
   
   home-manager.users."happylime" = {
     home.stateVersion="24.05";
@@ -271,7 +253,6 @@ in
 	zip
   zoom-us
 	#NUR
-	nur.repos.nltch.spotify-adblock    #for installing spotify-adblock
   #gnome extensions 
 	gnomeExtensions.battery-indicator-icon 
   gnomeExtensions.blur-my-shell
@@ -300,7 +281,7 @@ in
   #gnome cursor
   bibata-cursors
 	#scripts
-	(import ./conffiles/scripts/jump_script.nix { inherit pkgs; })
+	#(import ./conffiles/scripts/jump_script.nix { inherit pkgs; })
   ];
 
   #fonts
@@ -356,35 +337,13 @@ in
   # };
 
   # List services that you want to enable:
-  services.mullvad-vpn = {
-	enable = true;
-  };
+#  services.mullvad-vpn = {
+#	enable = true;
+#  };
 
-  services.blocky = {
-    enable = true;
-    settings = {
-      ports.dns = 53; # Port for incoming DNS Queries.
-      upstreams.groups.default = [
-        "https://one.one.one.one/dns-query" # Using Cloudflare's DNS over HTTPS server for resolving queries.
-      ];
-      # For initially solving DoH/DoT Requests when no system Resolver is available.
-      bootstrapDns = {
-        upstream = "https://one.one.one.one/dns-query";
-        ips = [ "1.1.1.1" "1.0.0.1" ];
-      };
-      #Enable Blocking of certian domains.
-      blocking = {
-        blackLists = {
-          #Adblocking
-          ads = ["https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"]; 
-        };
-      };
-    };
-  };
-
-  networking.iproute2.enable = true;
-  networking.firewall.allowedTCPPorts = [ 80 443 1401 1716 1717 1718 1719 1720 1721 1722 1723 1724 1725 1726 1727 1728 1729 1730 1731 1732 1733 1734 1735 1736 1737 1738 1739 1740 1741 1742 1743 1744 1745 1746 1747 1748 1749 1750 1751 1752 1753 1754 1755 1756 1757 1758 1759 1760 1761 1762 1763 1764 ];
-  networking.firewall.allowedUDPPorts = [ 53 1194 1195 1196 1197 1300 1301 1302 1303 1400 1401 1716 1717 1718 1719 1720 1721 1722 1723 1724 1725 1726 1727 1728 1729 1730 1731 1732 1733 1734 1735 1736 1737 1738 1739 1740 1741 1742 1743 1744 1745 1746 1747 1748 1749 1750 1751 1752 1753 1754 1755 1756 1757 1758 1759 1760 1761 1762 1763 1764 ];
+#  networking.iproute2.enable = true;
+#  networking.firewall.allowedTCPPorts = [ 80 443 1401 1716 1717 1718 1719 1720 1721 1722 1723 1724 1725 1726 1727 1728 1729 1730 1731 1732 1733 1734 1735 1736 1737 1738 1739 1740 1741 1742 1743 1744 1745 1746 1747 1748 1749 1750 1751 1752 1753 1754 1755 1756 1757 1758 1759 1760 1761 1762 1763 1764 ];
+#  networking.firewall.allowedUDPPorts = [ 53 1194 1195 1196 1197 1300 1301 1302 1303 1400 1401 1716 1717 1718 1719 1720 1721 1722 1723 1724 1725 1726 1727 1728 1729 1730 1731 1732 1733 1734 1735 1736 1737 1738 1739 1740 1741 1742 1743 1744 1745 1746 1747 1748 1749 1750 1751 1752 1753 1754 1755 1756 1757 1758 1759 1760 1761 1762 1763 1764 ];
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
   
