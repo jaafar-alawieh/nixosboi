@@ -232,6 +232,7 @@ in
   pomodoro-gtk
 	poppler_utils #anotherpdf toolfml
 	powertop
+  protonup-qt
 	python311
 	qbittorrent
   #sops-nix
