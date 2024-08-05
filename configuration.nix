@@ -49,7 +49,7 @@ in
 
   # Set your time zone.
   #time.timeZone = "Asia/Beirut";
-  time.timeZone = "Europe/Paris";
+  #time.timeZone = "Europe/Paris";
   # Set Default Language
 
   # Select internationalisation properties.
@@ -231,6 +231,7 @@ in
   #pass-wayland
   pomodoro-gtk
 	poppler_utils #anotherpdf toolfml
+  popsicle
 	powertop
   protonup-qt
 	python311
@@ -242,7 +243,6 @@ in
 	tldr
 	ungoogled-chromium
 	unzip
-  ventoy-full
   vim 
 	vlc
 	vscode-fhs
