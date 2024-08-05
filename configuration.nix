@@ -242,7 +242,7 @@ in
 	tldr
 	ungoogled-chromium
 	unzip
-  ventoy
+  ventoy-full
   vim 
 	vlc
 	vscode-fhs
