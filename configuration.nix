@@ -240,6 +240,7 @@ in
   qtpass
 	tenacity
 	tldr
+  unetbootin
 	ungoogled-chromium
 	unzip
   vim 
