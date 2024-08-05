@@ -240,9 +240,9 @@ in
   qtpass
 	tenacity
 	tldr
-  unetbootin
 	ungoogled-chromium
 	unzip
+  ventoy
   vim 
 	vlc
 	vscode-fhs
