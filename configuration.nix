@@ -223,6 +223,7 @@ in
 	unzip
   vim 
 	vlc
+  vpnc
 	vscode-fhs
 	webex
   wget
