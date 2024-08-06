@@ -49,23 +49,25 @@ in
 
   # Set your time zone.
   #time.timeZone = "Asia/Beirut";
+  time.timeZone = "Europe/London";
   #time.timeZone = "Europe/Paris";
   # Set Default Language
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "en_GB.UTF-8";
 
   i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_AU.UTF-8";
-    LC_IDENTIFICATION = "en_AU.UTF-8";
-    LC_MEASUREMENT = "en_AU.UTF-8";
-    LC_MONETARY = "en_AU.UTF-8";
-    LC_NAME = "en_AU.UTF-8";
-    LC_NUMERIC = "en_AU.UTF-8";
-    LC_PAPER = "en_AU.UTF-8";
-    LC_TELEPHONE = "en_AU.UTF-8";
-    LC_TIME = "en_AU.UTF-8"; 
+    LC_ADDRESS = "en_GB.UTF-8";
+    LC_IDENTIFICATION = "en_GB.UTF-8";
+    LC_MEASUREMENT = "en_GB.UTF-8";
+    LC_MONETARY = "en_GB.UTF-8";
+    LC_NAME = "en_GB.UTF-8";
+    LC_NUMERIC = "en_GB.UTF-8";
+    LC_PAPER = "en_GB.UTF-8";
+    LC_TELEPHONE = "en_GB.UTF-8";
+    LC_TIME = "en_GB.UTF-8";
   };
+
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -110,9 +112,9 @@ in
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.happylime = {
+  users.users.alawieh = {
     isNormalUser = true;
-    description = "happylime";
+    description = "alawieh";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
@@ -140,30 +142,6 @@ in
   ];
   #end of create directories
   
-  ####only for jaafar's backlight https://www.reddit.com/r/NixOS/comments/16on943/comment/k1m3f6g/?context=3
-  systemd.services.disable-keyboard-backlight = {
-    enable = true;
-    description = "Disable keyboard backlight on resume";
-    serviceConfig = {
-      Type = "oneshot";
-    };
-    script = ''
-      /run/current-system/sw/bin/echo 0 > "/sys/devices/pci0000:00/0000:00:14.3/PNP0C09:00/VPC2004:00/leds/platform::kbd_backlight/brightness"
-    '';
-    wantedBy = [
-      "sleep.target"
-      "hibernate.target"
-      "hybrid-sleep.target"
-    ];
-    after = [
-      "sleep.target"
-      "hibernate.target"
-      "hybrid-sleep.target"
-    ];
-  };
-  #####only for jaafar's backlight - DELETE FOR OTHER COMPUTERS
-
-  
   #GNOME DCONF SETTINGS ##Use `dconf watch /` to track stateful changes you are doing, then set them here.
   #comment out dconf.nix line when done with it so it doesnt keep undoing new adjustments
   #when you need to update it:
@@ -175,10 +153,10 @@ in
   #dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   #};
   
-  home-manager.users."happylime" = {
+  home-manager.users."alawieh" = {
     home.stateVersion="24.05";
     programs.bash.enable = true;
-    #imports = [ ./dconf.nix ];
+    imports = [ ./dconf.nix ];
     home.file."touchegg".target = "/config/touchegg/touchegg.conf";
     home.file."touchegg".source = "/etc/nixos/conffiles/touchegg.conf";  # or .text if I just want to include everything in a nix config file and import it
   };
