@@ -125,6 +125,9 @@ in
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  # Allow Unsupported systems
+  nixpkgs.config.allowUnsupportedSystem = true; 
   
   #flatpak support
   services.flatpak.enable = true;
@@ -218,6 +221,7 @@ in
   #sops-nix
 	#teams
   qtpass
+  teams
 	tenacity
 	tldr
 	ungoogled-chromium
