@@ -156,7 +156,7 @@ in
   home-manager.users."alawieh" = {
     home.stateVersion="24.05";
     programs.bash.enable = true;
-    imports = [ ./dconf.nix ];
+    #imports = [ ./dconf.nix ];
     home.file."touchegg".target = "/config/touchegg/touchegg.conf";
     home.file."touchegg".source = "/etc/nixos/conffiles/touchegg.conf";  # or .text if I just want to include everything in a nix config file and import it
   };
