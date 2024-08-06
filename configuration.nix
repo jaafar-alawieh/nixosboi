@@ -22,6 +22,7 @@ in
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.extraModprobeConfig = ''options snd-intel-dspcfg dsp_driver=1'';
   #one day ill have functioning hibernate
   #boot.resumeDevice = "/var/lib/swapfile";
   #boot.kernelParams = [
