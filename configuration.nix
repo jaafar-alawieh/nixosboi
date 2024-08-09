@@ -90,6 +90,8 @@ in
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  services.pcscd.enable = true;
+
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -308,6 +310,10 @@ in
   	  '' ;
     };
     #next program
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+      };
   };
 
   
