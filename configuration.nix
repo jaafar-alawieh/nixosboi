@@ -207,6 +207,7 @@ in
 	ocrmypdf #pdf tool
   pass
   #pass-wayland
+  pinentry
   pomodoro-gtk
 	poppler_utils #anotherpdf toolfml
   popsicle
