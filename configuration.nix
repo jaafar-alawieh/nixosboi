@@ -118,12 +118,14 @@ in
   users.users.alawieh = {
     isNormalUser = true;
     description = "alawieh";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker"];
     packages = with pkgs; [
       firefox
       #thunderbird
     ];
   };
+
+  virtualisation.docker.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
