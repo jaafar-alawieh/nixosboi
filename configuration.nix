@@ -193,6 +193,7 @@ in
 	keepassxc
   killall
 	libreoffice
+  librewolf
 	libsForQt5.kdenlive #kdenlive
 	livecaptions
 	lmms
