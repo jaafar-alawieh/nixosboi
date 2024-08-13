@@ -172,6 +172,7 @@ in
   caligula
   copyq
 	dconf2nix
+  docker
   firefox
   ffmpeg_5-full
 	fsearch
