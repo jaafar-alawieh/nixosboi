@@ -221,6 +221,7 @@ in
   qtpass
   #sops-nix
   teams
+  teams-for-linux
 	tenacity
 	tldr
 	ungoogled-chromium
