@@ -200,6 +200,7 @@ in
 	libsForQt5.kdenlive #kdenlive
 	livecaptions
 	lmms
+  lsof
   lutris
 	mediainfo #kdenlive dependency why tf aint it predownloaded
 	megacmd
