@@ -228,6 +228,7 @@ in
   gzdoom
   home-manager
 	imagemagick #CLI converter
+  inetutils
 	keepassxc
   killall
 	libreoffice
