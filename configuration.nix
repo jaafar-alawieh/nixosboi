@@ -146,17 +146,17 @@ in
 
   #systemd autossh socks proxy
 
-#  systemd.services.ssh-socks-maths = {
-#    description = "SSH SOCKS Proxy to Maths";
-#    after = [ "network.target" ];
-#    serviceConfig = {
-#      ExecStart = '' /run/current-system/sw/bin/ssh -N -D 8080 maths '';
-#      Restart = "always";
-#      RestartSec = 10;
-#      User = "alawieh";
-#    };
-#    wantedBy = [ "multi-user.target" ];
-#  };
+  systemd.services.ssh-socks-maths = {
+    description = "SSH SOCKS Proxy to Maths";
+    after = [ "network.target" ];
+    serviceConfig = {
+      ExecStart = '' /run/current-system/sw/bin/ssh socks-maths '';
+      Restart = "always";
+      RestartSec = 10;
+      User = "alawieh";
+    };
+    wantedBy = [ "multi-user.target" ];
+  };
   # end systemd autossh socks proxy
 
 
