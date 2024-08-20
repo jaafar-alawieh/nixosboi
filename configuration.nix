@@ -143,21 +143,6 @@ in
   };
 
 
-
-  #systemd autossh socks proxy
-  systemd.services.ssh-socks-maths = {
-    description = "SSH SOCKS Proxy to Maths";
-    after = [ "network.target" ];
-    serviceConfig = {
-      ExecStart = "/run/current-system/sw/bin/ssh socks-maths";
-      Restart = "no";
-      User = "alawieh";
-    };
-    wantedBy = [ "default.target" ];
-  };
-  # end systemd autossh socks proxy
-
-
   virtualisation.docker.enable = true;
 
   # Allow unfree packages
@@ -257,6 +242,7 @@ in
 	python311
 	qbittorrent
   qtpass
+  remmina
   #sops-nix
   teams
   teams-for-linux
