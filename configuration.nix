@@ -244,8 +244,6 @@ in
   qtpass
   remmina
   #sops-nix
-  teams
-  teams-for-linux
 	tenacity
 	tldr
 	ungoogled-chromium
