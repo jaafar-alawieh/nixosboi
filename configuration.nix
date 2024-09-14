@@ -254,6 +254,7 @@ in
 	vscode-fhs
 	webex
   wget
+  whatsapp-for-linux
   wineWowPackages.stable
   winetricks
   wmctrl
