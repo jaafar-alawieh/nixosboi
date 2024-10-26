@@ -191,6 +191,7 @@ in
 	brave
   caligula
   copyq
+  davinci-resolve-studio
 	dconf2nix
   docker
   firefox
@@ -243,6 +244,7 @@ in
 	qbittorrent
   qtpass
   remmina
+  shotcut
   #sops-nix
 	tenacity
 	tldr
