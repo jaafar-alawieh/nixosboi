@@ -191,7 +191,7 @@ in
 	brave
   caligula
   copyq
-  davinci-resolve-studio
+  davinci-resolve
 	dconf2nix
   docker
   firefox
