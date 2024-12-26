@@ -145,12 +145,14 @@ in
 
   virtualisation.docker.enable = true;
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # Allow Unsupported systems
-  nixpkgs.config.allowUnsupportedSystem = true; 
-  
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowUnsupportedSystem = true;
+    permittedInsecurePackages = [
+      "qbittorrent-4.6.4"
+    ];
+  };
+    
   #flatpak support
   services.flatpak.enable = true;
 
@@ -173,7 +175,6 @@ in
   #when you need to update it:
   ##  dconf dump / | dconf2nix > dconf.nix
   ##  sudo cp dconf.nix /etc/nixos/dconf.nix 
-
   
   home-manager.users."alawieh" = {
     home.stateVersion="24.05";
@@ -241,7 +242,6 @@ in
 	powertop
   protonup-qt
 	python311
-	qbittorrent
   qtpass
   remmina
   shotcut
