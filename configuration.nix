@@ -14,7 +14,7 @@ let
 in
 {
   imports =
-    [ <home-manager/nixos>
+    [ ###<home-manager/nixos>
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
@@ -110,7 +110,6 @@ in
   services.pcscd.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -176,13 +175,13 @@ in
   ##  dconf dump / | dconf2nix > dconf.nix
   ##  sudo cp dconf.nix /etc/nixos/dconf.nix 
   
-  home-manager.users."alawieh" = {
-    home.stateVersion="24.05";
-    programs.bash.enable = true;
-    #imports = [ ./dconf.nix ];
-    home.file."touchegg".target = "/config/touchegg/touchegg.conf";
-    home.file."touchegg".source = "/etc/nixos/conffiles/touchegg.conf";  # or .text if I just want to include everything in a nix config file and import it
-  };
+###  home-manager.users."alawieh" = {
+###    home.stateVersion="24.05";
+###    programs.bash.enable = true;
+###    #imports = [ ./dconf.nix ];
+###    home.file."touchegg".target = "/config/touchegg/touchegg.conf";
+###    home.file."touchegg".source = "/etc/nixos/conffiles/touchegg.conf";  # or .text if I just want to include everything in a nix config file and import it
+###  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -196,7 +195,7 @@ in
 	dconf2nix
   docker
   firefox
-  ffmpeg_5-full
+  ffmpeg_6-full
 	fsearch
   gedit
 	gh #github cli tool
@@ -204,14 +203,14 @@ in
 	git
 	glaxnimate #kdenlive dependency why tf aint it predownloaded
 	gnome-frog
-  gnome3.gnome-tweaks
+  gnome.gnome-tweaks
   gnome.dconf-editor
   gnome.gnome-terminal
   gnupg
   gnupg1
 	gradience
   gzdoom
-  home-manager
+  ###home-manager
 	imagemagick #CLI converter
   inetutils
 	keepassxc
