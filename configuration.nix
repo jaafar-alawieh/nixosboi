@@ -214,7 +214,6 @@ in
   ###home-manager
 	imagemagick #CLI converter
   inetutils
-	keepassxc
   killall
 	libreoffice
   librewolf
