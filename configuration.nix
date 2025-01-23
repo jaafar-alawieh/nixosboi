@@ -132,6 +132,8 @@ in
   };
   #end of overrides
 
+
+
   #create directories
   systemd.tmpfiles.rules = [
     "d /etc/nixos/conffiles 0755 root root"
@@ -235,7 +237,7 @@ in
 	powertop
   protonup-qt
 	python311
-	qbittorrent
+	#qbittorrent
   #sops-nix
 	#teams
   qtpass
