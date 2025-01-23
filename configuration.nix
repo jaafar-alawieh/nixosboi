@@ -88,7 +88,6 @@ in
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -195,7 +194,7 @@ in
   copyq
 	dconf2nix
   firefox
-  ffmpeg_5-full
+  ffmpeg_6-full
 	fsearch
   gedit
 	gh #github cli tool
@@ -203,7 +202,7 @@ in
 	git
 	glaxnimate #kdenlive dependency why tf aint it predownloaded
 	gnome-frog
-  gnome3.gnome-tweaks
+  gnome.gnome-tweaks
   gnome.dconf-editor
   gnome.gnome-terminal
   gnupg
