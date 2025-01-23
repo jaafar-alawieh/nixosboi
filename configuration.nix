@@ -188,6 +188,7 @@ in
   environment.systemPackages = with pkgs; [
   ardour
   autocutsel
+  bitwarden-desktop
 	brave
   caligula
   copyq
@@ -203,9 +204,9 @@ in
 	git
 	glaxnimate #kdenlive dependency why tf aint it predownloaded
 	gnome-frog
-  gnome.gnome-tweaks
-  gnome.dconf-editor
-  gnome.gnome-terminal
+  gnome-tweaks
+  dconf-editor
+  gnome-terminal
   gnupg
   gnupg1
 	gradience
