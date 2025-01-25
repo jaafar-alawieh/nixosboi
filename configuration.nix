@@ -259,6 +259,7 @@ in
   wineWowPackages.stable
   winetricks
   wmctrl
+  xdg-desktop-portal
   ydotool
 	zip
   zoom-us
