@@ -101,8 +101,15 @@ in
   };
 
   # #hyprland xdg portal #not sure if i need this
-  xdg.portal.enable = true;
-  # xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal = {
+    xdgOpenUsePortal = true;
+    enable = true;
+    # wlr.enable = true;
+    # lxqt.enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gnome
+      pkgs.xdg-desktop-portal-gtk
+    ]; };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -260,6 +267,7 @@ in
   winetricks
   wmctrl
   xdg-desktop-portal
+  xdg-desktop-portal-gnome
   ydotool
 	zip
   zoom-us
