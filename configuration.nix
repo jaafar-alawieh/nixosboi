@@ -269,6 +269,7 @@ in
   gnomeExtensions.gsconnect
 	gnomeExtensions.just-perfection
 	gnomeExtensions.media-controls
+  gnomeExtensions.pip-on-top
 	gnomeExtensions.power-profile-switcher
 	gnomeExtensions.reorder-workspaces
 	gnomeExtensions.tactile
