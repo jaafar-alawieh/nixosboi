@@ -100,17 +100,6 @@ in
     xkb.variant = "";
   };
 
-  # #hyprland xdg portal #not sure if i need this
-  xdg.portal = {
-    xdgOpenUsePortal = true;
-    enable = true;
-    # wlr.enable = true;
-    # lxqt.enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gnome
-      pkgs.xdg-desktop-portal-gtk
-    ]; };
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -240,6 +229,7 @@ in
 	obs-studio
 	ocrmypdf #pdf tool
   pass
+  pavucontrol
   #pass-wayland
   pinentry
   pomodoro-gtk
@@ -266,8 +256,6 @@ in
   wineWowPackages.stable
   winetricks
   wmctrl
-  xdg-desktop-portal
-  xdg-desktop-portal-gnome
   ydotool
 	zip
   zoom-us
