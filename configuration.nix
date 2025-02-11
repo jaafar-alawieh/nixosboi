@@ -196,6 +196,7 @@ in
 	fsearch
   gedit
 	gh #github cli tool
+  ghostscript
 	gimp-with-plugins
 	git
 	glaxnimate #kdenlive dependency why tf aint it predownloaded
@@ -237,7 +238,9 @@ in
   popsicle
 	powertop
   protonup-qt
+  python311Packages.pypdf2
 	python311
+  qpdf
   qtpass
   remmina
   shotcut
