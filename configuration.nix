@@ -238,8 +238,8 @@ in
   popsicle
 	powertop
   protonup-qt
-  python311Packages.pypdf2
-	python311
+  python312Packages.pypdf2
+	python312
   qpdf
   qtpass
   remmina
@@ -259,6 +259,7 @@ in
   wineWowPackages.stable
   winetricks
   wmctrl
+  wyoming-satellite
   ydotool
 	zip
   zoom-us
