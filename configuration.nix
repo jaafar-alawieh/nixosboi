@@ -203,6 +203,7 @@ in
 	glaxnimate #kdenlive dependency why tf aint it predownloaded
 	gnome-frog
   gnome-tweaks
+  google-chrome
   dconf-editor
   gnome-terminal
   gnupg
