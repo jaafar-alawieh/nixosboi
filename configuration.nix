@@ -278,6 +278,7 @@ in
   gnomeExtensions.pip-on-top
 	gnomeExtensions.power-profile-switcher
 	gnomeExtensions.reorder-workspaces
+  gnomeExtensions.resource-monitor
 	gnomeExtensions.tactile
   gnomeExtensions.panel-workspace-scroll
 	gnomeExtensions.transparent-top-bar-adjustable-transparency
