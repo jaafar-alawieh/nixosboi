@@ -211,6 +211,7 @@ in
 	gradience
   gzdoom
   ###home-manager
+  htop
 	imagemagick #CLI converter
   inetutils
   killall
