@@ -224,6 +224,7 @@ in
   lutris
 	mediainfo #kdenlive dependency why tf aint it predownloaded
 	megacmd
+  megasync
   mpv
 	mullvad-vpn
   nano
