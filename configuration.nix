@@ -247,8 +247,6 @@ in
   qpdf
   qtpass
   remmina
-  ruby_3_4
-  rubyPackages_3_4.cocoapods
   shotcut
   #sops-nix
 	tenacity
@@ -266,6 +264,7 @@ in
   winetricks
   wmctrl
   wyoming-satellite
+  xcbuild
   ydotool
 	zip
   zoom-us
