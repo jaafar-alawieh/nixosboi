@@ -265,6 +265,7 @@ in
   winetricks
   wmctrl
   wyoming-satellite
+  xar
   xcbuild
   ydotool
 	zip
@@ -320,7 +321,7 @@ in
         ll = "ls -l";
         ls = "ls --color=tty";
         conv = "code ~/projects/nix/configuration.nix";
-        revuild = "sudo cp ~/projects/nix/configuration.nix /etc/nixos/configuration.nix && sudo nixos-rebuild switch && [ $? -eq 0 ] && git -C ~/projects/nix add . && git -C ~/projects/nix commit -m 'auto rebuild commit' && git -C ~/projects/nix push";
+        revuild = "sudo cp ~/projects/nix/configuration.nix /etc/nixos/configuration.nix && sudo nixos-rebuild switch --max-jobs 1 && [ $? -eq 0 ] && git -C ~/projects/nix add . && git -C ~/projects/nix commit -m 'auto rebuild commit' && git -C ~/projects/nix push";
         conf = "sudo nano -l /etc/nixos/configuration.nix";
         rebuild = "sudo nixos-rebuild switch && [ $? -eq 0 ] && now=$(date +'%Y-%m-%d_%H-%M-%S') && sudo cp /etc/nixos/configuration.nix /etc/nixos/conffiles/backups/configuration.$now.nix";
         nano = "nano -l";
