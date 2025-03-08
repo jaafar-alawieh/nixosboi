@@ -189,6 +189,7 @@ in
 	brave
   caligula
   copyq
+  darling
   davinci-resolve
 	dconf2nix
   docker
