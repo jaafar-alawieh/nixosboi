@@ -237,6 +237,7 @@ in
   pass
   pavucontrol
   #pass-wayland
+  pbzx
   pinentry
   pomodoro-gtk
 	poppler_utils #anotherpdf toolfml
