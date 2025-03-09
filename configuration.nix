@@ -210,6 +210,7 @@ in
   gnupg
   gnupg1
 	gradience
+  gtk3
   gzdoom
   ###home-manager
   htop
@@ -330,7 +331,7 @@ in
         cp = "cp -i";
         mv = "mv -i";
         mkdir = "mkdir -p";
-        nixclean = "nix-env --delete-generations old && nix-store --gc && nix-channel --update && nix-env -u --always && for link in /nix/var/nix/gcroots/auto/*; do sudo rm $(readlink $link); done && nix-collect-garbage -d";
+        nixclean = "nix-env --delete-generations old && nix-store --gc && nix-channel --update && nix-env -u --always && for link in /nix/var/nix/gcroots/auto/*; do rm $(readlink $link); done && nix-collect-garbage -d";
         home = "cd ~";
         cb = "cd ..";
         cbb = "cd ../..";
