@@ -210,7 +210,6 @@ in
   gnupg
   gnupg1
 	gradience
-  gtk3
   gzdoom
   ###home-manager
   htop
@@ -269,6 +268,7 @@ in
   wyoming-satellite
   xar
   xcbuild
+  xorg.xhost
   ydotool
 	zip
   zoom-us
