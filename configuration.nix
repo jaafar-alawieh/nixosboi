@@ -102,6 +102,7 @@ in
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+  services.printing.drivers = [ pkgs.gutenprint pkgs.hplip ];
 
   services.pcscd.enable = true;
 
@@ -189,7 +190,6 @@ in
 	brave
   caligula
   copyq
-  cups
   darling
   davinci-resolve
 	dconf2nix
