@@ -189,6 +189,7 @@ in
 	brave
   caligula
   copyq
+  cups
   darling
   davinci-resolve
 	dconf2nix
