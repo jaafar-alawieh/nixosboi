@@ -184,6 +184,7 @@ in
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   alsa-utils
+  android-tools
   ardour
   autocutsel
   bitwarden-desktop
