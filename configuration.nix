@@ -248,6 +248,7 @@ in
   protonup-qt
   python312Packages.pypdf2
 	python312
+  qbittorrent
   qpdf
   qtpass
   remmina
