@@ -180,15 +180,15 @@ with lib.hm.gvariant;
       color-scheme = "prefer-dark";
       cursor-size = 24;
       cursor-theme = "Bibata-Modern-Classic";
-      document-font-name = "Inter Nerd Font 12";
+      document-font-name = "Inter Nerd Font 14";
       enable-animations = true;
       enable-hot-corners = false;
       font-antialiasing = "grayscale";
       font-hinting = "slight";
-      font-name = "Inter Nerd Font 12";
+      font-name = "Inter Nerd Font 14";
       gtk-theme = "Dracula";
       icon-theme = "Adwaita";
-      monospace-font-name = "Source Code Pro 12";
+      monospace-font-name = "Source Code Pro 14";
       show-battery-percentage = true;
       text-scaling-factor = 1.0;
       toolbar-style = "text";
@@ -465,7 +465,7 @@ with lib.hm.gvariant;
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "icon:minimize,maximize,close";
       num-workspaces = 5;
-      titlebar-font = "Inter Nerd Font Bold 12";
+      titlebar-font = "Inter Nerd Font Bold 14";
       workspace-names = [ "1 Messaging" "2  Music" "3 Terminal" ];
     };
 
