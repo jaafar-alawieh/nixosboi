@@ -8,7 +8,7 @@
   # Import complete dconf settings
   imports = [ 
     ./dconf/settings.nix 
-    ./bashrc_happylime.nix 
+    ./bashrc.nix 
     ];
   
   # Enable bash
