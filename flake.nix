@@ -39,7 +39,7 @@
           ./modules/development.nix
           ./modules/hardware.nix
           ./modules/users.nix
-          ./modules/bashrc.nix
+          ./modules/system_bashrc.nix
 
           
           # Home Manager module
