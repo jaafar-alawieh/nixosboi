@@ -12,9 +12,6 @@
   # System state version - IMPORTANT: Don't change this
   system.stateVersion = "23.11";
 
-  # Make configuration.nix backup on rebuild
-#  system.copySystemConfiguration = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   
@@ -24,20 +21,6 @@
     "d /etc/nixos/conffiles/backups 0755 root root"
     "d /etc/nixos/conffiles/scripts 0755 root root"
   ];
-  
-  # Fix for keyboard backlight - remove if not needed
-  systemd.services.disable-keyboard-backlight = {
-    enable = true;
-    description = "Disable keyboard backlight on resume";
-    serviceConfig = {
-      Type = "oneshot";
-    };
-    script = ''
-      /run/current-system/sw/bin/echo 0 > "/sys/devices/pci0000:00/0000:00:14.3/PNP0C09:00/VPC2004:00/leds/platform::kbd_backlight/brightness"
-    '';
-    wantedBy = [ "sleep.target" "hibernate.target" "hybrid-sleep.target" ];
-    after = [ "sleep.target" "hibernate.target" "hybrid-sleep.target" ];
-  };
   
   # Shell customization  
   programs.bash = {

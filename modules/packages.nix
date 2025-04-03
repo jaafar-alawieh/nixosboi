@@ -25,10 +25,8 @@
     ardour
     ffmpeg_6-full
     gimp-with-plugins
-    glaxnimate
     imagemagick
     lmms
-    mediainfo
     mpv
     obs-studio
     tenacity

@@ -1,16 +1,20 @@
-# Home Manager configuration for happylime
+# ~/projects/nix/home/happylime.nix
 { config, pkgs, lib, inputs, ... }:
 
 {
   # Home Manager configuration
   home.stateVersion = "24.05";
   
+  # Import complete dconf settings
+  imports = [ ./dconf/settings.nix ];
+  
   # Enable bash
   programs.bash.enable = true;
   
   # Home configuration files
-  home.file = {
-  };  
-  # Uncomment to import dconf settings when needed
-  # imports = [ ../dconf.nix ];
+  home.file = { #add any
+  };
+
+  # Enable dconf
+  dconf.enable = true;
 }
