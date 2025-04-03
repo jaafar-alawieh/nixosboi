@@ -49,6 +49,7 @@
   # Fonts
   fonts.packages = with pkgs; [
     corefonts
+    inter-nerdfont
     vistafonts
     wine64Packages.fonts
   ];
