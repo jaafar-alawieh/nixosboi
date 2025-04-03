@@ -11,7 +11,6 @@ in
 {
   imports = [
     <home-manager/nixos>
-    # Include the results of the hardware scan
     ./hardware-configuration.nix
   ];
 
@@ -62,7 +61,6 @@ in
 
   # Time zone settings
   time.timeZone = "Europe/London";
-  # Alternate timezones (uncomment as needed)
   # time.timeZone = "Europe/Paris";
   # time.timeZone = "Asia/Beirut";
   
@@ -105,8 +103,6 @@ in
       support32Bit = true;
     };
     pulse.enable = true;
-    # Uncomment to enable JACK support
-    # jack.enable = true;
   };
   
   # Fix for keyboard backlight - remove if not needed
