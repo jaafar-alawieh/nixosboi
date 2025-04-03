@@ -51,6 +51,7 @@
     corefonts
     inconsolata-nerdfont
     inter-nerdfont
+    nerd-fonts.overpass
     vistafonts
     wine64Packages.fonts
   ];
