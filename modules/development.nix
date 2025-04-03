@@ -10,6 +10,7 @@
     nodejs
     nodePackages_latest.pnpm
     python311
+    tig
     vscode-fhs
   ];
 }
