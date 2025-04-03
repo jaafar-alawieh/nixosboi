@@ -188,7 +188,7 @@ with lib.hm.gvariant;
       font-name = "Cantarell 12";
       gtk-theme = "Dracula";
       icon-theme = "Adwaita";
-      monospace-font-name = "Source Code Pro 14";
+      monospace-font-name = "Source Code Pro 12";
       show-battery-percentage = true;
       text-scaling-factor = 1.0;
       toolbar-style = "text";
