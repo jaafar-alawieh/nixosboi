@@ -3,8 +3,6 @@
 
 {
   programs.bash = {
-    enableCompletion = true;
-
     shellAliases = {
       # File management
       l = "ls -alh";
