@@ -39,6 +39,8 @@
           ./modules/development.nix
           ./modules/hardware.nix
           ./modules/users.nix
+          ./modules/bashrc.nix
+
           
           # Home Manager module
           home-manager.nixosModules.home-manager {
