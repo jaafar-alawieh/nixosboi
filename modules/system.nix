@@ -55,4 +55,10 @@
   
   # Flatpak support
   services.flatpak.enable = true;
+  
+  # Create necessary directories
+  systemd.tmpfiles.rules = [
+    "d /etc/nixos/conffiles 0755 root root"
+    "d /etc/nixos/conffiles/backups 0755 root root"
+  ];
 }
