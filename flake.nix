@@ -46,7 +46,7 @@
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.happylime = import ./home/happylime.nix;
+            home-manager.users.happylime = import ./home/happylime/happylime.nix;
             home-manager.extraSpecialArgs = { inherit inputs; };
           }
         ];
