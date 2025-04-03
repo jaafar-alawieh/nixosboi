@@ -6,7 +6,10 @@
   home.stateVersion = "24.05";
   
   # Import complete dconf settings
-  imports = [ ./dconf/settings.nix ];
+  imports = [ 
+    ./dconf/settings.nix 
+    ./bashrc_happylime.nix 
+    ];
   
   # Enable bash
   programs.bash.enable = true;
