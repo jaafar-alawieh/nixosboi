@@ -183,14 +183,13 @@ with lib.hm.gvariant;
       document-font-name = "Inter Nerd Font 12";
       enable-animations = true;
       enable-hot-corners = false;
-      font-antialiasing = "grayscale";
-      font-hinting = "slight";
+      font-antialiasing = "rgba";
+      font-hinting = "full";
       font-name = "Inter Nerd Font 12";
       gtk-theme = "Dracula";
       icon-theme = "Adwaita";
       monospace-font-name = "Source Code Pro 12";
       show-battery-percentage = true;
-      text-scaling-factor = 1.0;
       toolbar-style = "text";
     };
 
@@ -368,11 +367,11 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/peripherals/mouse" = {
-      speed = 4.680851063829797e-2;
+      speed = 4.6809e-2;
     };
 
     "org/gnome/desktop/peripherals/touchpad" = {
-      speed = 0.30000000000000004;
+      speed = 0.3;
       tap-to-click = true;
       two-finger-scrolling-enabled = true;
     };
@@ -465,7 +464,7 @@ with lib.hm.gvariant;
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "icon:minimize,maximize,close";
       num-workspaces = 5;
-      titlebar-font = "Inter Nerd Font Bold 12";
+      titlebar-font = "Cantarell Bold 12";
       workspace-names = [ "1 Messaging" "2  Music" "3 Terminal" ];
     };
 
@@ -493,7 +492,7 @@ with lib.hm.gvariant;
       sidebar-page = "thumbnails";
       sidebar-size = 148;
       sizing-mode = "automatic";
-      window-ratio = mkTuple [ 1.881391891391415 1.284016086793864 ];
+      window-ratio = mkTuple [ 1.881392 1.284016 ];
     };
 
     "org/gnome/evolution-data-server" = {
@@ -547,10 +546,13 @@ with lib.hm.gvariant;
 
     "org/gnome/gedit/state/window" = {
       bottom-panel-size = 140;
+      height = 700;
+      maximized = false;
       side-panel-active-page = "GeditWindowDocumentsPanel";
       side-panel-size = 200;
       size = mkTuple [ 1120 1326 ];
       state = 87168;
+      width = 900;
     };
 
     "org/gnome/gnome-system-monitor" = {
@@ -609,6 +611,7 @@ with lib.hm.gvariant;
 
     "org/gnome/nautilus/window-state" = {
       initial-size = mkTuple [ 830 539 ];
+      initial-size-file-chooser = mkTuple [ 890 550 ];
       maximized = false;
     };
 
@@ -645,6 +648,30 @@ with lib.hm.gvariant;
     "org/gnome/nm-applet/eap/f9ea6236-f511-46e9-a84d-f4d313459d0a" = {
       ignore-ca-cert = true;
       ignore-phase2-ca-cert = false;
+    };
+
+    "org/gnome/portal/filechooser/com/obsproject/Studio" = {
+      last-folder-path = "/home/happylime/Videos/OBS";
+    };
+
+    "org/gnome/portal/filechooser/com/obsproject/Studio" = {
+      last-folder-path = "/home/happylime/Videos/OBS";
+    };
+
+    "org/gnome/portal/filechooser/org/qbittorrent/qBittorrent" = {
+      last-folder-path = "/home/happylime/github/qbittheming/qbittorrent";
+    };
+
+    "org/gnome/portal/filechooser/org/upscayl/Upscayl" = {
+      last-folder-path = "/home/happylime/Pictures/Upscale";
+    };
+
+    "org/gnome/portal/filechooser/org/qbittorrent/qBittorrent" = {
+      last-folder-path = "/home/happylime/github/qbittheming/qbittorrent";
+    };
+
+    "org/gnome/portal/filechooser/org/upscayl/Upscayl" = {
+      last-folder-path = "/home/happylime/Pictures/Upscale";
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
@@ -734,6 +761,12 @@ with lib.hm.gvariant;
       name = "Workspaces";
     };
 
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom20" = {
+      binding = "<Shift><Super>m";
+      command = "bash -c 'screen_width=$(xdpyinfo | grep dimensions | awk \"{print \\$2}\" | cut -d \"x\" -f 1) && screen_height=$(xdpyinfo | grep dimensions | awk \"{print \\$2}\" | cut -d \"x\" -f 2) && window_width=$((screen_width / 2)) && window_height=$((screen_height / 2)) && bash -c \"spotify & disown\" && bash -c \"youtube-music & disown\" && xdotool search --name \"Spotify\" windowmove 0 0 windowsize ${window_width} ${window_height} && xdotool search --name \"YouTube Music\" windowmove ${window_width} 0 windowsize ${window_width} ${window_height}'n";
+      name = "DOUBLE Music";
+    };
+
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom21" = {
       binding = "<Super>m";
       command = "chromium-browser --app=https://music.youtube.com/";
@@ -815,7 +848,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/blur-my-shell" = {
       brightness = 1.0;
-      color = mkTuple [ 4.3237313628196716e-2 2.053334005177021e-2 0.14666666090488434 0.7233333587646484 ];
+      color = mkTuple [ 4.3237e-2 2.0533e-2 0.146667 0.723333 ];
       hacks-level = 0;
       noise-amount = 1.0;
       sigma = 60;
@@ -827,6 +860,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/caffeine" = {
       indicator-position-max = 2;
+      toggle-state = false;
     };
 
     "org/gnome/shell/extensions/custom-hot-corners-extended/misc" = {
@@ -1027,7 +1061,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/gsconnect/device/169790bc_17f4_41a2_a945_cd5549ea8ca1/plugin/notification" = {
       applications = ''
-        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Evolution Alarm Notify":{"iconName":"appointment-soon","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Geary":{"iconName":"org.gnome.Geary","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Archive Manager":{"iconName":"org.gnome.FileRoller","enabled":true},"Firefox":{"iconName":"","enabled":true},"Spotify":{"iconName":"","enabled":true},"Mullvad VPN":{"iconName":"","enabled":true},"Disk Space":{"iconName":"drive-harddisk-symbolic","enabled":true},"qBittorrent":{"iconName":"qbittorrent","enabled":true},"Pomodoro":{"iconName":"io.gitlab.idevecore.Pomodoro","enabled":true}}
+        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Evolution Alarm Notify":{"iconName":"appointment-soon","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Geary":{"iconName":"org.gnome.Geary","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Archive Manager":{"iconName":"org.gnome.FileRoller","enabled":true},"Firefox":{"iconName":"","enabled":true},"Spotify":{"iconName":"","enabled":true},"Mullvad VPN":{"iconName":"","enabled":true},"Disk Space":{"iconName":"drive-harddisk-symbolic","enabled":true},"qBittorrent":{"iconName":"qbittorrent","enabled":true},"Pomodoro":{"iconName":"io.gitlab.idevecore.Pomodoro","enabled":true}}\n
       '';
     };
 
@@ -1048,7 +1082,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/gsconnect/device/6208abe4_151b_4471_aab8_ea0704418a6a/plugin/notification" = {
       applications = ''
-        {"Firefox":{"iconName":"","enabled":true},"Power":{"iconName":"","enabled":true},"Disk Space":{"iconName":"drive-harddisk-symbolic","enabled":true},"Mullvad VPN":{"iconName":"","enabled":true},"qBittorrent":{"iconName":"qbittorrent","enabled":true},"Pomodoro":{"iconName":"io.gitlab.idevecore.Pomodoro","enabled":true}}
+        {"Firefox":{"iconName":"","enabled":true},"Power":{"iconName":"","enabled":true},"Disk Space":{"iconName":"drive-harddisk-symbolic","enabled":true},"Mullvad VPN":{"iconName":"","enabled":true},"qBittorrent":{"iconName":"qbittorrent","enabled":true},"Pomodoro":{"iconName":"io.gitlab.idevecore.Pomodoro","enabled":true}}\n
       '';
     };
 
@@ -1076,7 +1110,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/gsconnect/device/c20304e6-29e5-4b41-aa1d-644a436730ca/plugin/notification" = {
       applications = ''
-        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Evolution Alarm Notify":{"iconName":"appointment-soon","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Geary":{"iconName":"org.gnome.Geary","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Archive Manager":{"iconName":"org.gnome.FileRoller","enabled":true}}
+        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Evolution Alarm Notify":{"iconName":"appointment-soon","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Geary":{"iconName":"org.gnome.Geary","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Archive Manager":{"iconName":"org.gnome.FileRoller","enabled":true}}\n
       '';
     };
 
@@ -1110,7 +1144,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/gsconnect/device/f6632e15f1a4e42b/plugin/notification" = {
       applications = ''
-        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Evolution Alarm Notify":{"iconName":"appointment-soon","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Geary":{"iconName":"org.gnome.Geary","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Archive Manager":{"iconName":"org.gnome.FileRoller","enabled":true},"Spotify":{"iconName":"","enabled":true},"Firefox":{"iconName":"","enabled":true},"Mullvad VPN":{"iconName":"","enabled":true},"Disk Space":{"iconName":"drive-harddisk-symbolic","enabled":true},"qBittorrent":{"iconName":"qbittorrent","enabled":true},"Pomodoro":{"iconName":"io.gitlab.idevecore.Pomodoro","enabled":true}}
+        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Evolution Alarm Notify":{"iconName":"appointment-soon","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Geary":{"iconName":"org.gnome.Geary","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Archive Manager":{"iconName":"org.gnome.FileRoller","enabled":true},"Spotify":{"iconName":"","enabled":true},"Firefox":{"iconName":"","enabled":true},"Mullvad VPN":{"iconName":"","enabled":true},"Disk Space":{"iconName":"drive-harddisk-symbolic","enabled":true},"qBittorrent":{"iconName":"qbittorrent","enabled":true},"Pomodoro":{"iconName":"io.gitlab.idevecore.Pomodoro","enabled":true}}\n
       '';
     };
 
@@ -1325,6 +1359,7 @@ with lib.hm.gvariant;
       background-color = "rgb(0,0,0)";
       cursor-colors-set = false;
       foreground-color = "rgb(0,255,0)";
+      use-system-font = true;
       use-theme-colors = false;
     };
 
@@ -1333,8 +1368,8 @@ with lib.hm.gvariant;
     };
 
     "org/gtk/gtk4/settings/color-chooser" = {
-      custom-colors = [ (mkTuple [ 4.3237313628196716e-2 2.053334005177021e-2 0.14666666090488434 0.7233333587646484 ]) (mkTuple [ 0.14162133634090424 2.053334005177021e-2 0.14666666090488434 0.7233333587646484 ]) (mkTuple [ 0.14162133634090424 2.0533330738544464e-2 0.14666666090488434 0.7233333587646484 ]) (mkTuple [ 0.34967201948165894 2.1800002083182335e-2 0.3633333444595337 0.7233333587646484 ]) (mkTuple [ 0.0 0.0 0.0 0.0 ]) (mkTuple [ 0.13725490868091583 0.12941177189350128 0.21176470816135406 1.0 ]) (mkTuple [ 0.16470588743686676 0.15294118225574493 0.24705882370471954 1.0 ]) ];
-      selected-color = mkTuple [ true 4.3237313628196716e-2 2.053334005177021e-2 0.14666666090488434 0.7233333587646484 ];
+      custom-colors = [ (mkTuple [ 4.3237e-2 2.0533e-2 0.146667 0.723333 ]) (mkTuple [ 0.141621 2.0533e-2 0.146667 0.723333 ]) (mkTuple [ 0.141621 2.0533e-2 0.146667 0.723333 ]) (mkTuple [ 0.349672 2.18e-2 0.363333 0.723333 ]) (mkTuple [ 0.0 0.0 0.0 0.0 ]) (mkTuple [ 0.137255 0.129412 0.211765 1.0 ]) (mkTuple [ 0.164706 0.152941 0.247059 1.0 ]) ];
+      selected-color = mkTuple [ true 4.3237e-2 2.0533e-2 0.146667 0.723333 ];
     };
 
     "org/gtk/gtk4/settings/file-chooser" = {
