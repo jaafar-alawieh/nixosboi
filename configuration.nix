@@ -42,15 +42,15 @@
       nixscripts = "cd /etc/nixos/conffiles/scripts";
       
       # NixOS management
-      conv = "code ~/projects/nix/configuration.nix";
-      revuild = "cp -r ~/projects/nix/* /etc/nixos/ && sudo nixos-rebuild switch --flake /etc/nixos#nixos && [ $? -eq 0 ] && git -C ~/projects/nix add . && git -C ~/projects/nix commit -m 'auto rebuild commit' && git -C ~/projects/nix push";
-      conf = "sudo nano -l /etc/nixos/configuration.nix";
+      conv = "code ~/projects/nix/";
+      revuild = "sudo cp -r ~/projects/nix/* /etc/nixos/ && sudo nixos-rebuild switch --flake /etc/nixos#nixos && [ $? -eq 0 ] && git -C ~/projects/nix add . && git -C ~/projects/nix commit -m 'auto rebuild commit' && git -C ~/projects/nix push";
+      conf = "cd ~/projects/nix && ls modules/";
       rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#nixos && [ $? -eq 0 ] && now=$(date +'%Y-%m-%d_%H-%M-%S') && mkdir -p /etc/nixos/conffiles/backups && cp /etc/nixos/configuration.nix /etc/nixos/conffiles/backups/configuration.$now.nix";
-      nixclean = "nix-env --delete-generations old && nix-store --gc && nix-channel --update && nix-env -u --always && for link in /nix/var/nix/gcroots/auto/*; do rm $(readlink $link); done && nix-collect-garbage -d";
-      
+      nixclean = "nix-env --delete-generations old && nix-store --gc && for link in /nix/var/nix/gcroots/auto/*; do rm $(readlink $link); done && nix-collect-garbage -d";
+
       # dconf management
-      dconfigure = "sudo nano /etc/nixos/dconf.nix";
-      dconfbackup = "dconf dump / | dconf2nix > dconf.nix ; sudo cp dconf.nix /etc/nixos/dconf.nix; sudo cp dconf.nix ~/projects/nix/dconf.nix";
+      dconfigure = "sudo nano /etc/nixos/dconf/settings.nix";
+      dconfbackup = "dconf dump / | dconf2nix > dconf.nix ; sudo cp dconf.nix ~/projects/nix/home/dconf/settings.nix";
       dconfbackuphalf = "dconf dump / | dconf2nix > dconf.nix";
       
       # Applications
