@@ -14,12 +14,14 @@
     neovim
     powertop
     tldr
+    unzip
     vim
     wget
     wmctrl
     ydotool
     zip
-    unzip
+    zoxide
+    
     
     # Media tools
     ardour
