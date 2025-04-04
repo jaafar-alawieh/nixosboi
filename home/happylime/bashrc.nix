@@ -17,6 +17,12 @@
       fi
     '';
   };
+  
+  # Enable zoxide program
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration = true;
+  };
 
   # Create a separate file with all your customizations
   home.file.".bash_custom" = {
