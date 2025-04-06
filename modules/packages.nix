@@ -38,6 +38,7 @@
     brave
     firefox
     mullvad-vpn
+    qbittorrent
     ungoogled-chromium
     zoom-us
     webex
