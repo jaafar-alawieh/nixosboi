@@ -64,4 +64,5 @@
     "d /etc/nixos/conffiles 0755 root root"
     "d /etc/nixos/conffiles/backups 0755 root root"
   ];
+  services.mullvad-vpn.enable = true;
 }
