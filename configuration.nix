@@ -283,7 +283,7 @@ in
 	gnomeExtensions.clipboard-indicator
 	gnomeExtensions.dash-to-dock
   gnomeExtensions.gsconnect
-	gnomeExtensions.just-perfection
+	#gnomeExtensions.just-perfection
 	gnomeExtensions.media-controls
   gnomeExtensions.pip-on-top
 	gnomeExtensions.power-profile-switcher
