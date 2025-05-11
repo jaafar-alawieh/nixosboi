@@ -41,7 +41,6 @@
     gnomeExtensions.gsconnect
     gnomeExtensions.media-controls
     gnomeExtensions.panel-workspace-scroll
-    gnomeExtensions.pop-shell
     gnomeExtensions.power-profile-switcher
     gnomeExtensions.reorder-workspaces
     gnomeExtensions.space-bar
