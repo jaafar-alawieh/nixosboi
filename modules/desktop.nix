@@ -45,7 +45,7 @@
     gnomeExtensions.reorder-workspaces
     gnomeExtensions.space-bar
     gnomeExtensions.tactile
-    gnomeExtensions.tiling-assistant
+    gnomeExtensions.tiling-shell
     gnomeExtensions.transparent-top-bar-adjustable-transparency
     gnomeExtensions.transparent-window-moving
     gnomeExtensions.workspace-matrix
