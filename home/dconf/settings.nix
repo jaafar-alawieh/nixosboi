@@ -193,7 +193,7 @@ with lib.hm.gvariant;
       font-name = "Cantarell 12";
       gtk-theme = "Dracula";
       icon-theme = "Adwaita";
-      monospace-font-name = "OverpassM Nerd Font Mono 12";
+      monospace-font-name = "OverpassM Nerd Font Mono 13";
       show-battery-percentage = true;
       text-scaling-factor = 1.0;
       toolbar-style = "text";
