@@ -5,6 +5,7 @@
   # Development packages
   environment.systemPackages = with pkgs; [
     # Development tools
+    code-cursor
     git
     gh
     nodejs
