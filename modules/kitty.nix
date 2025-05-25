@@ -4,7 +4,7 @@ let
   kittyConf = ''
     ## ─── FONTS ───────────────────────────────
     font_family      OverpassM Nerd Font Mono
-    font_size        14.0
+    font_size        34.0
     enable_ligatures yes
 
     ## ─── COLORS & UI ─────────────────────────
