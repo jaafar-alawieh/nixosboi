@@ -28,7 +28,7 @@
       nixclean = "sudo nix-env --delete-generations old && sudo nix-store --gc && for link in /nix/var/nix/gcroots/auto/*; do sudo rm $(readlink $link); done && sudo nix-collect-garbage -d";
 
       # dconf management
-      dconfigure = "sudo nano /etc/nixos/dconf/settings.nix";
+      dconfigure = "sudo nano /etc/nixos/home/dconf/settings.nix";
       dconfbackup = "dconf dump / | dconf2nix > dconf.nix ; sudo cp dconf.nix ~/projects/nix/home/dconf/settings.nix";
       dconfbackuphalf = "dconf dump / | dconf2nix > dconf.nix";
       

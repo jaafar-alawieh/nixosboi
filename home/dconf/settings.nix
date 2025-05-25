@@ -185,15 +185,15 @@ with lib.hm.gvariant;
       color-scheme = "prefer-dark";
       cursor-size = 24;
       cursor-theme = "Bibata-Modern-Classic";
-      document-font-name = "Cantarell 13";
+      document-font-name = "Cantarell 14";
       enable-animations = true;
       enable-hot-corners = false;
       font-antialiasing = "grayscale";
       font-hinting = "slight";
-      font-name = "Cantarell 13";
+      font-name = "Cantarell 14";
       gtk-theme = "Dracula";
       icon-theme = "Adwaita";
-      monospace-font-name = "Source Code Pro 12";
+      monospace-font-name = "OverpassM Nerd Font Mono 13";
       show-battery-percentage = true;
       text-scaling-factor = 1.0;
       toolbar-style = "text";
@@ -840,7 +840,7 @@ with lib.hm.gvariant;
       disabled-extensions = [ "native-window-placement@gnome-shell-extensions.gcampax.github.com" "vertical-workspaces@G-dH.github.com" "blur-my-shell@aunetx" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "wsmatrix@martin.zurowietz.de" "gSnap@micahosborne" "custom-hot-corners-extended@G-dH.github.com" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" ];
       enabled-extensions = [ "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-top-bar@zhanghai.me" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "user-theme@gnome-shell-extensions.gcampax.github.com" "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-top-bar@ftpix.com" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "user-theme@gnome-shell-extensions.gcampax.github.com" "caffeine@patapon.info" "clipboard-indicator@tudmotu.com" "grand-theft-focus@zalckos.github.com" "reorder-workspaces@jer.dev" "RemoveAppMenu@Dragon8oy.com" "tactile@lundal.io" "scroll-workspaces@gfxmonk.net" "transparent-top-bar@ftpix.com" "transparent-window-moving@noobsai.github.com" "space-bar@luchrioh" "user-theme@gnome-shell-extensions.gcampax.github.com" "just-perfection-desktop@just-perfection" "battery-indicator-icon@Deminder" "color-picker@tuberry" "ssm-gnome@lgiki.net" "power-profile-switcher@eliapasquali.github.io" "mediacontrols@cliffniff.github.com" "gestureImprovements@gestures" "x11gestures@joseexposito.github.io" "gsconnect@andyholmes.github.io" "panel-workspace-scroll@polymeilex.github.io" "dash-to-dock@micxgx.gmail.com" ];
       favorite-apps = [ "org.gnome.Nautilus.desktop" "org.gnome.Terminal.desktop" "firefox.desktop" "code.desktop" ];
-      last-selected-power-profile = "performance";
+      last-selected-power-profile = "power-saver";
       welcome-dialog-last-shown-version = "44.2";
     };
 
@@ -869,7 +869,8 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/caffeine" = {
       indicator-position-max = 2;
-      toggle-state = false;
+      toggle-state = true;
+      user-enabled = true;
     };
 
     "org/gnome/shell/extensions/custom-hot-corners-extended/misc" = {
@@ -1440,9 +1441,9 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/software" = {
-      check-timestamp = mkInt64 1743679080;
+      check-timestamp = mkInt64 1748191230;
       first-run = false;
-      flatpak-purge-timestamp = mkInt64 1737637943;
+      flatpak-purge-timestamp = mkInt64 1748191145;
     };
 
     "org/gnome/terminal/legacy" = {
