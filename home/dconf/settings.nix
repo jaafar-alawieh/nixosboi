@@ -659,29 +659,11 @@ with lib.hm.gvariant;
       ignore-phase2-ca-cert = false;
     };
 
-    "org/gnome/portal/filechooser/com/obsproject/Studio" = {
-      last-folder-path = "/home/happylime/Videos/OBS";
-    };
 
-    "org/gnome/portal/filechooser/com/obsproject/Studio" = {
-      last-folder-path = "/home/happylime/Videos/OBS";
-    };
 
-    "org/gnome/portal/filechooser/org/qbittorrent/qBittorrent" = {
-      last-folder-path = "/home/happylime/github/qbittheming/qbittorrent";
-    };
 
-    "org/gnome/portal/filechooser/org/upscayl/Upscayl" = {
-      last-folder-path = "/home/happylime/Pictures/Upscale";
-    };
 
-    "org/gnome/portal/filechooser/org/qbittorrent/qBittorrent" = {
-      last-folder-path = "/home/happylime/github/qbittheming/qbittorrent";
-    };
 
-    "org/gnome/portal/filechooser/org/upscayl/Upscayl" = {
-      last-folder-path = "/home/happylime/Pictures/Upscale";
-    };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
       control-center = [ "<Super>s" ];
@@ -762,24 +744,6 @@ with lib.hm.gvariant;
       binding = "<Super>c";
       command = "firefox --new-window https://chat.openai.com/";
       name = "ChatGPT";
-    };
-
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
-      binding = "<Shift><Control><Alt><Super>m";
-      command = "gnome-extensions prefs workspace-indicator@gnome-shell-extensions.gcampax.github.com";
-      name = "Workspaces";
-    };
-
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom20" = {
-      binding = "<Shift><Super>m";
-      command = "bash -c 'screen_width=$(xdpyinfo | grep dimensions | awk \"{print \\$2}\" | cut -d \"x\" -f 1) && screen_height=$(xdpyinfo | grep dimensions | awk \"{print \\$2}\" | cut -d \"x\" -f 2) && window_width=$((screen_width / 2)) && window_height=$((screen_height / 2)) && bash -c \"spotify & disown\" && bash -c \"youtube-music & disown\" && xdotool search --name \"Spotify\" windowmove 0 0 windowsize ${window_width} ${window_height} && xdotool search --name \"YouTube Music\" windowmove ${window_width} 0 windowsize ${window_width} ${window_height}'n";
-      name = "DOUBLE Music";
-    };
-
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom21" = {
-      binding = "<Super>m";
-      command = "chromium-browser --app=https://music.youtube.com/";
-      name = "Music";
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom22" = {
@@ -1441,9 +1405,9 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/software" = {
-      check-timestamp = mkInt64 1748191230;
+      check-timestamp = mkInt64 1743679080;
       first-run = false;
-      flatpak-purge-timestamp = mkInt64 1748191145;
+      flatpak-purge-timestamp = mkInt64 1737637943;
     };
 
     "org/gnome/terminal/legacy" = {
