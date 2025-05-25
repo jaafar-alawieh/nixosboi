@@ -13,7 +13,7 @@
 
       ## ─── COLORS & UI ─────────────────────────
       background       #1e1e2e
-      foreground       #cdd6f4
+      foregroundrgb(166, 185, 19)
       cursor           #f5c2e7
 
       ## ─── BEHAVIOR & KEYBINDINGS ─────────────
