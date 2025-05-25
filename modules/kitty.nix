@@ -4,7 +4,7 @@ let
   kittyConf = ''
     ## ─── FONTS ───────────────────────────────
     font_family      OverpassM Nerd Font Mono
-    font_size        34.0
+    font_size        14.0
     enable_ligatures yes
 
     ## ─── COLORS & UI ─────────────────────────
@@ -18,9 +18,5 @@ let
     map ctrl+shift+w close_window
   '';
 in {
-  # Ensure the directory exists:
-  environment.etc."xdg/kitty".source = pkgs.lib.mkForce "/etc/xdg/kitty";
-
-  # Write out our config:
   environment.etc."xdg/kitty/kitty.conf".text = kittyConf;
 }
