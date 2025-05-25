@@ -9,6 +9,7 @@
     dconf2nix
     home-manager
     killall
+    kitty
     nano
     neofetch
     neovim
