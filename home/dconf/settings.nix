@@ -67,6 +67,11 @@ with lib.hm.gvariant;
       theme = "night";
     };
 
+    "org/gnome/Extensions" = {
+      window-height = 1356;
+      window-width = 1104;
+    };
+
     "org/gnome/Geary" = {
       migrated-config = true;
     };
@@ -180,16 +185,17 @@ with lib.hm.gvariant;
       color-scheme = "prefer-dark";
       cursor-size = 24;
       cursor-theme = "Bibata-Modern-Classic";
-      document-font-name = "Inter Nerd Font 12";
+      document-font-name = "Cantarell 12";
       enable-animations = true;
       enable-hot-corners = false;
-      font-antialiasing = "rgba";
-      font-hinting = "full";
-      font-name = "Inter Nerd Font 12";
+      font-antialiasing = "grayscale";
+      font-hinting = "slight";
+      font-name = "Cantarell 12";
       gtk-theme = "Dracula";
       icon-theme = "Adwaita";
-      monospace-font-name = "Source Code Pro 12";
+      monospace-font-name = "OverpassM Nerd Font Mono 12";
       show-battery-percentage = true;
+      text-scaling-factor = 1.0;
       toolbar-style = "text";
     };
 
@@ -464,7 +470,7 @@ with lib.hm.gvariant;
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "icon:minimize,maximize,close";
       num-workspaces = 5;
-      titlebar-font = "Cantarell Bold 12";
+      titlebar-font = "Cantarell Bold 14";
       workspace-names = [ "1 Messaging" "2  Music" "3 Terminal" ];
     };
 
@@ -509,6 +515,8 @@ with lib.hm.gvariant;
     "org/gnome/file-roller/file-selector" = {
       show-hidden = false;
       sidebar-size = 300;
+      sort-method = "name";
+      sort-type = "ascending";
       window-size = mkTuple [ (-1) (-1) ];
     };
 
@@ -578,6 +586,7 @@ with lib.hm.gvariant;
     "org/gnome/mutter" = {
       center-new-windows = false;
       dynamic-workspaces = false;
+      edge-tiling = false;
       workspaces-only-on-primary = true;
     };
 
@@ -1186,6 +1195,7 @@ with lib.hm.gvariant;
       search = true;
       show-apps-button = true;
       startup-status = 0;
+      support-notifier-showed-version = 34;
       theme = true;
       weather = true;
       window-demands-attention-focus = true;
@@ -1225,6 +1235,29 @@ with lib.hm.gvariant;
       show-sources-menu = false;
       show-text = true;
       track-label = [ "track" "-" "artist" ];
+    };
+
+    "org/gnome/shell/extensions/pop-shell" = {
+      activate-launcher = "";
+      focus-down = "";
+      focus-left = "";
+      focus-right = "";
+      focus-up = "";
+      hint = "";
+      move-down = "";
+      move-left = "";
+      move-right = "";
+      move-up = "";
+      search = "";
+      stacking-with-mouse = true;
+      swap-down = "";
+      swap-left = "";
+      swap-right = "";
+      swap-up = "";
+      tile-by-default = true;
+      toggle-floating = "";
+      toggle-fullscreen = "";
+      toggle-stacked-tiling = "";
     };
 
     "org/gnome/shell/extensions/power-profile-switcher" = {
@@ -1277,6 +1310,67 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/tactile" = {
       show-tiles = [ "<Alt>t" ];
+    };
+
+    "org/gnome/shell/extensions/tiling-assistant" = {
+      activate-layout0 = [];
+      activate-layout1 = [];
+      activate-layout2 = [];
+      activate-layout3 = [];
+      auto-tile = [];
+      center-window = [];
+      debugging-free-rects = [];
+      debugging-show-tiled-rects = [];
+      default-move-mode = 0;
+      dynamic-keybinding-behavior = 0;
+      enable-tiling-popup = false;
+      focus-hint = 0;
+      focus-hint-color = "rgb(53,132,228)";
+      import-layout-examples = false;
+      last-version-installed = 50;
+      restore-window = [ "<Super>Down" ];
+      search-popup-layout = [];
+      tile-bottom-half = [ "<Super>KP_2" ];
+      tile-bottom-half-ignore-ta = [];
+      tile-bottomleft-quarter = [ "<Super>KP_1" ];
+      tile-bottomleft-quarter-ignore-ta = [];
+      tile-bottomright-quarter = [ "<Super>KP_3" ];
+      tile-bottomright-quarter-ignore-ta = [];
+      tile-edit-mode = [];
+      tile-left-half = [ "<Super>Left" "<Super>KP_4" ];
+      tile-left-half-ignore-ta = [];
+      tile-maximize = [ "<Super>Up" "<Super>KP_5" ];
+      tile-maximize-horizontally = [];
+      tile-maximize-vertically = [];
+      tile-right-half = [ "<Super>Right" "<Super>KP_6" ];
+      tile-right-half-ignore-ta = [];
+      tile-top-half = [ "<Super>KP_8" ];
+      tile-top-half-ignore-ta = [];
+      tile-topleft-quarter = [ "<Super>KP_7" ];
+      tile-topleft-quarter-ignore-ta = [];
+      tile-topright-quarter = [ "<Super>KP_9" ];
+      tile-topright-quarter-ignore-ta = [];
+      toggle-always-on-top = [];
+      toggle-tiling-popup = [];
+    };
+
+    "org/gnome/shell/extensions/tilingshell" = {
+      enable-autotiling = true;
+      enable-move-keybindings = false;
+      enable-span-multiple-tiles = true;
+      enable-tiling-system-windows-suggestions = true;
+      enable-window-border = false;
+      enable-wraparound-focus = false;
+      last-version-name-installed = "16.2";
+      layouts-json = "[{\"id\":\"Layout 1\",\"tiles\":[{\"x\":0,\"y\":0,\"width\":0.22,\"height\":0.5,\"groups\":[1,2]},{\"x\":0,\"y\":0.5,\"width\":0.22,\"height\":0.5,\"groups\":[1,2]},{\"x\":0.22,\"y\":0,\"width\":0.56,\"height\":1,\"groups\":[2,3]},{\"x\":0.78,\"y\":0,\"width\":0.22,\"height\":0.5,\"groups\":[3,4]},{\"x\":0.78,\"y\":0.5,\"width\":0.22,\"height\":0.5,\"groups\":[3,4]}]},{\"id\":\"Layout 2\",\"tiles\":[{\"x\":0,\"y\":0,\"width\":0.22,\"height\":1,\"groups\":[1]},{\"x\":0.22,\"y\":0,\"width\":0.56,\"height\":1,\"groups\":[1,2]},{\"x\":0.78,\"y\":0,\"width\":0.22,\"height\":1,\"groups\":[2]}]},{\"id\":\"Layout 3\",\"tiles\":[{\"x\":0,\"y\":0,\"width\":0.33,\"height\":1,\"groups\":[1]},{\"x\":0.33,\"y\":0,\"width\":0.67,\"height\":1,\"groups\":[1]}]},{\"id\":\"Layout 4\",\"tiles\":[{\"x\":0,\"y\":0,\"width\":0.67,\"height\":1,\"groups\":[1]},{\"x\":0.67,\"y\":0,\"width\":0.33,\"height\":1,\"groups\":[1]}]},{\"id\":\"3989293\",\"tiles\":[{\"x\":0,\"y\":0,\"width\":0.6053571428571428,\"height\":1,\"groups\":[1]},{\"x\":0.6053571428571428,\"y\":0,\"width\":0.39464285714285713,\"height\":0.5058309037900874,\"groups\":[2,1]},{\"x\":0.6053571428571428,\"y\":0.5058309037900874,\"width\":0.1982142857142858,\"height\":0.49416909620991256,\"groups\":[2,3,1]},{\"x\":0.8035714285714286,\"y\":0.5058309037900874,\"width\":0.19642857142857134,\"height\":0.24927113702623904,\"groups\":[2,4,3]},{\"x\":0.8035714285714286,\"y\":0.7551020408163265,\"width\":0.19642857142857134,\"height\":0.24489795918367352,\"groups\":[4,3]}]}]";
+      move-window-down = [ "" ];
+      move-window-left = [ "" ];
+      move-window-right = [ "" ];
+      move-window-up = [ "" ];
+      overridden-settings = ''
+        {}
+      '';
+      selected-layouts = [ [ "3989293" ] [ "Layout 1" ] [ "Layout 1" ] [ "Layout 1" ] [ "Layout 1" ] ];
     };
 
     "org/gnome/shell/extensions/user-theme" = {
