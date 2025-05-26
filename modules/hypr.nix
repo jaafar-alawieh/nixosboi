@@ -15,8 +15,14 @@
 
   # Hyprland system packages (only what's missing from your existing setup)
   environment.systemPackages = with pkgs; [
-    waybar                 # Status bar
-    wofi                   # App launcher
+    waybar
+
+    # Arch-only extras
+    wlogout
+    capitaine-cursors
+    sweet
+    
+    wofi        
     mako                   # Notification daemon
     swaybg                 # Wallpaper
     swayidle               # Idle timeout handler
@@ -28,6 +34,7 @@
     grim                   # Screenshot tool
     slurp                  # Region selection for screenshots
     swappy                 # Annotate screenshots
+    foot
     libsForQt5.qt5ct                  # Qt5 theming
     qt6ct                  # Qt6 theming
     lxappearance           # GTK theming
