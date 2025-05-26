@@ -22,9 +22,9 @@
       
       # NixOS management
       conv = "cursor ~/projects/nix/";
-      revuild = "cd ~/projects/nix && git pull && nix flake update --update-input nixpkgs && sudo nixos-rebuild switch --flake .#nixos && [ $? -eq 0 ] && git add flake.lock && git commit -m 'Auto-update flake & rebuild' && git push";
+      flakeupdate = "cd ~/projects/nix && nix flake update nixpkgs";
+      rebuild = "cd ~/projects/nix && git pull && nix flake update --update-input nixpkgs && sudo nixos-rebuild switch --flake .#nixos && [ $? -eq 0 ] && git add flake.lock && git commit -m 'Auto-update flake & rebuild' && git push";
       conf = "cd ~/projects/nix && ls";
-      rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#nixos && [ $? -eq 0 ] && now=$(date +'%Y-%m-%d_%H-%M-%S') && mkdir -p /etc/nixos/conffiles/backups && cp /etc/nixos/configuration.nix /etc/nixos/conffiles/backups/configuration.$now.nix";
       nixclean = "sudo nix-env --delete-generations old && sudo nix-store --gc && for link in /nix/var/nix/gcroots/auto/*; do sudo rm $(readlink $link); done && sudo nix-collect-garbage -d";
 
       # dconf management
