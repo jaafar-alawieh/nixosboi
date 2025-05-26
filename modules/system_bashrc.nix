@@ -23,7 +23,7 @@
       # NixOS management
       conv = "cursor ~/projects/nix/";
       updateflake = "cd ~/projects/nix && sudo nix flake update nixpkgs";
-      reebuild = "sudo nixos-rebuild switch --flake /home/happylime/projects/nix#nixos && git -C /home/happylime/projects/nix add . && git -C /home/happylime/projects/nix commit -m 'Auto-update flake & rebuild' && git -C /home/happylime/projects/nix push";
+      reebuild = "sudo nixos-rebuild switch --impure --flake /home/happylime/projects/nix#nixos && git -C /home/happylime/projects/nix add . && git -C /home/happylime/projects/nix commit -m 'Auto-update flake & rebuild' && git -C /home/happylime/projects/nix push";
       conf = "cd ~/projects/nix && ls";
       nixclean = "sudo nix-env --delete-generations old && sudo nix-store --gc && for link in /nix/var/nix/gcroots/auto/*; do sudo rm $(readlink $link); done && sudo nix-collect-garbage -d";
 
