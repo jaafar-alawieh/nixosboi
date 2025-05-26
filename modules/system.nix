@@ -49,8 +49,7 @@
   # Fonts
   fonts.packages = with pkgs; [
     corefonts
-    inter-nerdfont
-    nerd-fonts.inconsolata
+    inter
     nerd-fonts.overpass
     vistafonts
     wine64Packages.fonts
