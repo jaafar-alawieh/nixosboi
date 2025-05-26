@@ -45,6 +45,13 @@
     mark1_foreground #282a36
     mark1_background #ff5555
 
+    # Always show Kitty's own title/tab bar
+    hide_tab_bar_when_only_one_tab no
+
+    # Style & position
+    tab_bar_style powerline
+    tab_bar_edge top
+
     ## ─── WINDOW BORDERS ──────────────────────────
     active_border_color   #f8f8f2
     inactive_border_color #6272a4
@@ -54,7 +61,6 @@
     confirm_os_window_close 0
 
     ## ─── KEYBINDINGS ─────────────────────────────
-    hide_tab_bar_when_only_one_tab yes
     map ctrl+shift+t new_tab
     map ctrl+shift+w close_window
   '';
