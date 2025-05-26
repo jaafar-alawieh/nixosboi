@@ -20,10 +20,6 @@
     text   = "#282a36"
     cursor = "#00ff00"
 
-    ## ─── URL HYPERLINK COLOR ────────────────────
-    [colors.url]
-    normal = "#8be9fd"
-
     ## ─── SELECTION ───────────────────────────────
     [colors.selection]
     text       = "#ffffff"
