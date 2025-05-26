@@ -61,10 +61,13 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/Console" = {
+      audible-bell = false;
       font-scale = 1.1;
       last-window-maximised = false;
-      last-window-size = mkTuple [ 1155 1366 ];
+      last-window-size = mkTuple [ 1120 683 ];
       theme = "night";
+      use-system-font = true;
+      visual-bell = true;
     };
 
     "org/gnome/Extensions" = {
@@ -185,15 +188,15 @@ with lib.hm.gvariant;
       color-scheme = "prefer-dark";
       cursor-size = 24;
       cursor-theme = "Bibata-Modern-Classic";
-      document-font-name = "Cantarell 14";
+      document-font-name = "Inter 14";
       enable-animations = true;
       enable-hot-corners = false;
       font-antialiasing = "grayscale";
       font-hinting = "slight";
-      font-name = "Cantarell 14";
+      font-name = "Inter 15";
       gtk-theme = "Dracula";
       icon-theme = "Adwaita";
-      monospace-font-name = "OverpassM Nerd Font Mono 14";
+      monospace-font-name = "OverpassM Nerd Font Mono 15";
       show-battery-percentage = true;
       text-scaling-factor = 1.0;
       toolbar-style = "text";
@@ -1430,7 +1433,7 @@ with lib.hm.gvariant;
     "org/gnome/software" = {
       check-timestamp = mkInt64 1743679080;
       first-run = false;
-      flatpak-purge-timestamp = mkInt64 1737637943;
+      flatpak-purge-timestamp = mkInt64 1748222327;
     };
 
     "org/gnome/terminal/legacy" = {
