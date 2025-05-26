@@ -13,7 +13,7 @@
     font-size    = 15
 
     # --- Initial window size (cols × rows) ---
-    width        = 70
-    height       = 15
+    window-width    = 70
+    window-height   = 15
   '';
 }
