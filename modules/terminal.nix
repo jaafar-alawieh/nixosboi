@@ -1,49 +1,35 @@
 { config, pkgs, ... }:
 
 {
-   environment.etc."xdg/alacritty/alacritty.toml".text = ''
-    ## ─── FONTS & LIGATURES ─────────────────────
-    [font]
-    normal   = { family = "OverpassM Nerd Font Mono" }
-    bold     = { family = "OverpassM Nerd Font Mono" }
-    italic   = { family = "OverpassM Nerd Font Mono" }
-    size     = 14.0
-    features = ["liga"]
+  environment.etc."xdg/wezterm/wezterm.lua".text = ''
+    local wezterm = require "wezterm"
+    local cfg = wezterm.config_builder and wezterm.config_builder() or {}
 
-    ## ─── BACKGROUND & FOREGROUND ────────────────
-    [colors.primary]
-    background = "#282a36"
-    foreground = "#00ff00"
+    cfg.enable_wayland = true
+    cfg.font = wezterm.font("OverpassM Nerd Font Mono")
+    cfg.font_size = 14.0
+    cfg.harfbuzz_features = { "liga=1", "clig=1", "calt=1" }
 
-    ## ─── CURSOR ──────────────────────────────────
-    [colors.cursor]
-    text   = "#282a36"
-    cursor = "#00ff00"
+    cfg.colors = {
+      foreground = "#00ff00",
+      background = "#282a36",
+      cursor_bg = "#00ff00",
+      cursor_fg = "#282a36", 
+      cursor_border = "#00ff00",
+      selection_bg = "#44475a",
+      selection_fg = "#ffffff",
+      ansi = {
+        "#21222c", "#ff5555", "#50fa7b", "#f1fa8c",
+        "#bd93f9", "#ff79c6", "#8be9fd", "#f8f8f2"
+      },
+      brights = {
+        "#6272a4", "#ff6e6e", "#69ff94", "#ffffa5",
+        "#d6acff", "#ff92df", "#a4ffff", "#ffffff"
+      }
+    }
 
-    ## ─── SELECTION ───────────────────────────────
-    [colors.selection]
-    text       = "#ffffff"
-    background = "#44475a"
+    cfg.window_decorations = "RESIZE"
 
-    ## ─── DRACULA ANSI PALETTE ───────────────────
-    [colors.normal]
-    black   = "#21222c"
-    red     = "#ff5555"
-    green   = "#50fa7b"
-    yellow  = "#f1fa8c"
-    blue    = "#bd93f9"
-    magenta = "#ff79c6"
-    cyan    = "#8be9fd"
-    white   = "#f8f8f2"
-
-    [colors.bright]
-    black   = "#6272a4"
-    red     = "#ff6e6e"
-    green   = "#69ff94"
-    yellow  = "#ffffa5"
-    blue    = "#d6acff"
-    magenta = "#ff92df"
-    cyan    = "#a4ffff"
-    white   = "#ffffff"
+    return cfg
   '';
-}
+  }
