@@ -129,5 +129,17 @@ selection-foreground = "#282a36"
 selection-background = "#bd93f9"
       '';
     };
+
+    "\.local/share/wayland-sessions/hyprland.desktop" = {
+      text = ''
+[Desktop Entry]
+Name=Hyprland
+Comment=An intelligent dynamic tiling Wayland compositor
+Exec=Hyprland
+Type=Application
+DesktopNames=Hyprland
+Keywords=tiling;wm;wayland
+      '';
+    };
   };
 }
