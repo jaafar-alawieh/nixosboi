@@ -16,20 +16,20 @@
   # Hyprland system packages (only what's missing from your existing setup)
   environment.systemPackages = with pkgs; [
     waybar                 # Status bar
-    # wofi                   # App launcher
-    # mako                   # Notification daemon
-    # swaybg                 # Wallpaper
-    # swayidle               # Idle timeout handler
-    # swaylock-effects       # Screen locker
-    # foot                   # Terminal (Wayland-native)
-    # brightnessctl          # Backlight control
-    # playerctl              # Media player controller
-    # wl-clipboard           # Clipboard for Wayland
-    # grim                   # Screenshot tool
-    # slurp                  # Region selection for screenshots
-    # swappy                 # Annotate screenshots
-    # qt5ct                  # Qt5 theming
-    # qt6ct                  # Qt6 theming
-    # lxappearance           # GTK theming
+    wofi                   # App launcher
+    mako                   # Notification daemon
+    swaybg                 # Wallpaper
+    swayidle               # Idle timeout handler
+    swaylock-effects       # Screen locker
+    polkit_gnome       # GUI auth prompts
+    brightnessctl          # Backlight control
+    playerctl              # Media player controller
+    wl-clipboard           # Clipboard for Wayland
+    grim                   # Screenshot tool
+    slurp                  # Region selection for screenshots
+    swappy                 # Annotate screenshots
+    libsForQt5.qt5ct                  # Qt5 theming
+    qt6ct                  # Qt6 theming
+    lxappearance           # GTK theming
   ];
 }
