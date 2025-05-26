@@ -40,7 +40,6 @@
           ./modules/hardware.nix
           ./modules/users.nix
           ./modules/system_bashrc.nix
-          ./modules/ghostty.nix
           
           # Home Manager module
           home-manager.nixosModules.home-manager {
