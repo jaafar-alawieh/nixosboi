@@ -37,10 +37,10 @@
     selection_background  #44475a
 
     ## ─── “TITLE BAR” (KITTY TAB BAR) ─────────────
-    hide_tab_bar_when_only_one_tab no        # always show it, even with 1 tab
-    tab_bar_edge           top               # at the very top
-    tab_bar_style          powerline         # nice powerline look
-    tab_bar_background     #282a36           # match your background
+    hide_tab_bar_when_only_one_tab no       
+    tab_bar_edge           top             
+    tab_bar_style          powerline        
+    tab_bar_background     #282a36           
 
     active_tab_background   #f8f8f2
     active_tab_foreground   #282a36
