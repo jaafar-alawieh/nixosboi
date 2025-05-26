@@ -16,7 +16,6 @@
     tldr
     unzip
     vim
-    wezterm
     wget
     wmctrl
     ydotool
