@@ -7,6 +7,7 @@
     # System utilities
     autocutsel
     dconf2nix
+    ghostty
     home-manager
     killall
     nano
