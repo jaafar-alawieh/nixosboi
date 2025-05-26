@@ -40,7 +40,7 @@
           ./modules/hardware.nix
           ./modules/users.nix
           ./modules/system_bashrc.nix
-          ./modules/kitty.nix
+          ./modules/alacritty.nix
 
           
           # Home Manager module

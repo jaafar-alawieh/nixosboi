@@ -5,11 +5,11 @@
   # System packages
   environment.systemPackages = with pkgs; [
     # System utilities
+    alacritty
     autocutsel
     dconf2nix
     home-manager
     killall
-    kitty
     nano
     neofetch
     neovim
