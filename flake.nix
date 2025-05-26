@@ -35,6 +35,7 @@
           # Module imports
           ./modules/system.nix
           ./modules/desktop.nix
+          #./modules/hypr.nix
           ./modules/packages.nix
           ./modules/development.nix
           ./modules/hardware.nix

@@ -10,6 +10,7 @@
     #../dconf/settings.nix 
     ./bashrc.nix 
     ./ghostty.nix
+    #./hyprconf.nix
     ];
   
   # Enable bash
