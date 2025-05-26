@@ -22,7 +22,6 @@
     swayidle               # Idle timeout handler
     swaylock-effects       # Screen locker
     foot                   # Terminal (Wayland-native)
-    polkit-kde-agent       # GUI auth prompts
     brightnessctl          # Backlight control
     playerctl              # Media player controller
     wl-clipboard           # Clipboard for Wayland
