@@ -45,10 +45,8 @@
     mark1_foreground #282a36
     mark1_background #ff5555
 
-    # Always show Kitty's own title/tab bar
-    hide_tab_bar_when_only_one_tab no
-
-    # Style & position
+    # Hide kitty’s tab-bar only when a single tab remains
+    hide_tab_bar_when_only_one_tab yes
     tab_bar_style powerline
     tab_bar_edge top
 
@@ -56,8 +54,7 @@
     active_border_color   #f8f8f2
     inactive_border_color #6272a4
 
-    ## ─── DECORATIONS & QUIT ───────────────────────
-    hide_window_decorations yes
+    ## ─── QUIT PROMPT ─────────────────────────────
     confirm_os_window_close 0
 
     ## ─── KEYBINDINGS ─────────────────────────────
