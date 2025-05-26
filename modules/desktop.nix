@@ -36,9 +36,11 @@
     gnomeExtensions.battery-indicator-icon 
     gnomeExtensions.blur-my-shell
     gnomeExtensions.caffeine
+   # gnomeExtensions.window-centering
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.dash-to-dock
     gnomeExtensions.gsconnect
+    gnomeExtensions.impatience
     gnomeExtensions.media-controls
     gnomeExtensions.panel-workspace-scroll
     gnomeExtensions.power-profile-switcher
