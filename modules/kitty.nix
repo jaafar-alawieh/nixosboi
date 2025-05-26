@@ -10,7 +10,7 @@
     ## ─── BACKGROUND & FOREGROUND ────────────────
     background       #282a36
     foreground       #00ff00
-    cursor           #00ff00           # make the cursor bright green
+    cursor           #00ff00        
     cursor_text_color background
     url_color        #8be9fd
 
