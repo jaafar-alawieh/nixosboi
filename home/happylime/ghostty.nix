@@ -8,6 +8,7 @@
     theme        = UltraDark
     foreground   = #00FF00
     cursor-color = #00FF00
+    adjust-cursor-thickness = 2
 
     # --- Font ---
     font-family  = OverpassM Nerd Font Mono
