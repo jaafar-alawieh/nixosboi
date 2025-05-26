@@ -5,7 +5,6 @@
   # System packages
   environment.systemPackages = with pkgs; [
     # System utilities
-    alacritty
     autocutsel
     dconf2nix
     home-manager
@@ -17,6 +16,7 @@
     tldr
     unzip
     vim
+    wezterm
     wget
     wmctrl
     ydotool
