@@ -30,9 +30,9 @@
 
   # Font sizes
   stylix.fonts.sizes = {
-    applications = 12;  # UI elements
+    applications = 13;  # UI elements
     desktop      = 12;
     popups       = 12;
-    terminal     = 16;
+    terminal     = 15;
   };
 }
