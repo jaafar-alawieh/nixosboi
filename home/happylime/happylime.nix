@@ -20,5 +20,5 @@
   };
 
   # Enable dconf
-  dconf.enable = true;
+  #dconf.enable = true;
 }
