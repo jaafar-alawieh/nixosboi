@@ -151,15 +151,6 @@ with lib.hm.gvariant;
       translate = true;
     };
 
-    "org/gnome/desktop/background" = {
-      color-shading-type = "solid";
-      picture-options = "zoom";
-      picture-uri = "file:///nix/store/gn8hsv7wm49bsqzv3i3sprl6qz03lmxl-wallpaper.jpg";
-      picture-uri-dark = "/home/happylime/.config/background";
-      primary-color = "#241f31";
-      secondary-color = "#000000";
-    };
-
     "org/gnome/desktop/calendar" = {
       show-weekdate = false;
     };
