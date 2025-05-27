@@ -18,5 +18,8 @@
     # --- Initial window size (cols × rows) ---
     window-width    = 70
     window-height   = 15
+
+    [bindings]
+    "Ctrl+Shift+A" = "enter-copy-mode;move-to-top;select-to-bottom;copy-selection;leave-copy-mode"
   '';
 }
