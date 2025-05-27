@@ -70,12 +70,12 @@ with lib.hm.gvariant;
 
     # Media-keys (GNOME Settings Daemon)
     "org/gnome/settings-daemon/plugins/media-keys" = {
-      control-center = [ "<Super>s" ];
+      control-center     = [ "<Super>s" ];
+      help               = [];
+      home               = [ "<Super>e" ];
+      logout             = [];
+      www                = [ "<Super>b" ];
       custom-keybindings = [ "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom11" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom12" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom13" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom14" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom15" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom16" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom17" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom18" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom19" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom20" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom21" "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom22" ];
-      help = [];
-      home = [ "<Super>e" ];
-      logout = [];
-      www = [ "<Super>b" ];
     };
 
     # Your full custom media-keybinds definitions
