@@ -1,3 +1,4 @@
+# ~/projects/nix/modules/system_bashrc.nix
 # Bash shell configuration
 { config, pkgs, lib, ... }:
 

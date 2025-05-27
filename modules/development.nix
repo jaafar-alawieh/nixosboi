@@ -1,3 +1,4 @@
+# ~/projects/nix/modules/development.nix
 # Development tools configuration
 { config, pkgs, lib, ... }:
 

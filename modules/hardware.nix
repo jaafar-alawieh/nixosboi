@@ -1,3 +1,4 @@
+# ~/projects/nix/modules/hardware.nix
 # Hardware configuration
 { config, pkgs, lib, ... }:
 

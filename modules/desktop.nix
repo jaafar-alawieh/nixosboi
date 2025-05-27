@@ -1,3 +1,4 @@
+# ~/projects/nix/modules/desktop.nix
 # Desktop environment configuration
 { config, pkgs, lib, ... }:
 

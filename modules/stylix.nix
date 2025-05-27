@@ -1,3 +1,4 @@
+# ~/projects/nix/modules/stylix.nix
 { pkgs, ... }:
 {
   # Color scheme: Rose Pine

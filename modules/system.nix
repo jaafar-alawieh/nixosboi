@@ -1,3 +1,4 @@
+# ~/projects/nix/modules/system.nix
 # System-specific configuration
 { config, pkgs, lib, ... }:
 

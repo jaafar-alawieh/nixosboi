@@ -1,3 +1,4 @@
+# ~/projects/nix/modules/packages.nix
 # System packages
 { config, pkgs, lib, ... }:
 

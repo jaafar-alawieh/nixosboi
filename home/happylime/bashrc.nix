@@ -1,3 +1,4 @@
+# ~/projects/nix/home/bashrc.nix
 { config, pkgs, lib, ... }:
 
 {

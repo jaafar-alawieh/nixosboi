@@ -1,3 +1,4 @@
+# ~/projects/nix/home/ghostty.nix
 { config, pkgs, ... }:
 
 {
