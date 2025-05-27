@@ -1,3 +1,4 @@
+# ~/projects/nix/modules/users.nix
 # User accounts configuration
 { config, pkgs, lib, ... }:
 

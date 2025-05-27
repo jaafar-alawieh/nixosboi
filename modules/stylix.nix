@@ -1,6 +1,7 @@
 # ~/projects/nix/modules/stylix.nix
 { pkgs, ... }:
 {
+  stylix.enable = true;
   # Color scheme: Rose Pine
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
 
@@ -13,16 +14,16 @@
   stylix.fonts = {
     # Terminal font: Overpass Mono Nerd Font Mono at size 15
     monospace = {
-      package = pkgs.nerdfonts.override { fonts = [ "OverpassMono" ]; };
+      package = pkgs.nerd-fonts.overpass;
       name    = "OverpassMono Nerd Font Mono";
     };
     # UI & documents font: Inter Variable at size 14
     sansSerif = {
-      package = pkgs.inter-font;
+      package = pkgs.inter;
       name    = "Inter Variable";
     };
     serif = {
-      package = pkgs.inter-font;
+      package = pkgs.inter;
       name    = "Inter Variable";
     };
   };

@@ -34,6 +34,7 @@
     copyq
     
     # GNOME extensions
+    gnomeExtensions.user-themes
     gnomeExtensions.battery-indicator-icon 
     gnomeExtensions.blur-my-shell
     gnomeExtensions.caffeine
