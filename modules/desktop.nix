@@ -23,6 +23,7 @@
   environment.systemPackages = with pkgs; [
     # GNOME utilities
     dconf-editor
+    dconf2nix
     gedit
     gnome-frog
     gnome-terminal
