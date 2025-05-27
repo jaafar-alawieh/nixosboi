@@ -56,9 +56,7 @@
     
     # GNOME themes and icons
     bibata-cursors
-    dracula-theme
     flat-remix-gnome
-    rose-pine-gtk-theme
     rose-pine-icon-theme
     tela-icon-theme
   ];
