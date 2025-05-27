@@ -19,6 +19,6 @@
     window-width    = 70
     window-height   = 15
 
-    #[bindings]
+    # --- Bindings ---
     keybind = ctrl+a=select_all  '';
 }
