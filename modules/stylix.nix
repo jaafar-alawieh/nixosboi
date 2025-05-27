@@ -33,6 +33,6 @@
     applications = 12;  # UI elements
     desktop      = 12;
     popups       = 12;
-    terminal     = 15;
+    terminal     = 16;
   };
 }
