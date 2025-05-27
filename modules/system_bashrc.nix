@@ -22,7 +22,7 @@
       nixscripts = "cd /etc/nixos/conffiles/scripts";
       
       # NixOS management
-      conv = "cursor ~/projects/nix/ & disown";
+      conv = "nohup cursor ~/projects/nix/ >/dev/null 2>&1 &";
       updateflake = "cd ~/projects/nix && sudo nix flake update";
       rrebuild = "sudo nixos-rebuild switch --impure --flake /home/happylime/projects/nix#nixos && git -C /home/happylime/projects/nix add . && git -C /home/happylime/projects/nix commit -m 'Auto-update flake & rebuild' && git -C /home/happylime/projects/nix push";
       conf = "cd ~/projects/nix && ls";
