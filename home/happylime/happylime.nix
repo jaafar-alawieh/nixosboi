@@ -18,5 +18,7 @@
   # Home configuration files
   home.file = { #add any
   };
+  
+  dconf.enable = true;
 
 }
