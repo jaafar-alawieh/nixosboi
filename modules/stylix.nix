@@ -35,4 +35,6 @@
     popups       = 10;
     terminal     = 15;
   };
+
+  stylix.image = ../assets/backgrounds/background1;
 }
