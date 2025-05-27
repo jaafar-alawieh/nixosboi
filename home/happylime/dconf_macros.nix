@@ -1297,10 +1297,6 @@ with lib.hm.gvariant;
       selected-layouts = [ [ "3989293" ] [ "Layout 1" ] [ "Layout 1" ] [ "Layout 1" ] [ "Layout 1" ] ];
     };
 
-    "org/gnome/shell/extensions/user-theme" = {
-      name = "Flat-Remix-Miami-Dark-fullPanel";
-    };
-
     "org/gnome/shell/extensions/vertical-workspaces" = {
       app-display-module = true;
       app-favorites-module = true;
