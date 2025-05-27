@@ -7,7 +7,7 @@
   
   # Import complete dconf settings
   imports = [ 
-    ../dconf/settings.nix 
+    #../dconf/settings.nix 
     ./bashrc.nix 
     ./ghostty.nix
     ];
