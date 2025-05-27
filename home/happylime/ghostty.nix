@@ -13,7 +13,7 @@
 
     # --- Font ---
     font-family  = OverpassM Nerd Font Mono
-    font-size    = 15
+    font-size    = 14
 
     # --- Initial window size (cols × rows) ---
     window-width    = 70
