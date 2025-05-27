@@ -15,7 +15,7 @@
     # Terminal font: Overpass Mono Nerd Font Mono at size 15
     monospace = {
       package = pkgs.nerd-fonts.overpass;
-      name    = "OverpassMono Nerd Font Mono";
+      name    = "OverpassM Nerd Font Mono";
     };
     # UI & documents font: Inter Variable at size 14
     sansSerif = {
