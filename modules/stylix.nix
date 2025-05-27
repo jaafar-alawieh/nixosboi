@@ -4,7 +4,7 @@
   stylix.enable = true;
 
   # Color scheme https://tinted-theming.github.io/tinted-gallery/
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/saga.yaml";
 
   # Cursor: Bibata Modern Classic
   stylix.cursor.package = pkgs.bibata-cursors;
