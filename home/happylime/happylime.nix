@@ -7,7 +7,6 @@
   
   # Import complete dconf settings
   imports = [ 
-    #../dconf/settings.nix 
     ./bashrc.nix 
     ./ghostty.nix
     ];
@@ -19,6 +18,9 @@
   home.file = { #add any
   };
 
-  # Enable dconf
-  #dconf.enable = true;
+  # Resolving weird error for input-method for asian characters
+  i18n.inputMethod = {
+    enabled = "none";
+  };
+
 }
