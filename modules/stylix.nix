@@ -1,39 +1,35 @@
-{ config, pkgs, lib, ... }:
-
+{ pkgs, ... }:
 {
-  stylix = {
-    enable = true;
+  # Color scheme: Rose Pine
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
 
-    image = /home/happylime/.config/background;
-    base16Scheme = "rose-pine";
+  # Cursor: Bibata Modern Classic
+  stylix.cursor.package = pkgs.bibata-cursors;
+  stylix.cursor.name    = "Bibata-Modern-Classic";
 
-    fonts = {
-      sizes = {
-        applications = 14;
-        desktop = 14;
-        terminal = 15;
-      };
-
-      sansSerif = {
-        name = "Inter Variable";
-      };
-
-      serif = {
-        name = "Inter Variable";
-      };
-
-      monospace = {
-        name = "OverpassM Nerd Font Mono";
-      };
-
-      emoji = {
-        name = "Noto Color Emoji";
-      };
+  # Fonts configuration
+  stylix.fonts = {
+    # Terminal font: Overpass Mono Nerd Font Mono at size 15
+    monospace = {
+      package = pkgs.nerdfonts.override { fonts = [ "OverpassMono" ]; };
+      name    = "OverpassMono Nerd Font Mono";
     };
-
-    cursor = {
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Classic";
+    # UI & documents font: Inter Variable at size 14
+    sansSerif = {
+      package = pkgs.inter-font;
+      name    = "Inter Variable";
     };
+    serif = {
+      package = pkgs.inter-font;
+      name    = "Inter Variable";
+    };
+  };
+
+  # Font sizes
+  stylix.fonts.sizes = {
+    applications = 14;  # UI elements
+    desktop      = 14;
+    popups       = 14;
+    terminal     = 15;
   };
 }
