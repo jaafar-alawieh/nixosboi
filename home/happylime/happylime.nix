@@ -9,7 +9,7 @@
   imports = [ 
     ./bashrc.nix 
     ./ghostty.nix
-    ./dconf_macros.nix
+    ./settings.nix
     ];
   
   # Enable bash
