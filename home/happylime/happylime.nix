@@ -18,9 +18,4 @@
   home.file = { #add any
   };
 
-  # Resolving weird error for input-method for asian characters
-  i18n.inputMethod = {
-    enabled = "none";
-  };
-
 }

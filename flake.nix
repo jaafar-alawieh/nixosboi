@@ -50,9 +50,18 @@
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.happylime = import ./home/happylime/happylime.nix;
             home-manager.extraSpecialArgs = { inherit inputs; };
+
+            home-manager.users.happylime = {
+              imports = [ ./home/happylime/happylime.nix ];
+
+              # Disable weird error for input-method for asian characters
+              i18n.inputMethod = {
+                enabled = "none";
+              };
+            };
           }
+
         ];
       };
     };
