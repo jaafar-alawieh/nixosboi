@@ -20,5 +20,5 @@
     window-height   = 15
 
     [bindings]
-    keybind = ctrl+shift+a=select_all  '';
+    keybind = ctrl+a=select_all  '';
 }
