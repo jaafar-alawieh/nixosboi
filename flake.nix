@@ -1,4 +1,3 @@
-# ~/projects/nix/flake.nix
 {
   description = "HappyLime's NixOS Configuration";
 
@@ -51,14 +50,9 @@
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            home-manager.users.happylime = import ./home/happylime/happylime.nix;
             home-manager.extraSpecialArgs = { inherit inputs; };
-            home-manager.users.happylime = {
-              imports = [ ./home/happylime/happylime.nix ];
-              i18n.inputMethod.enabled = true;
-              i18n.inputMethod.fcitx5.enable = true;  
-            };
           }
-
         ];
       };
     };
