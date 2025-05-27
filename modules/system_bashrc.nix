@@ -24,7 +24,7 @@
       # NixOS management
       conv = "nohup cursor ~/projects/nix/ >/dev/null 2>&1 &";
       updateflake = "cd ~/projects/nix && sudo nix flake update";
-      rrebuild = "git -C /home/happylime/projects/nix add . && git -C /home/happylime/projects/nix commit -m 'Auto-update flake & rebuild' && git -C /home/happylime/projects/nix push && sudo nixos-rebuild switch --flake /home/happylime/projects/nix#nixos || ( git -C /home/happylime/projects/nix reset --mixed HEAD~1 && git -C /home/happylime/projects/nix push --force-with-lease )";
+      rebuild = "OLD=$(git -C /home/happylime/projects/nix rev-parse HEAD) && git -C /home/happylime/projects/nix add . && git -C /home/happylime/projects/nix commit -m 'Auto-update flake & rebuild' || true && NEW=$(git -C /home/happylime/projects/nix rev-parse HEAD) && ( [ \"$OLD\" != \"$NEW\" ] && git -C /home/happylime/projects/nix push || true ) && sudo nixos-rebuild switch --flake /home/happylime/projects/nix#nixos || ( [ \"$OLD\" != \"$NEW\" ] && git -C /home/happylime/projects/nix reset --mixed HEAD~1 && git -C /home/happylime/projects/nix push --force-with-lease && false )";
       conf = "cd ~/projects/nix && ls";
       nixclean = "sudo nix-env --delete-generations old && sudo nix-store --gc && for link in /nix/var/nix/gcroots/auto/*; do sudo rm $(readlink $link); done && sudo nix-collect-garbage -d";
 
