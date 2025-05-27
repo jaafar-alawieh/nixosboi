@@ -3,8 +3,8 @@
 {
   stylix.enable = true;
 
-  # Color scheme
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/apathy.yaml";
+  # Color scheme https://tinted-theming.github.io/tinted-gallery/
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/purpledream.yaml";
 
   # Cursor: Bibata Modern Classic
   stylix.cursor.package = pkgs.bibata-cursors;
