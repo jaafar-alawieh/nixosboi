@@ -2,7 +2,8 @@
 { pkgs, ... }:
 {
   stylix.enable = true;
-  # Color scheme: Rose Pine
+
+  # Color scheme
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/dracula.yaml";
 
   # Cursor: Bibata Modern Classic
