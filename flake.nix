@@ -5,7 +5,7 @@
     # Core inputs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    #stylix.url = "github:danth/stylix";
+    stylix.url = "github:danth/stylix";
     
     # Home Manager 
     home-manager = {
@@ -41,10 +41,10 @@
           ./modules/hardware.nix
           ./modules/users.nix
           ./modules/system_bashrc.nix
-          #./modules/stylix.nix
+          ./modules/stylix.nix
 
           # Stylix
-          #inputs.stylix.nixosModules.stylix
+          inputs.stylix.nixosModules.stylix
 
           # Home Manager module
           home-manager.nixosModules.home-manager {

@@ -7,6 +7,7 @@
   # Cursor: Bibata Modern Classic
   stylix.cursor.package = pkgs.bibata-cursors;
   stylix.cursor.name    = "Bibata-Modern-Classic";
+  stylix.cursor.size    = 24;
 
   # Fonts configuration
   stylix.fonts = {
