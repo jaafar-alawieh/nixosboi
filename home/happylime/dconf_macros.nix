@@ -164,12 +164,6 @@ with lib.hm.gvariant;
       name = "ChatGPT";
     };
 
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom20" = {
-      binding = "<Shift><Super>m";
-      command = "bash -c 'screen_width=$(xdpyinfo | grep dimensions | awk \"{print \\$2}\" | cut -d \"x\" -f 1) && screen_height=$(xdpyinfo | grep dimensions | awk \"{print \\$2}\" | cut -d \"x\" -f 2) && window_width=$((screen_width / 2)) && window_height=$((screen_height / 2)) && bash -c \"spotify & disown\" && bash -c \"youtube-music & disown\" && xdotool search --name \"Spotify\" windowmove 0 0 windowsize ${window_width} ${window_height} && xdotool search --name \"YouTube Music\" windowmove ${window_width} 0 windowsize ${window_width} ${window_height}'n";
-      name = "DOUBLE Music";
-    };
-
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom22" = {
       binding = "<Control><Super>l";
       command = "busctl --user call org.gnome.Shell /org/gnome/ScreenSaver org.gnome.ScreenSaver SetActive b true n";
