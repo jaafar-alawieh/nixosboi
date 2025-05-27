@@ -20,6 +20,6 @@
     window-height   = 15
 
     [bindings]
-    "Ctrl+Shift+A" = "enter-copy-mode;move-to-top;select-to-bottom;copy-selection;leave-copy-mode"
+    key-bindings = "Ctrl+Shift+A: enter-copy-mode; move-to-top; select-to-bottom; copy-selection; leave-copy-mode"
   '';
 }
