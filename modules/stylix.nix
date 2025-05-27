@@ -3,7 +3,7 @@
 {
   stylix.enable = true;
   # Color scheme: Rose Pine
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/dracula.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/apathy.yaml";
 
   # Cursor: Bibata Modern Classic
   stylix.cursor.package = pkgs.bibata-cursors;
