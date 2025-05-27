@@ -41,7 +41,7 @@
           ./modules/hardware.nix
           ./modules/users.nix
           ./modules/system_bashrc.nix
-          ./modules/stylix.nix
+          #./modules/stylix.nix
 
           # Stylix
           inputs.stylix.nixosModules.stylix
