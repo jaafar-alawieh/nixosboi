@@ -164,26 +164,6 @@ with lib.hm.gvariant;
       xkb-options = [ "terminate:ctrl_alt_bksp" ];
     };
 
-    "org/gnome/desktop/interface" = {
-      clock-format = "24h";
-      clock-show-weekday = true;
-      color-scheme = "prefer-dark";
-      cursor-size = 24;
-      cursor-theme = "Bibata-Modern-Classic";
-      document-font-name = "Cantarell 14";
-      enable-animations = true;
-      enable-hot-corners = false;
-      font-antialiasing = "grayscale";
-      font-hinting = "slight";
-      font-name = "Cantarell 14";
-      gtk-theme = "Dracula";
-      icon-theme = "Adwaita";
-      monospace-font-name = "OverpassM Nerd Font Mono 14";
-      show-battery-percentage = true;
-      text-scaling-factor = 1.0;
-      toolbar-style = "text";
-    };
-
     "org/gnome/desktop/notifications" = {
       application-children = [ "org-gnome-settings" "gnome-power-panel" "org-gnome-console" "org-gnome-characters" "firefox" "org-gnome-nautilus" "gnome-network-panel" "org-gnome-extensions" "impress" "writer" "org-gnome-tweaks" "code" "teams" "org-gnome-terminal" "io-github-realmazharhussain-gdmsettings" "org-gnome-gedit" "xdg-desktop-portal-gnome" "vlc" "gnome-system-monitor" "org-keepassxc-keepassxc" "com-github-joseexposito-touche" "org-gnome-geary" "mullvad-vpn" "org-qbittorrent-qbittorrent" "tenacity" "spotify" "com-spotify-client" "org-gnome-eog" "android-studio" "gimp" "calc" "org-gnome-shell-extensions-gsconnect-preferences" "org-gnome-shell-extensions-gsconnect" "io-github-cboxdoerfer-fsearch" "steam" "org-upscayl-upscayl" "org-gnome-baobab" "org-gnome-extensions-desktop" "io-gitlab-idevecore-pomodoro" ];
       show-banners = true;
