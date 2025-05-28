@@ -8,7 +8,7 @@ in {
     package = cursorPackage;
     userSettings = {
       # Your Cursor settings.json entries
-      "window.zoomLevel"         = 1.8;
+      "window.zoomLevel"         = 2;
       "workbench.colorTheme"     = "Sweet Dracula";
       "update.mode"              = "none";
       "window.menuBarVisibility" = "visible";
