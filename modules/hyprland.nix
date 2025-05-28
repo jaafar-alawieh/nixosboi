@@ -1,3 +1,4 @@
+#from https://github.com/gpskwlkr/nixos-hyprland-flake/blob/main/system/modules/hyprland.nix
 { config, pkgs, ... }:
 
 {
