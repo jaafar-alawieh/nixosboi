@@ -9,6 +9,7 @@
   imports = [ 
     ../dconf/settings.nix 
     ./bashrc.nix 
+    ./cursor_code.nix
     ];
   
   # Enable bash
