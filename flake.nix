@@ -42,6 +42,7 @@
           ./modules/users.nix
           ./modules/system_bashrc.nix
           ./modules/stylix.nix
+          ./modules/hyprland.nix
 
           # Stylix
           inputs.stylix.nixosModules.stylix
