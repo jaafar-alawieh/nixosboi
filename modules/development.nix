@@ -6,6 +6,7 @@
   environment.systemPackages = with pkgs; [
     # Development tools
     code-cursor
+    emacs
     git
     gh
     nodejs
