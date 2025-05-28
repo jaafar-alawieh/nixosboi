@@ -37,5 +37,8 @@
     terminal     = 15;
   };
 
+  # Disable theming for GNOME Text Editor only
+  stylix.targets.gnome-text-editor.enable = false;
+
   stylix.image = ../assets/backgrounds/background1;
 }
