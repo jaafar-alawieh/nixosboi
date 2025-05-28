@@ -7,6 +7,7 @@
     # Development tools
     code-cursor
     emacs
+    emacsPackages.dracula-theme
     git
     gh
     nodejs
