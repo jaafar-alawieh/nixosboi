@@ -10,6 +10,7 @@
     ./dconfig.nix 
     ./bashrc.nix 
     ./cursor_code.nix
+    ./emacs.nix
     ];
   
   # Enable bash
