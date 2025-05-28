@@ -1,4 +1,3 @@
-# ~/projects/nix/modules/hardware.nix
 # Hardware configuration
 { config, pkgs, lib, ... }:
 
@@ -16,7 +15,6 @@
       support32Bit = true;
     };
     pulse.enable = true;
-    wireplumber.enable = true;
     # Uncomment to enable JACK support
     # jack.enable = true;
   };

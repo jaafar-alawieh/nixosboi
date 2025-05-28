@@ -1,4 +1,3 @@
-# ~/projects/nix/configuration.nix
 # Main configuration file that imports all modules
 { config, pkgs, lib, inputs, ... }:
 

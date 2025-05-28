@@ -1,4 +1,3 @@
-# ~/projects/nix/modules/desktop.nix
 # Desktop environment configuration
 { config, pkgs, lib, ... }:
 
@@ -34,15 +33,12 @@
     copyq
     
     # GNOME extensions
-    gnomeExtensions.user-themes
     gnomeExtensions.battery-indicator-icon 
     gnomeExtensions.blur-my-shell
     gnomeExtensions.caffeine
-   # gnomeExtensions.window-centering
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.dash-to-dock
     gnomeExtensions.gsconnect
-    gnomeExtensions.impatience
     gnomeExtensions.media-controls
     gnomeExtensions.panel-workspace-scroll
     gnomeExtensions.power-profile-switcher
@@ -56,7 +52,9 @@
     
     # GNOME themes and icons
     bibata-cursors
+    dracula-theme
     flat-remix-gnome
+    rose-pine-gtk-theme
     rose-pine-icon-theme
     tela-icon-theme
   ];

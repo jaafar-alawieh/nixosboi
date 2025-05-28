@@ -1,4 +1,3 @@
-# ~/projects/nix/modules/packages.nix
 # System packages
 { config, pkgs, lib, ... }:
 
@@ -7,7 +6,7 @@
   environment.systemPackages = with pkgs; [
     # System utilities
     autocutsel
-    ghostty
+    dconf2nix
     home-manager
     killall
     nano

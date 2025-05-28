@@ -1,4 +1,3 @@
-# ~/projects/nix/modules/system.nix
 # System-specific configuration
 { config, pkgs, lib, ... }:
 
@@ -50,7 +49,8 @@
   # Fonts
   fonts.packages = with pkgs; [
     corefonts
-    inter
+    inter-nerdfont
+    nerd-fonts.inconsolata
     nerd-fonts.overpass
     vistafonts
     wine64Packages.fonts
