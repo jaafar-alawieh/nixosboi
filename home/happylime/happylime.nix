@@ -7,7 +7,7 @@
   
   # Import complete dconf settings
   imports = [ 
-    ../dconf/settings.nix 
+    ./dconfig.nix 
     ./bashrc.nix 
     ./cursor_code.nix
     ];
