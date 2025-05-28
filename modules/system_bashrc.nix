@@ -28,7 +28,7 @@
 
       # dconf management
       dconfigure = "sudo nano /etc/nixos/dconf/settings.nix";
-      dconfbackup = "dconf dump / | dconf2nix > dconf.nix ; sudo cp dconf.nix ~/projects/nix/home/dconf/settings.nix";
+      dconfbackup = "dconf dump / | dconf2nix > dconf.nix ; sudo cp dconf.nix ~/projects/nix/home/happylime/dconfig.nix";
       dconfbackuphalf = "dconf dump / | dconf2nix > dconf.nix";
       
       # Applications
