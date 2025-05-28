@@ -43,6 +43,8 @@
           ./modules/system_bashrc.nix
           ./modules/stylix.nix
           ./modules/hyprland.nix
+          ./modules/polkit.nix
+          ./modules/security.nix
 
           # Stylix
           inputs.stylix.nixosModules.stylix
