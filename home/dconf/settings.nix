@@ -139,6 +139,18 @@ with lib.hm.gvariant;
       folder-children = [ "Utilities" "YaST" ];
     };
 
+    "org/gnome/desktop/app-folders/folders/Pardus" = {
+      categories = [ "X-Pardus-Apps" ];
+      name = "X-Pardus-Apps.directory";
+      translate = true;
+    };
+
+    "org/gnome/desktop/app-folders/folders/System" = {
+      apps = [ "org.gnome.baobab.desktop" "org.gnome.DiskUtility.desktop" "org.gnome.Logs.desktop" "org.gnome.tweaks.desktop" "org.gnome.SystemMonitor.desktop" ];
+      name = "X-GNOME-Shell-System.directory";
+      translate = true;
+    };
+
     "org/gnome/desktop/app-folders/folders/Utilities" = {
       apps = [ "gnome-abrt.desktop" "gnome-system-log.desktop" "nm-connection-editor.desktop" "org.gnome.baobab.desktop" "org.gnome.Connections.desktop" "org.gnome.DejaDup.desktop" "org.gnome.Dictionary.desktop" "org.gnome.DiskUtility.desktop" "org.gnome.eog.desktop" "org.gnome.Evince.desktop" "org.gnome.FileRoller.desktop" "org.gnome.fonts.desktop" "org.gnome.seahorse.Application.desktop" "org.gnome.tweaks.desktop" "org.gnome.Usage.desktop" "vinagre.desktop" ];
       categories = [ "X-GNOME-Utilities" ];
@@ -183,14 +195,16 @@ with lib.hm.gvariant;
       document-font-name = "Inter Nerd Font 12";
       enable-animations = true;
       enable-hot-corners = false;
-      font-antialiasing = "rgba";
-      font-hinting = "full";
+      font-antialiasing = "grayscale";
+      font-hinting = "slight";
       font-name = "Inter Nerd Font 12";
       gtk-theme = "Dracula";
       icon-theme = "Adwaita";
-      monospace-font-name = "Source Code Pro 12";
+      monospace-font-name = "OverpassM Nerd Font Mono 12";
       show-battery-percentage = true;
+      text-scaling-factor = 1.0;
       toolbar-style = "text";
+      toolkit-accessibility = false;
     };
 
     "org/gnome/desktop/notifications" = {
@@ -316,6 +330,10 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/notifications/application/org-gnome-shell-extensions-gsconnect" = {
       application-id = "org.gnome.Shell.Extensions.GSConnect.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/org-gnome-software" = {
+      application-id = "org.gnome.Software.desktop";
     };
 
     "org/gnome/desktop/notifications/application/org-gnome-terminal" = {
@@ -464,12 +482,16 @@ with lib.hm.gvariant;
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "icon:minimize,maximize,close";
       num-workspaces = 5;
-      titlebar-font = "Cantarell Bold 12";
+      titlebar-font = "Cantarell Bold 14";
       workspace-names = [ "1 Messaging" "2  Music" "3 Terminal" ];
     };
 
     "org/gnome/eog/ui" = {
       sidebar = true;
+    };
+
+    "org/gnome/eog/view" = {
+      background-color = "#191724";
     };
 
     "org/gnome/epiphany" = {
@@ -509,6 +531,8 @@ with lib.hm.gvariant;
     "org/gnome/file-roller/file-selector" = {
       show-hidden = false;
       sidebar-size = 300;
+      sort-method = "name";
+      sort-type = "ascending";
       window-size = mkTuple [ (-1) (-1) ];
     };
 
@@ -546,13 +570,10 @@ with lib.hm.gvariant;
 
     "org/gnome/gedit/state/window" = {
       bottom-panel-size = 140;
-      height = 700;
-      maximized = false;
       side-panel-active-page = "GeditWindowDocumentsPanel";
       side-panel-size = 200;
       size = mkTuple [ 1120 1326 ];
       state = 87168;
-      width = 900;
     };
 
     "org/gnome/gnome-system-monitor" = {
@@ -578,6 +599,7 @@ with lib.hm.gvariant;
     "org/gnome/mutter" = {
       center-new-windows = false;
       dynamic-workspaces = false;
+      edge-tiling = true;
       workspaces-only-on-primary = true;
     };
 
@@ -611,7 +633,6 @@ with lib.hm.gvariant;
 
     "org/gnome/nautilus/window-state" = {
       initial-size = mkTuple [ 830 539 ];
-      initial-size-file-chooser = mkTuple [ 890 550 ];
       maximized = false;
     };
 
@@ -648,30 +669,6 @@ with lib.hm.gvariant;
     "org/gnome/nm-applet/eap/f9ea6236-f511-46e9-a84d-f4d313459d0a" = {
       ignore-ca-cert = true;
       ignore-phase2-ca-cert = false;
-    };
-
-    "org/gnome/portal/filechooser/com/obsproject/Studio" = {
-      last-folder-path = "/home/happylime/Videos/OBS";
-    };
-
-    "org/gnome/portal/filechooser/com/obsproject/Studio" = {
-      last-folder-path = "/home/happylime/Videos/OBS";
-    };
-
-    "org/gnome/portal/filechooser/org/qbittorrent/qBittorrent" = {
-      last-folder-path = "/home/happylime/github/qbittheming/qbittorrent";
-    };
-
-    "org/gnome/portal/filechooser/org/upscayl/Upscayl" = {
-      last-folder-path = "/home/happylime/Pictures/Upscale";
-    };
-
-    "org/gnome/portal/filechooser/org/qbittorrent/qBittorrent" = {
-      last-folder-path = "/home/happylime/github/qbittheming/qbittorrent";
-    };
-
-    "org/gnome/portal/filechooser/org/upscayl/Upscayl" = {
-      last-folder-path = "/home/happylime/Pictures/Upscale";
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
@@ -761,12 +758,6 @@ with lib.hm.gvariant;
       name = "Workspaces";
     };
 
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom20" = {
-      binding = "<Shift><Super>m";
-      command = "bash -c 'screen_width=$(xdpyinfo | grep dimensions | awk \"{print \\$2}\" | cut -d \"x\" -f 1) && screen_height=$(xdpyinfo | grep dimensions | awk \"{print \\$2}\" | cut -d \"x\" -f 2) && window_width=$((screen_width / 2)) && window_height=$((screen_height / 2)) && bash -c \"spotify & disown\" && bash -c \"youtube-music & disown\" && xdotool search --name \"Spotify\" windowmove 0 0 windowsize ${window_width} ${window_height} && xdotool search --name \"YouTube Music\" windowmove ${window_width} 0 windowsize ${window_width} ${window_height}'n";
-      name = "DOUBLE Music";
-    };
-
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom21" = {
       binding = "<Super>m";
       command = "chromium-browser --app=https://music.youtube.com/";
@@ -851,16 +842,37 @@ with lib.hm.gvariant;
       color = mkTuple [ 4.3237e-2 2.0533e-2 0.146667 0.723333 ];
       hacks-level = 0;
       noise-amount = 1.0;
+      settings-version = 2;
       sigma = 60;
+    };
+
+    "org/gnome/shell/extensions/blur-my-shell/appfolder" = {
+      brightness = 0.6;
+      sigma = 30;
+    };
+
+    "org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
+      blur = true;
+      brightness = 0.6;
+      sigma = 30;
+      static-blur = true;
+      style-dash-to-dock = 0;
     };
 
     "org/gnome/shell/extensions/blur-my-shell/panel" = {
       blur = false;
+      brightness = 0.6;
+      sigma = 30;
+    };
+
+    "org/gnome/shell/extensions/blur-my-shell/window-list" = {
+      brightness = 0.6;
+      sigma = 30;
     };
 
     "org/gnome/shell/extensions/caffeine" = {
       indicator-position-max = 2;
-      toggle-state = false;
+      user-enabled = true;
     };
 
     "org/gnome/shell/extensions/custom-hot-corners-extended/misc" = {
@@ -1279,6 +1291,13 @@ with lib.hm.gvariant;
       show-tiles = [ "<Alt>t" ];
     };
 
+    "org/gnome/shell/extensions/tilingshell" = {
+      last-version-name-installed = "16.4";
+      layouts-json = "[{\"id\":\"Layout 1\",\"tiles\":[{\"x\":0,\"y\":0,\"width\":0.22,\"height\":0.5,\"groups\":[1,2]},{\"x\":0,\"y\":0.5,\"width\":0.22,\"height\":0.5,\"groups\":[1,2]},{\"x\":0.22,\"y\":0,\"width\":0.56,\"height\":1,\"groups\":[2,3]},{\"x\":0.78,\"y\":0,\"width\":0.22,\"height\":0.5,\"groups\":[3,4]},{\"x\":0.78,\"y\":0.5,\"width\":0.22,\"height\":0.5,\"groups\":[3,4]}]},{\"id\":\"Layout 2\",\"tiles\":[{\"x\":0,\"y\":0,\"width\":0.22,\"height\":1,\"groups\":[1]},{\"x\":0.22,\"y\":0,\"width\":0.56,\"height\":1,\"groups\":[1,2]},{\"x\":0.78,\"y\":0,\"width\":0.22,\"height\":1,\"groups\":[2]}]},{\"id\":\"Layout 3\",\"tiles\":[{\"x\":0,\"y\":0,\"width\":0.33,\"height\":1,\"groups\":[1]},{\"x\":0.33,\"y\":0,\"width\":0.67,\"height\":1,\"groups\":[1]}]},{\"id\":\"Layout 4\",\"tiles\":[{\"x\":0,\"y\":0,\"width\":0.67,\"height\":1,\"groups\":[1]},{\"x\":0.67,\"y\":0,\"width\":0.33,\"height\":1,\"groups\":[1]}]}]";
+      overridden-settings = "{\"org.gnome.mutter.keybindings\":{\"toggle-tiled-right\":\"['<Super>Right']\"}}";
+      selected-layouts = [ [ "Layout 1" ] [ "Layout 1" ] [ "Layout 1" ] [ "Layout 1" ] ];
+    };
+
     "org/gnome/shell/extensions/user-theme" = {
       name = "Flat-Remix-Miami-Dark-fullPanel";
     };
@@ -1359,7 +1378,6 @@ with lib.hm.gvariant;
       background-color = "rgb(0,0,0)";
       cursor-colors-set = false;
       foreground-color = "rgb(0,255,0)";
-      use-system-font = true;
       use-theme-colors = false;
     };
 
