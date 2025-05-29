@@ -8,6 +8,7 @@
     code-cursor
     git
     gh
+    ghostty
     nodejs
     nodePackages_latest.pnpm
     python311
