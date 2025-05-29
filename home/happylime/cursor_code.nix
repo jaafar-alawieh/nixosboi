@@ -17,6 +17,12 @@ in {
         "window.commandCenter"     = true;
         "git.path"                 = "/run/current-system/sw/bin/git";
         "python.defaultInterpreterPath" = "/run/current-system/sw/bin/python3";
+        "workbench.colorCustomizations" = {
+          "list.errorForeground" = "#b3e5ec";
+          "list.warningForeground" = "#00d9ff";
+          "gitDecoration.modifiedResourceForeground" = "#00ffb3";
+          "gitDecoration.untrackedResourceForeground" = "#f7aeae";
+        };
       };
 
       extensions = with pkgs.vscode-extensions; [
