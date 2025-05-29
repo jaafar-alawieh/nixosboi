@@ -25,10 +25,13 @@
         inherit system;
         config.allowUnfree = true;
       };
+      homeStateVersion = "25.05";
     in {
       nixosConfigurations.nixos = lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs; };
+        specialArgs = { 
+          inherit inputs homeStateVersion; 
+        };
         modules = [
           # Hardware configuration
           ./hardware-configuration.nix
@@ -51,7 +54,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.happylime = import ./home/happylime/happylime.nix;
-            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.extraSpecialArgs = { inherit inputs homeStateVersion; };
           }
         ];
       };

@@ -1,10 +1,9 @@
 # ~/projects/nix/home/happylime.nix
-{ config, pkgs, lib, inputs, ... }:
+{ config, pkgs, lib, inputs, homeStateVersion, ... }:
 
 {
-  # Home Manager configuration
-  home.stateVersion = "25.05";
-
+  # Home Manager state version
+  home.stateVersion = homeStateVersion;
   # Import complete dconf settings
   imports = [ 
     ./dconfig.nix 
