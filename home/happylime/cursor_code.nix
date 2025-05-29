@@ -38,6 +38,7 @@ in {
         ms-python.python
         ms-python.vscode-pylance
         ms-vscode.cpptools
+        naumovs.color-highlight
         ritwickdey.liveserver
         saoudrizwan.claude-dev
         yzhang.markdown-all-in-one
