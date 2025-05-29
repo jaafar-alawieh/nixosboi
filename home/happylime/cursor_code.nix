@@ -18,12 +18,12 @@ in {
         "git.path"                 = "/run/current-system/sw/bin/git";
         "python.defaultInterpreterPath" = "/run/current-system/sw/bin/python3";
         "workbench.editor.highlightModifiedTabs" = true;
-        "workbench.colorCustomizations" = {
-          "tab.activeModifiedBorder" = "#50fa7b";
-          "tab.inactiveModifiedBorder" = "#50fa7b";
-          "tab.activeDirtyBorder" = "#ff79c6";
-          "tab.inactiveDirtyBorder" = "#ff79c6";
-        };
+        # "workbench.colorCustomizations" = {
+        #   "tab.activeModifiedBorder" = "#50fa7b";
+        #   "tab.inactiveModifiedBorder" = "#50fa7b";
+        #   "tab.activeDirtyBorder" = "#ff79c6";
+        #   "tab.inactiveDirtyBorder" = "#ff79c6";
+        # };
       };
 
       extensions = with pkgs.vscode-extensions; [
