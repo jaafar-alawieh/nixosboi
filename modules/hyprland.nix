@@ -11,6 +11,7 @@
     mako                    # notification daemon
     networkmanagerapplet    # network manager applet
     pavucontrol             # audio control
+    kitty                   # terminal emulator
     slurp                   # region selection
     swayidle                # idle & lock management
     swaylock                # screen locker
