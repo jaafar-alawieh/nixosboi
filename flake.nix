@@ -5,8 +5,11 @@
     # Core inputs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    stylix.url = "github:danth/stylix";
-    
+    # Emacs
+    emacs = {
+      url = "github:nix-community/emacs-overlay/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Home Manager 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -41,10 +44,6 @@
           ./modules/hardware.nix
           ./modules/users.nix
           ./modules/system_bashrc.nix
-          #./modules/stylix.nix
-
-          # Stylix
-          inputs.stylix.nixosModules.stylix
 
           # Home Manager module
           home-manager.nixosModules.home-manager {
