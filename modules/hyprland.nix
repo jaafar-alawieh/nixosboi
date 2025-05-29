@@ -7,16 +7,16 @@
   };
   environment.systemPackages = with pkgs; [
     waybar                  # status bar
-    hyprpaper              # wallpaper setter
-    mako                   # notification daemon
-    networkmanagerapplet   # network manager applet
-    swayidle              # idle & lock management
-    swaylock              # screen locker
-    wdisplays             # monitor manager
-    wofi                  # application launcher
-    wl-clipboard          # clipboard utilities
-    grim                  # screenshot utility
-    slurp                 # region selection
+    hyprpaper               # wallpaper setter
+    mako                    # notification daemon
+    networkmanagerapplet    # network manager applet
+    swayidle                # idle & lock management
+    swaylock                # screen locker
+    wdisplays               # monitor manager
+    wofi                    # application launcher
+    wl-clipboard            # clipboard utilities
+    grim                    # screenshot utility
+    slurp                   # region selection
   ];
 
   xdg.portal = {
