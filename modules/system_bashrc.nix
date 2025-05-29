@@ -25,6 +25,8 @@
       rrebuild = "sudo cp -r ~/projects/nix/* /etc/nixos/ && sudo nixos-rebuild switch --flake /etc/nixos#nixos && [ $? -eq 0 ] && git -C ~/projects/nix add . && git -C ~/projects/nix commit -m 'auto rebuild commit' && git -C ~/projects/nix push";
       conf = "cd ~/projects/nix && ls";
       nixclean = "sudo nix-env --delete-generations old && sudo nix-store --gc && for link in /nix/var/nix/gcroots/auto/*; do sudo rm $(readlink $link); done && sudo nix-collect-garbage -d";
+      updateflake = "cd ~/projects/nix && sudo nix flake update";
+
 
       # dconf management
       dconfigure = "sudo nano /etc/nixos/dconf/settings.nix";
