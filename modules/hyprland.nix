@@ -10,6 +10,7 @@
     hyprpaper               # wallpaper setter
     mako                    # notification daemon
     networkmanagerapplet    # network manager applet
+    pavucontrol             # audio control
     swayidle                # idle & lock management
     swaylock                # screen locker
     wdisplays               # monitor manager
