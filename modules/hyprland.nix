@@ -6,18 +6,18 @@
     package = pkgs.hyprland;
   };
   environment.systemPackages = with pkgs; [
-    waybar                  # status bar
+    grim                    # screenshot utility
     hyprpaper               # wallpaper setter
     mako                    # notification daemon
     networkmanagerapplet    # network manager applet
     pavucontrol             # audio control
+    slurp                   # region selection
     swayidle                # idle & lock management
     swaylock                # screen locker
+    waybar                  # status bar
     wdisplays               # monitor manager
-    wofi                    # application launcher
     wl-clipboard            # clipboard utilities
-    grim                    # screenshot utility
-    slurp                   # region selection
+    wofi                    # application launcher
   ];
 
   xdg.portal = {
