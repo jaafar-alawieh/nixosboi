@@ -18,7 +18,7 @@
       cbb = "cd ../..";
       cbbb = "cd ../../..";
       cbbbb = "cd ../../../..";
-      nixscripts = "cd /etc/nixos/conffiles/scripts";
+      copylast = "cmd=$(fc -ln -1) && out=$(mktemp) && echo '$cmd' > '$out' && eval '$cmd' >> '$out' 2>&1 && (command -v xclip && xclip -selection clipboard < '$out' || command -v pbcopy && pbcopy < '$out' || command -v wl-copy && wl-copy < '$out') && rm '$out'";
       
       # NixOS management
       conv = "nohup cursor ~/projects/nix/ >/dev/null 2>&1 &";
