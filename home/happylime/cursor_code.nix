@@ -15,6 +15,7 @@ in {
         "update.mode"              = "none";
         "window.menuBarVisibility" = "visible";
         "window.commandCenter"     = true;
+        "git.path"                 = "/run/current-system/sw/bin/git";
       };
 
       extensions = with pkgs.vscode-extensions; [
