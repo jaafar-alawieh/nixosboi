@@ -20,6 +20,9 @@
 
   # GNOME-specific packages
   environment.systemPackages = with pkgs; [
+    # General Desktop utilities
+    caffeine-ng
+    
     # GNOME utilities
     dconf-editor
     gedit
