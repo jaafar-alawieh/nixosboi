@@ -20,9 +20,7 @@
 
   # GNOME-specific packages
   environment.systemPackages = with pkgs; [
-    # General Desktop utilities
-    caffeine-ng
-    
+
     # GNOME utilities
     dconf-editor
     gedit
@@ -40,6 +38,7 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.dash-to-dock
+    gnomeExtensions.espresso
     gnomeExtensions.gsconnect
     gnomeExtensions.media-controls
     gnomeExtensions.panel-workspace-scroll
