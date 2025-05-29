@@ -35,7 +35,6 @@
     
     # GNOME extensions
     gnomeExtensions.battery-indicator-icon 
-    gnomeExtensions.blur-my-shell
     gnomeExtensions.caffeine
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.dash-to-dock
@@ -46,10 +45,8 @@
     gnomeExtensions.reorder-workspaces
     gnomeExtensions.space-bar
     gnomeExtensions.tactile
-    gnomeExtensions.tiling-shell
     gnomeExtensions.transparent-top-bar-adjustable-transparency
     gnomeExtensions.transparent-window-moving
-    gnomeExtensions.workspace-matrix
     
     # GNOME themes and icons
     bibata-cursors
