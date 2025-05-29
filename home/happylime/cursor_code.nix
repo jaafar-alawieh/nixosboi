@@ -33,8 +33,8 @@ in {
         "workbench.colorCustomizations" = {
           "tab.activeModifiedBorder" = "#ff79c6";
           "tab.inactiveModifiedBorder" = "#ff79c6";
-          "tab.activeDirtyBorder" = "#50fa7b";
-          "tab.inactiveDirtyBorder" = "#50fa7b";
+          #"tab.activeDirtyBorder" = "#50fa7b";
+          #"tab.inactiveDirtyBorder" = "#50fa7b";
         };
       };
 
