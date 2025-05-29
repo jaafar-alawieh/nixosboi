@@ -17,12 +17,6 @@ in {
         "window.commandCenter"     = true;
         "git.path"                 = "/run/current-system/sw/bin/git";
         "python.defaultInterpreterPath" = "/run/current-system/sw/bin/python3";
-        "workbench.colorCustomizations" = {
-          "tab.activeModifiedBackground" = "#ff8800";      # unsaved
-          "tab.unfocusedActiveModifiedBackground" = "#ffbb00";
-          "tab.activeBackground" = "#2b2b2b";              # normal
-          "tab.inactiveBackground" = "#1e1e1e";           # saved but not focused
-        };
       };
 
       extensions = with pkgs.vscode-extensions; [
