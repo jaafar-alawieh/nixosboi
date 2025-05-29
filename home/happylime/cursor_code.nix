@@ -16,6 +16,7 @@ in {
         "window.menuBarVisibility" = "visible";
         "window.commandCenter"     = true;
         "git.path"                 = "/run/current-system/sw/bin/git";
+        "python.defaultInterpreterPath" = "/run/current-system/sw/bin/python3";
       };
 
       extensions = with pkgs.vscode-extensions; [
