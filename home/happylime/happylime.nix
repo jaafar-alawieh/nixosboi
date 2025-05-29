@@ -10,6 +10,7 @@
     ./dconfig.nix 
     ./bashrc.nix 
     ./cursor_code.nix
+    ./ghostty.nix
     ];
   
   # Enable bash
