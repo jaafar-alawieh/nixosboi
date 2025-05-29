@@ -3,8 +3,8 @@
 
 {
   # Home Manager configuration
-  home.stateVersion = "24.05";
-  
+  home.stateVersion = "25.05";
+
   # Import complete dconf settings
   imports = [ 
     ./dconfig.nix 
