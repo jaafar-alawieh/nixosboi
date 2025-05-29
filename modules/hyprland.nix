@@ -11,8 +11,7 @@
     mako             # notification daemon
     swayidle         # idle & lock management
     swaylock         # screen locker
-    foot             # terminal emulator
-    rofi             # application launcher
+    wofi             # application launcher
     wl-clipboard     # clipboard utilities
     grim             # screenshot utility
     slurp            # region selection
