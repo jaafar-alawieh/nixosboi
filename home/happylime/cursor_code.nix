@@ -23,6 +23,7 @@ in {
           "gitDecoration.modifiedResourceForeground" = "#00ffb3";
           "gitDecoration.untrackedResourceForeground" = "#f7aeae";
         };
+        "workbench.editor.highlightModifiedTabs" = true;
       };
 
       extensions = with pkgs.vscode-extensions; [
