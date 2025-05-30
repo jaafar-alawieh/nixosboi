@@ -201,7 +201,7 @@ with lib.hm.gvariant;
       font-name = "Inter Variable 12";
       gtk-theme = "Dracula";
       icon-theme = "Adwaita";
-      monospace-font-name = "OverpassM Nerd Font Mono 12";
+      monospace-font-name = "OverpassM Nerd Font Mono 15";
       show-battery-percentage = true;
       text-scaling-factor = 1.0;
       toolbar-style = "text";
@@ -511,7 +511,7 @@ with lib.hm.gvariant;
       enable-spellchecking = true;
       fullscreen = false;
       inverted-colors = false;
-      show-sidebar = true;
+      show-sidebar = false;
       sidebar-page = "thumbnails";
       sidebar-size = 148;
       sizing-mode = "automatic";
@@ -1078,7 +1078,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/gsconnect/device/169790bc_17f4_41a2_a945_cd5549ea8ca1/plugin/notification" = {
       applications = ''
-        {}\n
+        {}
       '';
     };
 
@@ -1099,7 +1099,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/gsconnect/device/6208abe4_151b_4471_aab8_ea0704418a6a/plugin/notification" = {
       applications = ''
-        {}\n
+        {}
       '';
     };
 
@@ -1127,7 +1127,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/gsconnect/device/c20304e6-29e5-4b41-aa1d-644a436730ca/plugin/notification" = {
       applications = ''
-        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Evolution Alarm Notify":{"iconName":"appointment-soon","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Geary":{"iconName":"org.gnome.Geary","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Archive Manager":{"iconName":"org.gnome.FileRoller","enabled":true}}\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n\\\\\\\\n\\\\n\\n\n
+        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Evolution Alarm Notify":{"iconName":"appointment-soon","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Geary":{"iconName":"org.gnome.Geary","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Archive Manager":{"iconName":"org.gnome.FileRoller","enabled":true}}\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n\\\\\\\\n\\\\n\\n\n
       '';
     };
 
@@ -1161,7 +1161,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/gsconnect/device/f6632e15f1a4e42b/plugin/notification" = {
       applications = ''
-        {}\n
+        {}
       '';
     };
 
@@ -1370,7 +1370,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/software" = {
-      check-timestamp = mkInt64 1743679080;
+      check-timestamp = mkInt64 1748601976;
       first-run = false;
       flatpak-purge-timestamp = mkInt64 1737637943;
     };
@@ -1422,7 +1422,7 @@ with lib.hm.gvariant;
       show-hidden = false;
       show-size-column = true;
       show-type-column = true;
-      sidebar-width = 184;
+      sidebar-width = 187;
       sort-column = "name";
       sort-directories-first = false;
       sort-order = "ascending";
