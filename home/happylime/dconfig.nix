@@ -209,7 +209,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = [ "org-gnome-settings" "gnome-power-panel" "org-gnome-console" "org-gnome-characters" "firefox" "org-gnome-nautilus" "gnome-network-panel" "org-gnome-extensions" "impress" "writer" "org-gnome-tweaks" "code" "teams" "org-gnome-terminal" "io-github-realmazharhussain-gdmsettings" "org-gnome-gedit" "xdg-desktop-portal-gnome" "vlc" "gnome-system-monitor" "org-keepassxc-keepassxc" "com-github-joseexposito-touche" "org-gnome-geary" "mullvad-vpn" "org-qbittorrent-qbittorrent" "tenacity" "spotify" "com-spotify-client" "org-gnome-eog" "android-studio" "gimp" "calc" "org-gnome-shell-extensions-gsconnect-preferences" "org-gnome-shell-extensions-gsconnect" "io-github-cboxdoerfer-fsearch" "steam" "org-upscayl-upscayl" "org-gnome-baobab" "org-gnome-extensions-desktop" "io-gitlab-idevecore-pomodoro" ];
+      application-children = [ "org-gnome-settings" "gnome-power-panel" "org-gnome-console" "org-gnome-characters" "firefox" "org-gnome-nautilus" "gnome-network-panel" "org-gnome-extensions" "impress" "writer" "org-gnome-tweaks" "code" "teams" "org-gnome-terminal" "io-github-realmazharhussain-gdmsettings" "org-gnome-gedit" "xdg-desktop-portal-gnome" "vlc" "gnome-system-monitor" "org-keepassxc-keepassxc" "com-github-joseexposito-touche" "org-gnome-geary" "mullvad-vpn" "org-qbittorrent-qbittorrent" "tenacity" "spotify" "com-spotify-client" "org-gnome-eog" "android-studio" "gimp" "calc" "org-gnome-shell-extensions-gsconnect-preferences" "org-gnome-shell-extensions-gsconnect" "io-github-cboxdoerfer-fsearch" "steam" "org-upscayl-upscayl" "org-gnome-baobab" "org-gnome-extensions-desktop" "io-gitlab-idevecore-pomodoro" "zoom" ];
       show-banners = true;
     };
 
@@ -383,6 +383,10 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/notifications/application/xdg-desktop-portal-gnome" = {
       application-id = "xdg-desktop-portal-gnome.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/zoom" = {
+      application-id = "Zoom.desktop";
     };
 
     "org/gnome/desktop/peripherals/mouse" = {
@@ -678,7 +682,7 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
       control-center = [ "<Super>s" ];
-      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom11/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom12/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom13/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom14/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom15/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom16/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom17/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom18/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom19/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom20/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom21/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom22/" ];
+      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" ];
       help = [];
       home = [ "<Super>e" ];
       logout = [];
@@ -686,15 +690,15 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-      binding = "";
-      command = "sh -c 'sleep 1 && xset dpms force off'";
-      name = "xscreen off";
+      binding = "<Super>t";
+      command = "ghostty";
+      name = "Terminal";
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
-      binding = "<Control><Super>t";
-      command = "gedit";
-      name = "gedit";
+      binding = "<Super>c";
+      command = "firefox --new-window https://chatgpt.com";
+      name = "chatgpt";
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10" = {
@@ -773,6 +777,12 @@ with lib.hm.gvariant;
       binding = "<Control><Super>l";
       command = "busctl --user call org.gnome.Shell /org/gnome/ScreenSaver org.gnome.ScreenSaver SetActive b true n";
       name = "wayland screen off";
+    };
+
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom23" = {
+      binding = "<Ctrl><Alt><Shift>H";
+      command = "dbus-send --session --dest=com.zoom.HotKeyService --type=method_call /com/zoom/HotKeyListener com.zoom.HotKeyListener.keyPressed int64:55834574920 string:\"<Ctrl><Alt><Shift>H\"";
+      name = "ZMHKey55834574920";
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
@@ -1078,7 +1088,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/gsconnect/device/169790bc_17f4_41a2_a945_cd5549ea8ca1/plugin/notification" = {
       applications = ''
-        {}
+        {"Firefox":{"iconName":"","enabled":true}}
       '';
     };
 
@@ -1099,7 +1109,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/gsconnect/device/6208abe4_151b_4471_aab8_ea0704418a6a/plugin/notification" = {
       applications = ''
-        {}
+        {"Firefox":{"iconName":"","enabled":true}}
       '';
     };
 
@@ -1127,7 +1137,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/gsconnect/device/c20304e6-29e5-4b41-aa1d-644a436730ca/plugin/notification" = {
       applications = ''
-        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Evolution Alarm Notify":{"iconName":"appointment-soon","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Geary":{"iconName":"org.gnome.Geary","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Archive Manager":{"iconName":"org.gnome.FileRoller","enabled":true}}\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n\\\\\\\\n\\\\n\\n\n
+        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Evolution Alarm Notify":{"iconName":"appointment-soon","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Geary":{"iconName":"org.gnome.Geary","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Archive Manager":{"iconName":"org.gnome.FileRoller","enabled":true}}\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n\\\\\\\\n\\\\n\\n\n
       '';
     };
 
@@ -1161,7 +1171,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/gsconnect/device/f6632e15f1a4e42b/plugin/notification" = {
       applications = ''
-        {}
+        {"Firefox":{"iconName":"","enabled":true}}
       '';
     };
 
@@ -1372,7 +1382,7 @@ with lib.hm.gvariant;
     "org/gnome/software" = {
       check-timestamp = mkInt64 1748601976;
       first-run = false;
-      flatpak-purge-timestamp = mkInt64 1737637943;
+      flatpak-purge-timestamp = mkInt64 1748624455;
     };
 
     "org/gnome/terminal/legacy" = {
