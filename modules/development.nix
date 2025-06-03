@@ -9,6 +9,7 @@
     git
     gh
     ghostty
+    lazygit
     nodejs
     nodePackages_latest.pnpm
     python311
