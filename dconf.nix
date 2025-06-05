@@ -81,7 +81,7 @@ with lib.hm.gvariant;
 
     "org/gnome/TextEditor" = {
       show-line-numbers = true;
-      style-scheme = "Flat-Remix-Dark";
+      style-scheme = "classic-dark";
       style-variant = "dark";
     };
 
