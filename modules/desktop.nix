@@ -60,3 +60,31 @@
     tela-icon-theme
   ];
 }
+
+/*
+Pop-shell shortcuts fix
+# Disable search
+dconf write '/org/gnome/shell/extensions/pop-shell/search' "@as []"
+
+# Keep only Super+y for toggle-floating
+dconf write '/org/gnome/shell/extensions/pop-shell/toggle-floating' "['<Super>y']"
+
+# Disable everything else by forcing each to an empty array of strings
+dconf write '/org/gnome/shell/extensions/pop-shell/tile-enter' "@as []"
+dconf write '/org/gnome/shell/extensions/pop-shell/focus-left' "@as []"
+dconf write '/org/gnome/shell/extensions/pop-shell/focus-right' "@as []"
+dconf write '/org/gnome/shell/extensions/pop-shell/focus-up' "@as []"
+dconf write '/org/gnome/shell/extensions/pop-shell/focus-down' "@as []"
+dconf write '/org/gnome/shell/extensions/pop-shell/tile-move-left' "@as []"
+dconf write '/org/gnome/shell/extensions/pop-shell/tile-move-right' "@as []"
+dconf write '/org/gnome/shell/extensions/pop-shell/tile-move-up' "@as []"
+dconf write '/org/gnome/shell/extensions/pop-shell/tile-move-down' "@as []"
+dconf write '/org/gnome/shell/extensions/pop-shell/tile-swap-left' "@as []"
+dconf write '/org/gnome/shell/extensions/pop-shell/tile-swap-right' "@as []"
+dconf write '/org/gnome/shell/extensions/pop-shell/tile-swap-up' "@as []"
+dconf write '/org/gnome/shell/extensions/pop-shell/tile-swap-down' "@as []"
+dconf write '/org/gnome/shell/extensions/pop-shell/tile-resize-left' "@as []"
+dconf write '/org/gnome/shell/extensions/pop-shell/tile-resize-right' "@as []"
+dconf write '/org/gnome/shell/extensions/pop-shell/tile-resize-up' "@as []"
+dconf write '/org/gnome/shell/extensions/pop-shell/tile-resize-down' "@as []"
+*/
