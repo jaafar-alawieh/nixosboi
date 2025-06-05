@@ -47,6 +47,7 @@
     gnomeExtensions.tactile
     gnomeExtensions.transparent-top-bar-adjustable-transparency
     gnomeExtensions.transparent-window-moving
+    gnomeExtensions.user-themes
     
     # GNOME themes and icons
     bibata-cursors
