@@ -62,6 +62,14 @@
 }
 
 /*
+Pop-shell disable or enable hints
+dconf write /org/gnome/shell/extensions/pop-shell/active-hint false
+
+
+
+
+
+
 Pop-shell shortcuts fix
 # Disable search
 dconf write '/org/gnome/shell/extensions/pop-shell/search' "@as []"
