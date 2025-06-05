@@ -6,7 +6,7 @@
   home.stateVersion = homeStateVersion;
   # Import complete dconf settings
   imports = [ 
-    ./dconfig.nix 
+    #./dconfig.nix 
     ./bashrc.nix 
     ./cursor_code.nix
     ./ghostty.nix
