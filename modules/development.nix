@@ -14,6 +14,9 @@
     nodePackages_latest.pnpm
     python313
     python313Packages.pip
+    #python crap
+    python313Packages.numpy
+    python313Packages.matplotlib
     tig
     vscode-fhs
   ];
