@@ -14,9 +14,9 @@
     nodePackages_latest.pnpm
     python313
     python313Packages.pip
-    #python crap
-    python313Packages.numpy
-    python313Packages.matplotlib
+    ### when i need to use python 
+    # this is basically a venv for nix 
+    # nix-shell -p python313Full python313Packages.numpy python313Packages.matplotlib
     tig
     vscode-fhs
   ];
