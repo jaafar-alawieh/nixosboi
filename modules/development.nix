@@ -12,7 +12,7 @@
     lazygit
     nodejs
     nodePackages_latest.pnpm
-    python311
+    python314
     tig
     vscode-fhs
   ];
