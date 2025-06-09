@@ -12,7 +12,8 @@
     lazygit
     nodejs
     nodePackages_latest.pnpm
-    python314
+    python313
+    python313Packages.pip
     tig
     vscode-fhs
   ];
