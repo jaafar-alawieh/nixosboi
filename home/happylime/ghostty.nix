@@ -8,7 +8,7 @@
     # --- Appearance ---
     #theme        = matrix 
     #if u dont like it try gitlabdarkhigh
-    theme        = Github-Dark-High-Contrast 
+    theme        = GitHub-Dark-High-Contrast 
     background        = #000000
     background-opacity = 1
     foreground   = #00FF00
