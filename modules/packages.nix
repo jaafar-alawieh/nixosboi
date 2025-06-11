@@ -14,6 +14,7 @@
     neovim
     powertop
     tldr
+    tree
     unzip
     vim
     wget
