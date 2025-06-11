@@ -6,7 +6,8 @@
 
   xdg.configFile."ghostty/config".text = ''
     # --- Appearance ---
-    theme        = matrix #Material Darker
+    theme        = matrix 
+    #Material Darker Iterm2 gitlabdarkhigh
     foreground   = #00FF00
     cursor-color = #00FF00
     adjust-cursor-thickness = 2
