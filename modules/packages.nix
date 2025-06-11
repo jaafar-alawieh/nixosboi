@@ -60,6 +60,7 @@
     
     # PDF and office
     libreoffice
+    logseq
     ocrmypdf
     poppler_utils
     
