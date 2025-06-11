@@ -6,9 +6,9 @@
 
   xdg.configFile."ghostty/config".text = ''
     # --- Appearance ---
-    theme        = NvimLight
-    #foreground   = #00FF00
-    #cursor-color = #00FF00
+    theme        = matrix #Material Darker
+    foreground   = #00FF00
+    cursor-color = #00FF00
     adjust-cursor-thickness = 2
 
     # --- Font ---
