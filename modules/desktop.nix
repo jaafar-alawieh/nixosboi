@@ -2,15 +2,10 @@
 { config, pkgs, lib, ... }:
 
 {
-  # Enable the X11 windowing system with GNOME
-  services.xserver = {
-    enable = true;
+  # Enable GNOME
+  services = {
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
-    xkb = {
-      layout = "us";
-      variant = "";
-    };
   };
   
   # XDG Portal
