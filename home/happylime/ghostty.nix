@@ -23,6 +23,9 @@
     window-width    = 70
     window-height   = 15
 
+    #Ghostty warnings
+    clipboard-paste-protection = false
+    
     # --- Bindings ---
     keybind = ctrl+a=select_all  '';
 }
