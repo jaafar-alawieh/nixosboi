@@ -7,6 +7,7 @@
     # System utilities
     autocutsel
     dconf2nix
+    gparted
     home-manager
     killall
     nano
