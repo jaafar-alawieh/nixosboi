@@ -25,7 +25,7 @@
   };
   
   # Time zone settings
-  time.timeZone = "Europe/London";
+  time.timeZone = "Europe/Berlin";
   # Alternate timezones (uncomment as needed)
   # time.timeZone = "Europe/Paris";
   # time.timeZone = "Asia/Beirut";
