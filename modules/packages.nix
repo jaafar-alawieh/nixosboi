@@ -38,6 +38,7 @@
     
     # Internet
     brave
+    google-chrome
     firefox
     mullvad-vpn
     qbittorrent

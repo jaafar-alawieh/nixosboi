@@ -27,7 +27,7 @@
   # Time zone settings
   time.timeZone = "Europe/Berlin";
   # Alternate timezones (uncomment as needed)
-  # time.timeZone = "Europe/Paris";
+  # time.timeZone = "Europe/Luxembourg";
   # time.timeZone = "Asia/Beirut";
   
   # Internationalization
