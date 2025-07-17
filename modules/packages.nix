@@ -28,7 +28,7 @@
     # Media tools
     ardour
     ffmpeg_6-full
-    gimp-with-plugins
+    #gimp-with-plugins
     imagemagick
     lmms
     mpv
